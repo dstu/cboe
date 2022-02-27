@@ -13,7 +13,7 @@
 #include <map>
 #include <sstream>
 
-#include "oldstructs.hpp"
+#include "src/oldstructs.hpp"
 
 void cSpeech::import_legacy(legacy::talking_record_type& old, std::vector<shop_info_t>& shops){
 	talk_nodes.resize(60);

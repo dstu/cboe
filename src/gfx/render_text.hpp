@@ -17,7 +17,7 @@
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 
-#include "location.hpp"
+#include "src/location.hpp"
 
 using hilite_t = std::pair<size_t,size_t>;
 

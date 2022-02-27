@@ -1,12 +1,11 @@
+#include "src/game/boe.locutils.hpp"
 
-#include "mathutil.hpp"
-#include "boe.global.hpp"
-
-#include "universe.hpp"
-#include "boe.locutils.hpp"
-#include "boe.text.hpp"
-#include "boe.monster.hpp"
-#include "utility.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.monster.hpp"
+// #include "src/game/boe.text.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/util/utility.hpp"
 
 bool combat_pt_in_light();
 location obs_sec;

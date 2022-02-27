@@ -10,7 +10,7 @@
 
 class ImageLoader : public ResMgr::cLoader<sf::Texture> {
 	/// Load an image from a PNG file.
-	sf::Texture* operator() (const fs::path& fpath) const override {
+	sf::Texture* operator() (const boost::filesystem::path& fpath) const override {
 		sf::Texture* img = new sf::Texture();
 		if(img->loadFromFile(fpath.string())) return img;
 		delete img;

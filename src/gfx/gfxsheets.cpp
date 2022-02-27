@@ -8,9 +8,9 @@
 
 #include "gfxsheets.hpp"
 
-#include "location.hpp"
-#include "res_image.hpp"
-#include "render_image.hpp"
+#include "src/location.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/gfx/render_image.hpp"
 
 bool use_win_graphics = false;
 
@@ -111,8 +111,8 @@ void cCustomGraphics::convert_sheets() {
 	numSheets = num_graphics / 100;
 	if(num_graphics % 100) numSheets++;
 	sheets.resize(numSheets);
-	extern fs::path tempDir;
-	fs::path pic_dir = tempDir/scenario_temp_dir_name/"graphics";
+	extern boost::filesystem::path tempDir;
+	boost::filesystem::path pic_dir = tempDir/scenario_temp_dir_name/"graphics";
 	for(size_t i = 0; i < numSheets; i++) {
 		sf::IntRect subrect;
 		subrect.top = i * 280;
@@ -128,7 +128,7 @@ void cCustomGraphics::convert_sheets() {
 		sheet_tex.update(sheet);
 		sheets[i].reset(new sf::Texture(sheet_tex));
 		
-		fs::path sheetPath = pic_dir/("sheet" + std::to_string(i) + ".png");
+		boost::filesystem::path sheetPath = pic_dir/("sheet" + std::to_string(i) + ".png");
 		sheets[i]->copyToImage().saveToFile(sheetPath.string().c_str());
 	}
 	ResMgr::graphics.pushPath(pic_dir);
@@ -140,9 +140,9 @@ void cCustomGraphics::replace_sheet(size_t num, sf::Image& newSheet) {
 	replacement.loadFromImage(newSheet);
 	sheets[num].reset(new sf::Texture(replacement));
 	// Then we need to do some extra stuff to ensure the dialog engine also sees the change
-	extern fs::path tempDir;
+	extern boost::filesystem::path tempDir;
 	std::string sheetname = "sheet" + std::to_string(num);
-	fs::path tmpPath = tempDir/scenario_temp_dir_name/"graphics"/(sheetname + ".png");
+	boost::filesystem::path tmpPath = tempDir/scenario_temp_dir_name/"graphics"/(sheetname + ".png");
 	newSheet.saveToFile(tmpPath.string().c_str());
 	ResMgr::graphics.free(sheetname);
 }

@@ -12,15 +12,15 @@
 #include <fstream>
 #include <boost/filesystem/path.hpp>
 
-#include "fileio.hpp"
-#include "render_shapes.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/gfx/render_shapes.hpp"
 
 sf::Shader maskShader;
-extern fs::path progDir;
+extern boost::filesystem::path progDir;
 
 void init_shaders() {
-	fs::path shaderPath = progDir/"data"/"shaders";
-	fs::path fragPath = shaderPath/"mask.frag", vertPath = shaderPath/"mask.vert";
+	boost::filesystem::path shaderPath = progDir/"data"/"shaders";
+	boost::filesystem::path fragPath = shaderPath/"mask.frag", vertPath = shaderPath/"mask.vert";
 	
 	do {
 		std::ifstream fin;

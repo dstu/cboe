@@ -13,9 +13,10 @@
 /// Field-related classes and types.
 
 #include <string>
-#include "control.hpp"
-#include "render_text.hpp"
-#include "undo.hpp"
+
+#include "src/dialogxml/widgets/control.hpp"
+#include "src/gfx/render_text.hpp"
+#include "src/tools/undo.hpp"
 
 /// The field's expected input type.
 enum eFldType {

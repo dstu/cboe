@@ -1,13 +1,14 @@
 
-#include "prefs.hpp"
+#include "src/tools/prefs.hpp"
+
+#include <boost/any.hpp>
+#include <boost/filesystem.hpp>
+#include <boost/lexical_cast.hpp>
+#include <fstream>
 #include <map>
+#include <sstream>
 #include <string>
 #include <vector>
-#include <fstream>
-#include <sstream>
-#include <boost/filesystem.hpp>
-#include <boost/any.hpp>
-#include <boost/lexical_cast.hpp>
 
 std::map<std::string,boost::any> prefs;
 using iarray = std::vector<int>;
@@ -69,9 +70,9 @@ void clear_pref(std::string keypath) {
 	if(iter != prefs.end()) prefs.erase(iter);
 }
 
-static bool save_prefs(fs::path fpath) {
+static bool save_prefs(boost::filesystem::path fpath) {
 	if(!prefsDirty) return true;
-	fs::create_directories(fpath.parent_path());
+	boost::filesystem::create_directories(fpath.parent_path());
 	std::ofstream fout(fpath.string().c_str());
 	for(auto& kv : prefs) {
 		if(kv.second.type() == typeid(iarray)) {
@@ -96,7 +97,7 @@ static bool save_prefs(fs::path fpath) {
 	return true;
 }
 
-static bool load_prefs(fs::path fpath) {
+static bool load_prefs(boost::filesystem::path fpath) {
 	prefsDirty = false;
 	std::map<std::string,boost::any> temp_prefs;
 	std::ifstream fin(fpath.string().c_str());
@@ -141,9 +142,9 @@ static bool load_prefs(fs::path fpath) {
 	return prefsLoaded = true;
 }
 
-extern fs::path tempDir;
+extern boost::filesystem::path tempDir;
 bool sync_prefs() {
-	fs::path prefsPath = tempDir.parent_path() / "bladesprefs.ini";
+	boost::filesystem::path prefsPath = tempDir.parent_path() / "bladesprefs.ini";
 	if(prefsLoaded) return save_prefs(prefsPath);
 	else return load_prefs(prefsPath);
 }

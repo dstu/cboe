@@ -10,7 +10,7 @@
 
 class SoundLoader : public ResMgr::cLoader<sf::SoundBuffer> {
 	/// Load a sound from a WAV file.
-	sf::SoundBuffer* operator() (const fs::path& fpath) const override {
+	sf::SoundBuffer* operator() (const boost::filesystem::path& fpath) const override {
 		sf::SoundBuffer* snd = new sf::SoundBuffer;
 		if(snd->loadFromFile(fpath.string())) return snd;
 		delete snd;

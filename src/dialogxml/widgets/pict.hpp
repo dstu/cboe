@@ -16,8 +16,11 @@
 
 #include <vector>
 #include <map>
-#include "control.hpp"
-#include "pictypes.hpp"
+#include <memory>
+
+#include "src/global.hpp"
+#include "src/dialogxml/widgets/control.hpp"
+#include "src/dialogxml/widgets/pictypes.hpp"
 
 /// A simple icon.
 /// This control can also be made clickable.

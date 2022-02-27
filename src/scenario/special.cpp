@@ -6,21 +6,21 @@
  *
  */
 
-#include "special.hpp"
-#include <string>
-#include <vector>
+#include "src/scenario/special.hpp"
+
+#include <boost/lexical_cast.hpp>
 #include <map>
 #include <sstream>
-#include <boost/lexical_cast.hpp>
+#include <string>
+#include <vector>
 
-#include "strdlog.hpp"
-#include "oldstructs.hpp"
-#include "utility.hpp"
-
-#include "spell.hpp"
-#include "skills_traits.hpp"
-#include "damage.hpp"
-#include "fields.hpp"
+#include "src/damage.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/fields.hpp"
+#include "src/oldstructs.hpp"
+#include "src/skills_traits.hpp"
+#include "src/spell.hpp"
+#include "src/tools/utility.hpp"
 
 cSpecial::cSpecial(){
 	type = eSpecType::NONE;

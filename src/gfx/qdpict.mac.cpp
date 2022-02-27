@@ -453,8 +453,8 @@ static rectangle loadFromPictResource(Handle resHandle, unsigned char*& pixelSto
 	return rectangle(bounds.top, bounds.left, bounds.bottom, bounds.right);
 }
 
-bool tryLoadPictFromResourceFile(fs::path& gpath, sf::Image& graphics_store); // Suppress "no prototype" warning
-bool tryLoadPictFromResourceFile(fs::path& gpath, sf::Image& graphics_store) {
+bool tryLoadPictFromResourceFile(boost::filesystem::path& gpath, sf::Image& graphics_store); // Suppress "no prototype" warning
+bool tryLoadPictFromResourceFile(boost::filesystem::path& gpath, sf::Image& graphics_store) {
 	static const char*const noGraphics = "The game will still work without the custom graphics, but some things will not look right.";
 	static const std::string errStrings[] = {
 		"The resource did not contain any pixel data.",

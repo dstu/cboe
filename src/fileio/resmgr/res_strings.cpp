@@ -17,7 +17,7 @@ class StringsLoader : public ResMgr::cLoader<StringList> {
 	/// Load a list of strings from a TXT file.
 	/// Each line in the file becomes one string in the resulting list.
 	/// (Empty lines are included too.)
-	StringList* operator() (const fs::path& fpath) const override {
+	StringList* operator() (const boost::filesystem::path& fpath) const override {
 		std::ifstream fin(fpath.string().c_str());
 		if(fin.fail()) {
 			std::cerr << std_fmterr << ": Error opening file";

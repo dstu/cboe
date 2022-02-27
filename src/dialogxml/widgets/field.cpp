@@ -6,16 +6,18 @@
  *
  */
 
-#include "field.hpp"
-#include <sstream>
+#include "src/dialogxml/widgets/field.hpp"
+
+#include <boost/lexical_cast.hpp>
 #include <map>
 #include <numeric>
-#include <boost/lexical_cast.hpp>
-#include "dialog.hpp"
-#include "strdlog.hpp"
-#include "render_shapes.hpp"
-#include "winutil.hpp"
-#include "cursors.hpp"
+#include <sstream>
+
+#include "src/dialogxml/widgets/dialog.hpp"
+// #include "strdlog.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/tools/cursors.hpp"
 
 bool cTextField::callHandler(event_fcn<EVT_DEFOCUS>::type onFocus, cDialog& me, std::string id) {
 	if(field_type != FLD_TEXT) {
@@ -39,7 +41,9 @@ bool cTextField::callHandler(event_fcn<EVT_DEFOCUS>::type onFocus, cDialog& me, 
 				{FLD_UINT, "a non-negative integer"},
 				{FLD_REAL, "a number"},
 			};
-			showError("You need to enter " + typeNames.at(field_type) + "!","",parent);
+                        // TODO(blaze): this fixes a circular dependency but is a stupid hack.
+                        std::cerr << "You need to enter " + typeNames.at(field_type) + "!";
+			// showError("You need to enter " + typeNames.at(field_type) + "!","",parent);
 			return false;
 		}
 	}

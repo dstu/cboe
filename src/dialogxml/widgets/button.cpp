@@ -7,13 +7,12 @@
  *
  */
 
-#include "button.hpp"
+#include "src/dialogxml/widgets/button.hpp"
 
-#include "dialog.hpp"
-#include "render_image.hpp"
-#include "render_text.hpp"
-
-#include "res_image.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_text.hpp"
 
 extern sf::Texture bg_gworld;
 

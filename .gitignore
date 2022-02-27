@@ -87,6 +87,12 @@ test/junk/*.map
 # Packed scenarios
 *.boes
 
+# Bazel outputs
+bazel-bin
+bazel-boe
+bazel-out
+bazel-testlogs
+
 # Misc
 *~
 oldstructs.txt

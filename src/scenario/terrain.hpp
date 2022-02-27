@@ -12,9 +12,10 @@
 #include <string>
 #include <iosfwd>
 
-#include "pictypes.hpp"
-#include "location.hpp"
-#include "terrain_abilities.hpp"
+#include "src/dialogxml/widgets/pictypes.hpp"
+#include "src/global.hpp"
+#include "src/location.hpp"
+#include "src/scenario/terrain_abilities.hpp"
 
 namespace legacy { struct terrain_type_type; };
 

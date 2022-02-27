@@ -15,7 +15,7 @@ extern bool party_in_scen,scen_items_loaded;
 extern void update_item_menu();
 void load_base_item_defs();
 
-extern fs::path progDir;
+extern boost::filesystem::path progDir;
 
 void leave_town() {
 	univ.party.town_num = 200;
@@ -30,6 +30,6 @@ void remove_party_from_scen() {
 }
 
 void load_base_item_defs(){
-	fs::path basePath = progDir/"Blades of Exile Base"/"bladbase.boes";
+	boost::filesystem::path basePath = progDir/"Blades of Exile Base"/"bladbase.boes";
 	scen_items_loaded = load_scenario(basePath, univ.scenario);
 }

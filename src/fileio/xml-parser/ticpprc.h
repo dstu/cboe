@@ -31,8 +31,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef TICPPRC_INCLUDED
 #define TICPPRC_INCLUDED
 
-#include "ticppapi.h"
 #include <vector>
+
+#include "src/fileio/xml-parser/ticppapi.h"
 
 // Forward declare ticpp::Node, so it can be made a friend of TiCppRC
 namespace ticpp

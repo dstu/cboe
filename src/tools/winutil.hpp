@@ -23,12 +23,12 @@ void launchURL(std::string url);
 
 std::string get_os_version();
 
-fs::path nav_get_party();
-fs::path nav_put_party(fs::path def = "");
-fs::path nav_get_scenario();
-fs::path nav_put_scenario(fs::path def = "");
-fs::path nav_get_rsrc(std::initializer_list<std::string> extensions);
-fs::path nav_put_rsrc(std::initializer_list<std::string> extensions, fs::path def = "");
+boost::filesystem::path nav_get_party();
+boost::filesystem::path nav_put_party(boost::filesystem::path def = "");
+boost::filesystem::path nav_get_scenario();
+boost::filesystem::path nav_put_scenario(boost::filesystem::path def = "");
+boost::filesystem::path nav_get_rsrc(std::initializer_list<std::string> extensions);
+boost::filesystem::path nav_put_rsrc(std::initializer_list<std::string> extensions, boost::filesystem::path def = "");
 
 // Deal with text snippets in the clipboard.
 // If the clipboard contains something other than text,

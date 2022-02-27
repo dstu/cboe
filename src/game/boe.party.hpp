@@ -2,7 +2,7 @@
 #ifndef BOE_GAME_PARTY_H
 #define BOE_GAME_PARTY_H
 
-#include "spell.hpp"
+#include "src/spell.hpp"
 
 class cDialog;
 void make_boats();

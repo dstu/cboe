@@ -12,8 +12,8 @@
 #include <map>
 #include <string>
 
-#include "location.hpp"
-#include "damage.hpp"
+#include "src/damage.hpp"
+#include "src/location.hpp"
 
 class iLiving {
 public:

@@ -10,8 +10,8 @@
 #define BoE_creature_hpp
 
 #include <iosfwd>
-#include "location.hpp"
-#include "monster.hpp"
+#include "src/location.hpp"
+#include "src/scenario/monster.hpp"
 #include "living.hpp"
 
 class cCreature : public cMonster, public cTownperson, public iLiving {

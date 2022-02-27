@@ -7,12 +7,11 @@
  *
  */
 
-#include "led.hpp"
+#include "src/dialogxml/widgets/led.hpp"
 
-#include "dialog.hpp"
-#include "render_image.hpp"
-
-#include "res_image.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/gfx/render_image.hpp"
 
 rectangle cLed::ledRects[3][2];
 

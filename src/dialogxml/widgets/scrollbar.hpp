@@ -12,9 +12,9 @@
 /// @file
 /// Scrollbar-related classes and types.
 
-#include "control.hpp"
-#include "event_listener.hpp"
-#include "drawable.hpp"
+#include "src/dialogxml/widgets/control.hpp"
+#include "src/tools/event_listener.hpp"
+#include "src/tools/drawable.hpp"
 
 /// Specifies the style of a scrollbar.
 enum eScrollStyle {

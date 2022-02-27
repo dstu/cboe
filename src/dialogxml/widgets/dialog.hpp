@@ -13,18 +13,17 @@
 /// Dialog-related classes and types.
 
 #include <SFML/Graphics.hpp>
-
-#include <string>
-#include <map>
-#include <vector>
+#include <boost/any.hpp>
 #include <exception>
 #include <functional>
+#include <map>
+#include <string>
+#include <vector>
 
-#include "ticpp.h"
-#include "keycodes.hpp"
-#include "dlogevt.hpp"
-#include "location.hpp"
-#include <boost/any.hpp>
+#include "src/dialogxml/dialogs/dlogevt.hpp"
+#include "src/dialogxml/keycodes.hpp"
+#include "src/fileio/xml-parser/ticpp.h"
+#include "src/location.hpp"
 
 class cControl;
 class cTextField;

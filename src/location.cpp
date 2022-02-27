@@ -7,7 +7,7 @@
  */
 
 #include "location.hpp"
-#include "mathutil.hpp"
+#include "util/mathutil.hpp"
 #include <iostream>
 
 eDirection& operator++ (eDirection& me, int) {

@@ -6,14 +6,15 @@
  *
  */
 
-#include "container.hpp"
-#include "dialog.hpp"
-#include "button.hpp"
-#include "field.hpp"
-#include "ledgroup.hpp"
-#include "message.hpp"
-#include "pict.hpp"
-#include "scrollbar.hpp"
+#include "src/dialogxml/widgets/container.hpp"
+
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/field.hpp"
+#include "src/dialogxml/widgets/ledgroup.hpp"
+#include "src/dialogxml/widgets/message.hpp"
+#include "src/dialogxml/widgets/pict.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
 
 bool cContainer::parseChildControl(ticpp::Element& elem, std::map<std::string,cControl*>& controls, std::string& id) {
 	std::string tag = elem.Value();

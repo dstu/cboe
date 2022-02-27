@@ -17,14 +17,14 @@
 
 #include <boost/iterator/indirect_iterator.hpp>
 
-#include "vehicle.hpp"
+#include "src/scenario/vehicle.hpp"
 #include "population.hpp"
-#include "item.hpp"
+#include "src/scenario/item.hpp"
 #include "pc.hpp"
-#include "outdoors.hpp"
-#include "monster.hpp"
+#include "src/scenario/outdoors.hpp"
+#include "src/scenario/monster.hpp"
 #include "living.hpp"
-#include "quest.hpp"
+#include "src/scenario/quest.hpp"
 
 namespace legacy {
 	struct party_record_type;

@@ -12,7 +12,7 @@
 #include <iosfwd>
 #include <string>
 #include <functional>
-#include "location.hpp"
+#include "src/location.hpp"
 
 namespace legacy { struct special_node_type; };
 

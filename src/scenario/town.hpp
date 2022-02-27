@@ -13,12 +13,13 @@
 #include <iosfwd>
 #include <array>
 #include <boost/dynamic_bitset.hpp>
-#include "location.hpp"
-#include "special.hpp"
+
+#include "item.hpp"
 #include "monster.hpp"
 #include "talking.hpp"
-#include "item.hpp"
-#include "area.hpp"
+#include "special.hpp"
+#include "src/scenario/area.hpp"
+#include "src/location.hpp"
 
 namespace legacy {
 	struct town_record_type;

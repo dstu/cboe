@@ -14,12 +14,12 @@
 #include <sstream>
 #include <stdexcept>
 
-#include "scenario.hpp"
 #include "universe.hpp"
-#include "strdlog.hpp"
-#include "oldstructs.hpp"
-#include "fileio.hpp"
-#include "mathutil.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/oldstructs.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/util/mathutil.hpp"
 
 cParty::cParty(ePartyPreset party_preset) {
 	gold = 200;

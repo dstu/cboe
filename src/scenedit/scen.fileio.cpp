@@ -32,9 +32,9 @@ extern bool change_made;
 extern cCustomGraphics spec_scen_g;
 extern bool mac_is_intel;
 
-fs::path temp_file_to_load;
+boost::filesystem::path temp_file_to_load;
 std::string last_load_file = "Blades of Exile Scenario";
-extern fs::path progDir, tempDir;
+extern boost::filesystem::path progDir, tempDir;
 extern bool cur_scen_is_mac;
 
 void print_write_position ();
@@ -987,11 +987,11 @@ struct overrides_sheet {
 };
 
 extern std::string scenario_temp_dir_name;
-extern fs::path scenDir;
+extern boost::filesystem::path scenDir;
 void save_scenario(bool rename) {
-	fs::path toFile = scenario.scen_file;
+	boost::filesystem::path toFile = scenario.scen_file;
 	if(rename || toFile.empty()) {
-		fs::path def = scenario.scen_file;
+		boost::filesystem::path def = scenario.scen_file;
 		if(def.empty())
 			def = scenDir/"myscenario.boes";
 		toFile = nav_put_scenario(def);
@@ -1090,7 +1090,7 @@ void save_scenario(bool rename) {
 		spec_scen_g.convert_sheets();
 		for(size_t i = 0; i < spec_scen_g.numSheets; i++) {
 			sf::Image sheet = spec_scen_g.sheets[i]->copyToImage();
-			fs::path tempPath = tempDir/"temp.png";
+			boost::filesystem::path tempPath = tempDir/"temp.png";
 			sheet.saveToFile(tempPath.string());
 			std::ostream& pic_out = scen_file.newFile("scenario/graphics/sheet" + std::to_string(i) + ".png");
 			std::ifstream fin(tempPath.string().c_str(), std::ios::binary);
@@ -1098,7 +1098,7 @@ void save_scenario(bool rename) {
 			fin.close();
 		}
 	} else {
-		fs::path picPath = tempDir/scenario_temp_dir_name/"graphics";
+		boost::filesystem::path picPath = tempDir/scenario_temp_dir_name/"graphics";
 		if(fs::exists(picPath) && fs::is_directory(picPath)) {
 			// First build a list of overridable sheets
 			std::set<std::string> sheet_names;
@@ -1136,7 +1136,7 @@ void save_scenario(bool rename) {
 	}
 	
 	// And also sounds!
-	fs::path sndPath = tempDir/scenario_temp_dir_name/"sounds";
+	boost::filesystem::path sndPath = tempDir/scenario_temp_dir_name/"sounds";
 	if(fs::exists(sndPath) && fs::is_directory(sndPath)) {
 		fs::directory_iterator dir_iter(sndPath);
 		while(dir_iter != fs::directory_iterator()) {

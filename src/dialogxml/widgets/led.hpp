@@ -9,8 +9,8 @@
 #ifndef BOE_DIALOG_LED_HPP
 #define BOE_DIALOG_LED_HPP
 
-#include "button.hpp"
-#include "render_text.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/gfx/render_text.hpp"
 
 /// Represents the state of an LED button.
 /// Generally, led_red is used to indicate a selected button.

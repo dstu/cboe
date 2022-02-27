@@ -9,14 +9,15 @@
 #include <fstream>
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "res_cursor.hpp"
+
+#include "src/fileio/resmgr/res_cursor.hpp"
 
 class CursorLoader : public ResMgr::cLoader<Cursor> {
 	/// Load a cursor from a GIF file.
 	/// The cursor's hotspot location is stored in a GIF comment, with the following syntax (case-sensitive):
 	/// "Hotspot(x,y)"
-	Cursor* operator() (const fs::path& fpath) const override {
-		if(!fs::exists(fpath))
+	Cursor* operator() (const boost::filesystem::path& fpath) const override {
+		if(!boost::filesystem::exists(fpath))
 			throw ResMgr::xError(ResMgr::ERR_LOAD, "Failed to load GIF cursor: " + fpath.string());
 		int x = 0, y = 0, f_sz;
 		std::ifstream fin(fpath.string().c_str(), std::ios::binary);

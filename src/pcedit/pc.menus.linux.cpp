@@ -7,7 +7,7 @@
 
 extern sf::RenderWindow mainPtr;
 extern bool party_in_scen;
-extern fs::path file_in_mem;
+extern boost::filesystem::path file_in_mem;
 
 std::shared_ptr<OpenBoEPCEditMenu> menu_ptr;
 

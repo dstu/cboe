@@ -12,7 +12,8 @@
 #include <functional>
 #include <string>
 #include <type_traits>
-#include "keycodes.hpp"
+
+#include "src/dialogxml/keycodes.hpp"
 
 /// Represents an event that can occur in a dialog.
 enum eDlogEvt {

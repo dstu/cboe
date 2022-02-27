@@ -9,8 +9,9 @@
 #ifndef BOE_RES_FONT_HPP
 #define BOE_RES_FONT_HPP
 
-#include "resmgr.hpp"
 #include <SFML/Graphics.hpp>
+
+#include "src/fileio/resmgr/resmgr.hpp"
 
 using FontRsrc = ResMgr::cPointer<sf::Font>;
 

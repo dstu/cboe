@@ -13,10 +13,10 @@
 #include <string>
 #include <boost/dynamic_bitset.hpp>
 
-#include "vector2d.hpp"
-#include "location.hpp"
 #include "special.hpp"
-#include "mathutil.hpp"
+#include "src/tools/vector2d.hpp"
+#include "src/location.hpp"
+#include "src/util/mathutil.hpp"
 
 enum {
 	AREA_TINY = 24,

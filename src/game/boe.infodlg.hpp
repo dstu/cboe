@@ -2,10 +2,10 @@
 #ifndef BOE_GAME_INFODLG_H
 #define BOE_GAME_INFODLG_H
 
-#include "item.hpp"
-#include "monster.hpp"
-#include "pc.hpp"
-#include "creature.hpp"
+#include "src/scenario/item.hpp"
+#include "src/scenario/monster.hpp"
+#include "src/universe/creature.hpp"
+#include "src/universe/pc.hpp"
 
 class cDialog;
 void display_spells(eSkill mode,short force_spell,cDialog* parent);

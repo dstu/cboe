@@ -13,8 +13,8 @@
 #include <iosfwd>
 #include <array>
 
-#include "location.hpp"
-#include "special.hpp"
+#include "src/location.hpp"
+#include "src/scenario/special.hpp"
 #include "monster.hpp"
 #include "area.hpp"
 

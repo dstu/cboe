@@ -10,7 +10,7 @@
 #define BOE_GAME_UI_H
 
 #include <vector>
-#include "location.hpp"
+#include "src/location.hpp"
 
 // These correspond to the icons in buttons.png
 enum eToolbarButton {

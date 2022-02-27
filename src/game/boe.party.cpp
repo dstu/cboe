@@ -1,45 +1,42 @@
 
-#include <iostream>
-
-#include "boe.global.hpp"
-
 #include <array>
-#include <map>
-
-#include "universe.hpp"
-
-#include "boe.fileio.hpp"
-#include "boe.graphics.hpp"
-#include "boe.graphutil.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.specials.hpp"
-#include "boe.infodlg.hpp"
-#include "boe.items.hpp"
-#include "boe.actions.hpp"
-#include <cstring>
-#include <queue>
-#include "boe.party.hpp"
-#include "boe.monster.hpp"
-#include "boe.town.hpp"
-#include "boe.combat.hpp"
-#include "boe.locutils.hpp"
-#include "boe.combat.hpp"
-#include "boe.text.hpp"
-#include "sounds.hpp"
-#include "boe.main.hpp"
-#include "utility.hpp"
-#include "mathutil.hpp"
-#include "strdlog.hpp"
-#include "choicedlog.hpp"
-#include "pictchoice.hpp"
-#include "winutil.hpp"
-#include "fileio.hpp"
-#include "boe.menus.hpp"
 #include <boost/lexical_cast.hpp>
-#include "button.hpp"
-#include "spell.hpp"
-#include "cursors.hpp"
-#include "render_shapes.hpp" // for colour constants
+#include <cstring>
+#include <iostream>
+#include <map>
+#include <queue>
+
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/dialogxml/dialogs/pictchoice.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/game/boe.actions.hpp"
+#include "src/game/boe.combat.hpp"
+#include "src/game/boe.combat.hpp"
+#include "src/game/boe.fileio.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.graphutil.hpp"
+#include "src/game/boe.infodlg.hpp"
+#include "src/game/boe.items.hpp"
+#include "src/game/boe.locutils.hpp"
+#include "src/game/boe.main.hpp"
+#include "src/game/boe.menus.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.party.hpp"
+#include "src/game/boe.specials.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/game/boe.town.hpp"
+#include "src/gfx/render_shapes.hpp" // for colour constants
+#include "src/sounds.hpp"
+#include "src/spell.hpp"
+#include "src/tools/cursors.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/util/utility.hpp"
 
 extern short skill_bonus[21];
 
@@ -61,7 +58,7 @@ extern short fast_bang;
 extern bool flushingInput;
 extern eItemWinMode stat_window;
 extern eGameMode overall_mode;
-extern fs::path progDir;
+extern boost::filesystem::path progDir;
 extern location center;
 extern sf::RenderWindow mainPtr;
 extern bool spell_forced,boom_anim_active;
@@ -145,7 +142,7 @@ void put_party_in_scen(std::string scen_name) {
 	if(item_took)
 		cChoiceDlog("removed-special-items").show();
 	
-	fs::path path = locate_scenario(scen_name);
+	boost::filesystem::path path = locate_scenario(scen_name);
 	if(path.empty()) {
 		showError("Could not find scenario!");
 		return;

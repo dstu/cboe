@@ -2,41 +2,40 @@
 #include <cmath>
 #include <queue>
 
-#include "boe.global.hpp"
-
-#include "universe.hpp"
-#include "boe.actions.hpp"
-#include "boe.graphutil.hpp"
-#include "boe.graphics.hpp"
-#include "boe.townspec.hpp"
-#include "boe.fileio.hpp"
-#include "boe.dlgutil.hpp"
-#include "boe.locutils.hpp"
-#include "boe.town.hpp"
-#include "boe.text.hpp"
-#include "boe.party.hpp"
-#include "boe.monster.hpp"
-#include "boe.specials.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.combat.hpp"
-#include "boe.items.hpp"
-#include "sounds.hpp"
-#include "boe.infodlg.hpp"
-#include "boe.main.hpp"
-#include "boe.ui.hpp"
-#include "mathutil.hpp"
-#include "fileio.hpp"
+#include "src/game/boe.actions.hpp"
+// #include "src/game/boe.combat.hpp"
+#include "src/game/boe.dlgutil.hpp"
+#include "src/game/boe.fileio.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.graphutil.hpp"
+#include "src/game/boe.infodlg.hpp"
+#include "src/game/boe.items.hpp"
+#include "src/game/boe.locutils.hpp"
+// #include "src/game/boe.main.hpp"
+#include "src/game/boe.menus.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.party.hpp"
+#include "src/game/boe.specials.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/game/boe.town.hpp"
+#include "src/game/boe.townspec.hpp"
+#include "src/game/boe.ui.hpp"
 #include "choicedlog.hpp"
-#include "dialog.hpp"
-#include "scrollbar.hpp"
-#include "boe.menus.hpp"
-#include "winutil.hpp"
 #include "cursors.hpp"
-#include "spell.hpp"
-#include "shop.hpp"
-#include "prefs.hpp"
-#include "render_shapes.hpp"
-#include "enum_map.hpp"
+#include "dialog.hpp"
+#include "fileio.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/scenario/shop.hpp"
+#include "src/sounds.hpp"
+#include "src/spell.hpp"
+#include "src/tools/enum_map.hpp"
+#include "src/tools/prefs.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
+#include "winutil.hpp"
 
 rectangle item_screen_button_rects[9] = {
 	{125,10,141,28},{125,40,141,58},{125,68,141,86},{125,98,141,116},{125,126,141,144},{125,156,141,174},
@@ -1000,7 +999,7 @@ static void handle_victory() {
 	univ.party.scen_name = ""; // should be harmless...
 	if(cChoiceDlog("congrats-save",{"cancel","save"}).show() == "save"){
 		// TODO: Wait, this shouldn't be a "save as" action, should it? It should save without asking for a location.
-		fs::path file = nav_put_party();
+		boost::filesystem::path file = nav_put_party();
 		if(!file.empty()) save_party(file, univ);
 	}
 }
@@ -2138,7 +2137,7 @@ bool handle_scroll(const sf::Event& event) {
 }
 
 void do_load() {
-	fs::path file_to_load = nav_get_party();
+	boost::filesystem::path file_to_load = nav_get_party();
 	if(file_to_load.empty()) return;
 	if(!load_party(file_to_load, univ))
 		return;
@@ -2185,7 +2184,7 @@ void do_save(short mode) {
 		print_buf();
 		return;
 	}
-	fs::path file = univ.file;
+	boost::filesystem::path file = univ.file;
 	if(mode == 1 || file.empty())
 		file = nav_put_party(file);
 	bool saved = false;
@@ -2579,7 +2578,7 @@ void handle_death() {
 			return;
 		}
 		else if(choice == "load") {
-			fs::path file_to_load = nav_get_party();
+			boost::filesystem::path file_to_load = nav_get_party();
 			if(!file_to_load.empty()) load_party(file_to_load, univ);
 			if(univ.party.is_alive()) {
 				if(overall_mode != MODE_STARTUP)
@@ -2648,7 +2647,7 @@ void start_new_game(bool force) {
 	}
 	party_in_memory = true;
 	if(force) return;
-	fs::path file = nav_put_party();
+	boost::filesystem::path file = nav_put_party();
 	if(!file.empty()) save_party(file, univ);
 	univ.file = file;
 }

@@ -9,20 +9,21 @@
 #ifndef BOE_DATA_SCENARIO_H
 #define BOE_DATA_SCENARIO_H
 
-#include <iosfwd>
 #include <array>
+#include <iosfwd>
 #include <boost/filesystem/path.hpp>
-#include "monster.hpp"
+
+#include "src/scenario/monster.hpp"
 // For reasons unknown, putting terrain above monster breaks the tests build in MSVC 2013
-#include "terrain.hpp"
-#include "vehicle.hpp"
-#include "item.hpp"
-#include "special.hpp"
-#include "outdoors.hpp"
-#include "town.hpp"
-#include "vector2d.hpp"
-#include "shop.hpp"
-#include "quest.hpp"
+#include "src/scenario/item.hpp"
+#include "src/scenario/outdoors.hpp"
+#include "src/scenario/quest.hpp"
+#include "src/scenario/shop.hpp"
+#include "src/scenario/special.hpp"
+#include "src/scenario/terrain.hpp"
+#include "src/scenario/town.hpp"
+#include "src/scenario/vehicle.hpp"
+#include "src/tools/vector2d.hpp"
 
 namespace legacy{
 	struct scenario_data_type;
@@ -87,7 +88,7 @@ public:
 	std::vector<std::string> snd_names;
 	bool adjust_diff;
 	bool is_legacy;
-	fs::path scen_file; // transient
+	boost::filesystem::path scen_file; // transient
 	vector2d<cOutdoors*> outdoors;
 	std::vector<cTown*> towns;
 	void addTown(size_t dim) {

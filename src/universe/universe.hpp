@@ -14,13 +14,13 @@
 #include <set>
 #include <array>
 #include <boost/filesystem/path.hpp>
-#include "party.hpp"
+#include "src/universe/party.hpp"
 #include "population.hpp"
-#include "item.hpp"
-#include "town.hpp"
-#include "talking.hpp"
-#include "scenario.hpp"
-#include "pictypes.hpp"
+#include "src/scenario/item.hpp"
+#include "src/scenario/town.hpp"
+#include "src/scenario/talking.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/dialogxml/widgets/pictypes.hpp"
 
 namespace legacy {
 	struct out_info_type;
@@ -201,7 +201,7 @@ public:
 	std::map<long,cPlayer*> stored_pcs;
 	cCurTown town;
 	cCurOut out;
-	fs::path file;
+	boost::filesystem::path file;
 	bool debug_mode { false };
 	bool ghost_mode { false };
 	bool node_step_through { false };

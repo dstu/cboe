@@ -10,7 +10,7 @@
 #define BOE_DATA_VEHICLE_H
 
 #include <iosfwd>
-#include "location.hpp"
+#include "src/location.hpp"
 
 namespace legacy {
 	struct horse_record_type;

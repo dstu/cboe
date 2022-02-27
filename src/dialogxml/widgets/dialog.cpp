@@ -6,24 +6,26 @@
  *
  */
 
+#include "src/dialogxml/widgets/dialog.hpp"
+
 #include <cmath>
 #include <stdexcept>
-#include "dialog.hpp"
-#include "tiling.hpp" // for bg
-#include "sounds.hpp"
-#include "pict.hpp"
-#include "button.hpp"
-#include "field.hpp"
-#include "ledgroup.hpp"
-#include "message.hpp"
-#include "scrollbar.hpp"
-#include "scrollpane.hpp"
-#include "stack.hpp"
-#include "winutil.hpp"
-#include "mathutil.hpp"
-#include "cursors.hpp"
-#include "prefs.hpp"
-#include "framerate_limiter.hpp"
+
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/field.hpp"
+#include "src/dialogxml/widgets/ledgroup.hpp"
+#include "src/dialogxml/widgets/message.hpp"
+#include "src/dialogxml/widgets/pict.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/dialogxml/widgets/scrollpane.hpp"
+#include "src/dialogxml/widgets/stack.hpp"
+#include "src/gfx/tiling.hpp" // for bg
+#include "src/sounds.hpp"
+#include "src/tools/cursors.hpp"
+#include "src/tools/framerate_limiter.hpp"
+#include "src/tools/prefs.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/util/mathutil.hpp"
 
 using namespace std;
 using namespace ticpp;
@@ -174,12 +176,12 @@ cDialog::cDialog(std::string path, cDialog* p) : parent(p) {
 	loadFromFile(path + ".xml");
 }
 
-extern fs::path progDir;
+extern boost::filesystem::path progDir;
 void cDialog::loadFromFile(std::string path){
 	static const cKey enterKey = {true, key_enter};
 	bg = defaultBackground;
 	fname = path;
-	fs::path cPath = progDir/"data"/"dialogs"/path;
+	boost::filesystem::path cPath = progDir/"data"/"dialogs"/path;
 	try{
 		TiXmlBase::SetCondenseWhiteSpace(false);
 		Document xml(cPath.string().c_str());

@@ -11,7 +11,7 @@
 
 #include <string>
 #include <functional>
-#include "location.hpp"
+#include "src/location.hpp"
 
 short can_see(location p1,location p2,std::function<short(short,short)> get_obscurity);
 std::string get_str(std::string list, short j);

@@ -6,15 +6,17 @@
 //
 //
 
-#include "scrollpane.hpp"
-#include "message.hpp"
-#include "field.hpp"
-#include "button.hpp"
-#include "dialog.hpp"
-#include "pict.hpp"
-#include "stack.hpp"
-#include "render_shapes.hpp"
+#include "src/dialogxml/widgets/scrollpane.hpp"
+
 #include <climits>
+
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/field.hpp"
+#include "src/dialogxml/widgets/message.hpp"
+#include "src/dialogxml/widgets/pict.hpp"
+#include "src/dialogxml/widgets/stack.hpp"
+#include "src/gfx/render_shapes.hpp"
 
 cScrollPane::cScrollPane(cDialog& parent) : cContainer(CTRL_PANE, parent), scroll(parent) {
 	recalcRect();

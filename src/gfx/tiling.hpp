@@ -11,7 +11,7 @@
 
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
-#include "location.hpp"
+#include "src/location.hpp"
 
 struct tessel_ref_t {
 	int key;

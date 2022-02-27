@@ -1,36 +1,35 @@
 
+#include <array>
 #include <cstdio>
 #include <cstring>
 #include <queue>
 #include <map>
 
-#include "boe.global.hpp"
-
-#include "universe.hpp"
-#include "boe.party.hpp"
-#include "boe.town.hpp"
-#include "boe.text.hpp"
-#include "boe.infodlg.hpp"
-#include "boe.items.hpp"
-#include "boe.combat.hpp"
-#include "boe.monster.hpp"
-#include "boe.locutils.hpp"
-#include "boe.actions.hpp"
-#include "sounds.hpp"
-#include "boe.townspec.hpp"
-#include "boe.graphics.hpp"
-#include "boe.fileio.hpp"
-#include "boe.specials.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.dlgutil.hpp"
-#include "mathutil.hpp"
-#include "boe.main.hpp"
-#include "strdlog.hpp"
-#include "choicedlog.hpp"
-#include "fileio.hpp"
-#include <array>
-#include "spell.hpp"
-#include "boe.menus.hpp"
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/game/boe.actions.hpp"
+#include "src/game/boe.combat.hpp"
+#include "src/game/boe.dlgutil.hpp"
+#include "src/game/boe.fileio.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.infodlg.hpp"
+#include "src/game/boe.items.hpp"
+#include "src/game/boe.locutils.hpp"
+// #include "src/game/boe.main.hpp"
+#include "src/game/boe.menus.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.party.hpp"
+#include "src/game/boe.specials.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/game/boe.town.hpp"
+#include "src/game/boe.townspec.hpp"
+#include "src/sounds.hpp"
+#include "src/spell.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
 
 extern sf::RenderWindow mainPtr;
 extern eGameMode overall_mode;

@@ -10,9 +10,11 @@
 #define BoE_DIALOG_STACK_HPP
 
 #include <vector>
+#include <limits>
 #include <map>
 #include <string>
-#include "container.hpp"
+
+#include "src/dialogxml/widgets/container.hpp"
 
 /// A stack groups several controls that represent an array of data.
 /// Generally, each control would represent some aspect of a single element of the data.

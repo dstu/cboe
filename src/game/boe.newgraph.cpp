@@ -1,36 +1,35 @@
 
 #include <cstring>
 #include <cstdio>
+#include <memory>
 #include <vector>
 #include <iostream>
 
-#include "boe.global.hpp"
-
-#include "universe.hpp"
-#include "boe.graphics.hpp"
-#include "boe.graphutil.hpp"
-#include "boe.monster.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.fileio.hpp"
-#include "boe.locutils.hpp"
-#include "boe.text.hpp"
-#include "boe.consts.hpp"
-#include "sounds.hpp"
-#include "mathutil.hpp"
-#include "render_image.hpp"
-#include "render_shapes.hpp"
-#include "render_text.hpp"
-#include "tiling.hpp"
-#include "utility.hpp"
-#include "scrollbar.hpp"
-#include <memory>
-#include "location.hpp"
-#include "shop.hpp"
-#include "spell.hpp"
-#include "button.hpp"
-#include "res_image.hpp"
-#include "prefs.hpp"
-#include "enum_map.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/universe/universe.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.graphutil.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.fileio.hpp"
+#include "src/game/boe.locutils.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/game/boe.consts.hpp"
+#include "src/sounds.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/gfx/render_text.hpp"
+#include "src/gfx/tiling.hpp"
+#include "src/util/utility.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/location.hpp"
+#include "src/scenario/shop.hpp"
+#include "src/spell.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/tools/prefs.hpp"
+#include "src/tools/enum_map.hpp"
 
 short monsters_faces[190] = {
 	0,1,2,3,4,5,6,7,8,9,

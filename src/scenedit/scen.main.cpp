@@ -286,12 +286,12 @@ void redraw_everything() {
 	restore_cursor();
 }
 
-extern fs::path progDir;
+extern boost::filesystem::path progDir;
 void handle_menu_choice(eMenu item_hit) {
 	extern cUndoList undo_list;
 	bool isEdit = false, isHelp = false;
 	std::string helpDlog;
-	fs::path file_to_load;
+	boost::filesystem::path file_to_load;
 	cKey editKey = {true};
 	switch(item_hit) {
 		case eMenu::NONE: return;

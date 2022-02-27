@@ -20,9 +20,9 @@
 #include <set>
 #include <map>
 #include <boost/any.hpp>
-#include "dlogevt.hpp"
 
-#include "location.hpp"
+#include "src/dialogxml/dialogs/dlogevt.hpp"
+#include "src/location.hpp"
 
 // TinyXML forward declarations
 namespace ticpp {

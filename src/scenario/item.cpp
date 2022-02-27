@@ -6,22 +6,21 @@
  *
  */
 
-#include "item.hpp"
+#include "src/scenario/item.hpp"
 
-#include <string>
-#include <vector>
+#include <boost/lexical_cast.hpp>
 #include <map>
 #include <set>
 #include <sstream>
-#include <boost/lexical_cast.hpp>
+#include <string>
+#include <vector>
 
-#include "oldstructs.hpp"
-#include "utility.hpp"
-#include "fileio.hpp"
-
-#include "damage.hpp"
-#include "spell.hpp"
-#include "race.hpp"
+#include "src/damage.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/oldstructs.hpp"
+#include "src/race.hpp"
+#include "src/spell.hpp"
+#include "src/util/utility.hpp"
 
 static std::array<item_variety_t, 28> load_item_type_info() {
 	std::multiset<eItemType> equippable = {

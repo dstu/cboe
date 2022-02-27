@@ -2896,7 +2896,7 @@ bool edit_make_scen_2(short& out_w, short& out_h, short& town_l, short& town_m, 
 	return true;
 }
 
-extern fs::path progDir;
+extern boost::filesystem::path progDir;
 extern eScenMode overall_mode;
 bool build_scenario() {
 	short width, height, lg, med, sm;
@@ -2915,7 +2915,7 @@ bool build_scenario() {
 	scenario.contact_info[0] = author;
 	scenario.default_ground = grass ? 2 : 0;
 	
-	fs::path basePath = progDir/"Blades of Exile Base"/"bladbase.boes";
+	boost::filesystem::path basePath = progDir/"Blades of Exile Base"/"bladbase.boes";
 	if(!fs::exists(basePath)) {
 		basePath = basePath.parent_path()/"bladbase.exs";
 		if(!fs::exists(basePath)) {
@@ -3311,13 +3311,13 @@ static void set_dlg_custom_sheet(cDialog& me, size_t sheet) {
 	dynamic_cast<cPict&>(me["sheet"]).setPict(sheet, PIC_FULL);
 }
 
-extern fs::path tempDir;
+extern boost::filesystem::path tempDir;
 extern std::string scenario_temp_dir_name;
 
 void edit_custom_sheets() {
 	int max_pic = -1;
 	std::vector<int> all_pics;
-	fs::path pic_dir = tempDir/scenario_temp_dir_name/"graphics";
+	boost::filesystem::path pic_dir = tempDir/scenario_temp_dir_name/"graphics";
 	if(!scenario.scen_file.has_extension()) // It's an unpacked scenario
 		pic_dir = scenario.scen_file/"graphics";
 	if(!fs::exists(pic_dir)) fs::create_directories(pic_dir);
@@ -3375,7 +3375,7 @@ void edit_custom_sheets() {
 	pic_dlg["okay"].attachClickHandler(std::bind(&cDialog::toast, _1, true));
 	pic_dlg["copy"].attachClickHandler([&sheets,&cur,&all_pics,&pic_dir](cDialog&, std::string, eKeyMod) -> bool {
 		if(cur >= spec_scen_g.numSheets) {
-			fs::path fromPath = pic_dir/("sheet" + std::to_string(all_pics[cur]) + ".png");
+			boost::filesystem::path fromPath = pic_dir/("sheet" + std::to_string(all_pics[cur]) + ".png");
 			sf::Image img;
 			img.loadFromFile(fromPath.string().c_str());
 			set_clipboard_img(img);
@@ -3392,7 +3392,7 @@ void edit_custom_sheets() {
 		}
 		if(cur >= spec_scen_g.numSheets) {
 			std::string resName = "sheet" + std::to_string(all_pics[cur]);
-			fs::path toPath = pic_dir/(resName + ".png");
+			boost::filesystem::path toPath = pic_dir/(resName + ".png");
 			img->saveToFile(toPath.string().c_str());
 			ResMgr::graphics.free(resName);
 			return true;
@@ -3402,7 +3402,7 @@ void edit_custom_sheets() {
 		return true;
 	});
 	pic_dlg["open"].attachClickHandler([&sheets,&cur,&all_pics,&pic_dir](cDialog&, std::string, eKeyMod) -> bool {
-		fs::path fpath = nav_get_rsrc({"png", "bmp", "jpg", "jpeg", "gif", "psd"});
+		boost::filesystem::path fpath = nav_get_rsrc({"png", "bmp", "jpg", "jpeg", "gif", "psd"});
 		if(fpath.empty()) return true;
 		sf::Image img;
 		if(!img.loadFromFile(fpath.string().c_str())) {
@@ -3411,7 +3411,7 @@ void edit_custom_sheets() {
 		}
 		if(cur >= spec_scen_g.numSheets) {
 			std::string resName = "sheet" + std::to_string(all_pics[cur]);
-			fs::path toPath = pic_dir/(resName + ".png");
+			boost::filesystem::path toPath = pic_dir/(resName + ".png");
 			img.saveToFile(toPath.string().c_str());
 			ResMgr::graphics.free(resName);
 			return true;
@@ -3421,10 +3421,10 @@ void edit_custom_sheets() {
 		return true;
 	});
 	pic_dlg["save"].attachClickHandler([&sheets,&cur,&all_pics,&pic_dir](cDialog&, std::string, eKeyMod) -> bool {
-		fs::path fpath = nav_put_rsrc({"png", "bmp", "jpg", "jpeg"});
+		boost::filesystem::path fpath = nav_put_rsrc({"png", "bmp", "jpg", "jpeg"});
 		if(fpath.empty()) return true;
 		if(cur >= spec_scen_g.numSheets) {
-			fs::path fromPath = pic_dir/("sheet" + std::to_string(all_pics[cur]) + ".png");
+			boost::filesystem::path fromPath = pic_dir/("sheet" + std::to_string(all_pics[cur]) + ".png");
 			sf::Image img;
 			img.loadFromFile(fromPath.string().c_str());
 			img.saveToFile(fpath.string().c_str());
@@ -3438,7 +3438,7 @@ void edit_custom_sheets() {
 		pickNum->getControl("num").setTextToNum(spec_scen_g.numSheets);
 		if(pickNum.show() == "cancel") return true;
 		int newSheet = pickNum->getControl("num").getTextAsNum();
-		fs::path sheetPath = pic_dir/("sheet" + std::to_string(newSheet) + ".png");
+		boost::filesystem::path sheetPath = pic_dir/("sheet" + std::to_string(newSheet) + ".png");
 		if(newSheet == spec_scen_g.numSheets) {
 			spec_scen_g.sheets.emplace_back();
 			spec_scen_g.init_sheet(newSheet);
@@ -3474,8 +3474,8 @@ void edit_custom_sheets() {
 				spec_scen_g.sheets.erase(spec_scen_g.sheets.begin() + which_pic);
 				spec_scen_g.numSheets--;
 				for(; which_pic < spec_scen_g.numSheets; which_pic++) {
-					fs::path from = pic_dir/("sheet" + std::to_string(which_pic + 1) + ".png");
-					fs::path to = pic_dir/("sheet" + std::to_string(which_pic) + ".png");
+					boost::filesystem::path from = pic_dir/("sheet" + std::to_string(which_pic + 1) + ".png");
+					boost::filesystem::path to = pic_dir/("sheet" + std::to_string(which_pic) + ".png");
 					if(!fs::exists(from)) continue; // Just in case
 					fs::remove(to);
 					fs::rename(from, to);
@@ -3495,7 +3495,7 @@ void edit_custom_sheets() {
 				ResMgr::graphics.free("sheet" + std::to_string(which_pic));
 			}
 		}
-		fs::path fpath = pic_dir/("sheet" + std::to_string(which_pic) + ".png");
+		boost::filesystem::path fpath = pic_dir/("sheet" + std::to_string(which_pic) + ".png");
 		if(fs::exists(fpath)) fs::remove(fpath);
 		if(all_pics.size() == 1) {
 			me["left"].hide();
@@ -3550,9 +3550,9 @@ static bool edit_custom_sound_action(cDialog& me, std::string action, std::vecto
 	size_t a_len = action.length();
 	int which_snd = (curPage + 1) * 100 + (action[a_len-1] - '0');
 	action.erase(action.end() - 1);
-	fs::path sndpath = tempDir/scenario_temp_dir_name/"sounds";
+	boost::filesystem::path sndpath = tempDir/scenario_temp_dir_name/"sounds";
 	std::string sndbasenm = "SND" + std::to_string(which_snd);
-	fs::path sndfile = sndpath/(sndbasenm + ".wav");
+	boost::filesystem::path sndfile = sndpath/(sndbasenm + ".wav");
 	if(action != "open" && !fs::exists(sndfile)) {
 		beep();
 		return true;
@@ -3565,7 +3565,7 @@ static bool edit_custom_sound_action(cDialog& me, std::string action, std::vecto
 		fs::remove(sndfile);
 		me["name" + std::to_string(which_snd % 10)].setText("");
 	} else if(action == "open") {
-		fs::path fpath = nav_get_rsrc({"wav"});
+		boost::filesystem::path fpath = nav_get_rsrc({"wav"});
 		if(fpath.empty()) return true;
 		sf::SoundBuffer snd;
 		if(!snd.loadFromFile(fpath.string().c_str())) {
@@ -3581,7 +3581,7 @@ static bool edit_custom_sound_action(cDialog& me, std::string action, std::vecto
 			me["right"].show();
 		}
 	} else if(action == "save") {
-		fs::path fpath = nav_put_rsrc({"wav"});
+		boost::filesystem::path fpath = nav_put_rsrc({"wav"});
 		if(fpath.empty()) return true;
 		fs::copy_file(sndfile, fpath, fs::copy_option::overwrite_if_exists);
 	}
@@ -3626,7 +3626,7 @@ void edit_custom_sounds() {
 	snd_dlg["okay"].attachClickHandler(std::bind(&cDialog::toast, &snd_dlg, true));
 	
 	int max_snd = 99;
-	fs::path snd_dir = tempDir/scenario_temp_dir_name/"sounds";
+	boost::filesystem::path snd_dir = tempDir/scenario_temp_dir_name/"sounds";
 	if(!fs::exists(snd_dir)) fs::create_directories(snd_dir);
 	for(fs::directory_iterator iter(snd_dir); iter != fs::directory_iterator(); iter++) {
 		std::string fname = iter->path().filename().string().c_str();

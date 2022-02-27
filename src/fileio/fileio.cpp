@@ -14,23 +14,23 @@
 #include <cstdlib>
 #include <boost/filesystem/operations.hpp>
 
-#include "res_image.hpp"
-#include "res_cursor.hpp"
-#include "res_font.hpp"
-#include "res_strings.hpp"
-#include "res_sound.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/fileio/resmgr/res_cursor.hpp"
+#include "src/fileio/resmgr/res_font.hpp"
+#include "src/fileio/resmgr/res_strings.hpp"
+#include "src/fileio/resmgr/res_sound.hpp"
 
 bool mac_is_intel;
-fs::path progDir, tempDir, scenDir;
+boost::filesystem::path progDir, tempDir, scenDir;
 
 // This is here to avoid unnecessarily duplicating it in platform-specific files.
 cursor_type Cursor::current = sword_curs;
 
 std::filebuf logfile;
 
-static fs::path get_posix_tempdir();
+static boost::filesystem::path get_posix_tempdir();
 
-static void add_resmgr_paths(const fs::path& basePath) {
+static void add_resmgr_paths(const boost::filesystem::path& basePath) {
 	ResMgr::graphics.pushPath(basePath/"graphics");
 	ResMgr::cursors.pushPath(basePath/"cursors");
 	ResMgr::fonts.pushPath(basePath/"fonts");
@@ -39,7 +39,7 @@ static void add_resmgr_paths(const fs::path& basePath) {
 }
 
 void init_directories(const char* exec_path) {
-	progDir = fs::canonical(exec_path);
+	progDir = boost::filesystem::canonical(exec_path);
 #ifdef __APPLE__
 	// Need to back up out of the application package
 	// We're pointing at .app/Contents/MacOS/exec_name, so back out three steps
@@ -61,7 +61,7 @@ void init_directories(const char* exec_path) {
 	tempDir = get_posix_tempdir();
 #endif
 	scenDir = tempDir/"Scenarios";
-	fs::create_directories(scenDir);
+	boost::filesystem::create_directories(scenDir);
 	add_resmgr_paths(tempDir/"data");
 	tempDir /= "Temporary Files";
 	
@@ -81,15 +81,15 @@ void init_directories(const char* exec_path) {
 	sf::err().rdbuf(std::cerr.rdbuf());
 #endif
 	// Now print all the paths
-	std::cout << "Working directory: " << fs::current_path() << std::endl;
+	std::cout << "Working directory: " << boost::filesystem::current_path() << std::endl;
 	std::cout << "Program directory: " << progDir << std::endl;
 	std::cout << "Scenario directory: " << scenDir << std::endl;
 	std::cout << "Temporary directory: " << tempDir << std::endl;
 }
 
-fs::path get_posix_tempdir() {
+boost::filesystem::path get_posix_tempdir() {
 
-	fs::path tempdir;
+	boost::filesystem::path tempdir;
 
 	const char* xdg_config_dir = std::getenv("XDG_CONFIG_HOME");
 

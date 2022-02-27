@@ -6,14 +6,16 @@
 //
 //
 
-#include "creature.hpp"
+#include "src/universe/creature.hpp"
 
 #include <iostream>
 #include <sstream>
-#include "oldstructs.hpp"
-#include "mathutil.hpp"
-#include "pc.hpp"
-#include "spell.hpp"
+
+#include "src/global.hpp"
+#include "src/oldstructs.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/universe/pc.hpp"
+#include "src/spell.hpp"
 
 const short cCreature::charm_odds[21] = {90,90,85,80,78, 75,73,60,40,30, 20,10,4,1,0, 0,0,0,0,0, 0};
 

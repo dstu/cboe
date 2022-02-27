@@ -15,9 +15,9 @@
 #include <unordered_set>
 #include <unordered_map>
 
-#include "res_sound.hpp"
-#include "mathutil.hpp"
-#include "prefs.hpp"
+#include "src/fileio/resmgr/res_sound.hpp"
+#include "src/tools/prefs.hpp"
+#include "src/util/mathutil.hpp"
 
 struct SoundChannel {
 	std::shared_ptr<sf::Sound> player;

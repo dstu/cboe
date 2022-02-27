@@ -12,7 +12,7 @@
 #include <iostream>
 #include <boost/math/constants/constants.hpp>
 #include <SFML/OpenGL.hpp>
-#include "render_image.hpp"
+#include "src/gfx/render_image.hpp"
 
 using boost::math::constants::pi;
 using pt_idx_t = decltype(((sf::Shape*)nullptr)->getPointCount());

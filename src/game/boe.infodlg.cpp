@@ -1,33 +1,31 @@
 
+#include <boost/lexical_cast.hpp>
 #include <cstdio>
+#include <cstring>
 #include <map>
 
-#include "boe.global.hpp"
-
-#include "universe.hpp"
-
-#include "boe.graphics.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.items.hpp"
-#include <cstring>
-#include "boe.monster.hpp"
-#include "boe.party.hpp"
-#include "boe.locutils.hpp"
-#include "boe.text.hpp"
-#include "sounds.hpp"
-#include "boe.infodlg.hpp"
-#include "boe.fileio.hpp"
-#include "boe.main.hpp"
-#include "mathutil.hpp"
-#include "strdlog.hpp"
-#include "button.hpp"
-#include "fileio.hpp"
-#include <boost/lexical_cast.hpp>
-#include "prefs.hpp"
-#include "spell.hpp"
-#include "view_dialogs.hpp"
-#include "cursors.hpp"
-#include "utility.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/fileio/fileio.hpp"
+// #include "src/game/boe.fileio.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.infodlg.hpp"
+#include "src/game/boe.items.hpp"
+#include "src/game/boe.locutils.hpp"
+#include "src/game/boe.main.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.party.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/sounds.hpp"
+#include "src/spell.hpp"
+#include "src/tools/cursors.hpp"
+#include "src/tools/prefs.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/util/utility.hpp"
+#include "src/view_dialogs.hpp"
 
 short mage_spell_pos = 0,priest_spell_pos = 0,skill_pos = 0;
 

@@ -2,8 +2,8 @@
 #ifndef BOE_GAME_DLGUTIL_H
 
 #include <string>
-#include "dialog.hpp"
-#include "shop.hpp"
+
+#include "src/scenario/shop.hpp"
 
 void start_shop_mode(short which,short cost_adj,std::string store_name);
 void end_shop_mode();

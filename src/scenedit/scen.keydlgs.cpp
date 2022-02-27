@@ -163,7 +163,7 @@ short choose_background(short cur_choice, cDialog* parent) {
 // TODO: I have two functions that do this. (The other one is pick_picture.)
 extern std::string scenario_temp_dir_name;
 pic_num_t choose_graphic(short cur_choice,ePicType g_type,cDialog* parent) {
-	extern fs::path tempDir;
+	extern boost::filesystem::path tempDir;
 	int i = 0;
 	std::vector<pic_num_t> all_pics;
 	size_t total_pics = 0;

@@ -6,10 +6,12 @@
  *
  */
 
-#include "message.hpp"
-#include "mathutil.hpp"
-#include "dialog.hpp"
+#include "src/dialogxml/widgets/message.hpp"
+
 #include <numeric>
+
+#include "src/util/mathutil.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
 
 extern sf::Texture bg_gworld;
 

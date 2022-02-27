@@ -2,9 +2,9 @@
 #ifndef BOE_GAME_GRAPHUTIL_H
 #define BOE_GAME_GRAPHUTIL_H
 
-#include "pict.hpp"
-#include "location.hpp"
-#include "gfxsheets.hpp"
+#include "src/dialogxml/widgets/pict.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/location.hpp"
 
 void draw_one_terrain_spot (short i,short j,short terrain_to_draw);
 void draw_monsters();

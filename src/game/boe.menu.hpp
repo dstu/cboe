@@ -6,7 +6,7 @@
 // NOTE: this also includes SFML for us
 #include <TGUI/TGUI.hpp>
 #include <vector>
-#include "universe.hpp"
+#include "src/universe/universe.hpp"
 #include "boe.consts.hpp"
 #include "spell.hpp"
 #include "skills_traits.hpp"

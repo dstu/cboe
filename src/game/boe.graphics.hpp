@@ -3,7 +3,7 @@
 #define BOE_GAME_GRAPHICS_H
 
 #include <SFML/Graphics.hpp>
-#include "location.hpp"
+#include "src/location.hpp"
 
 enum {
 	REFRESH_NONE = 0,

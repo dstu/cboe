@@ -14,9 +14,9 @@
 #include <sstream>
 #include <set>
 
-#include "oldstructs.hpp"
-#include "gfxsheets.hpp" // for NO_PIC
-#include "damage.hpp"
+#include "src/oldstructs.hpp"
+#include "src/gfx/gfxsheets.hpp" // for NO_PIC
+#include "src/damage.hpp"
 
 void cTerrain::import_legacy(legacy::terrain_type_type& old){
 	static const std::set<int> archetypes = {

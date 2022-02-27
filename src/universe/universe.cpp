@@ -6,7 +6,7 @@
  *
  */
 
-#include "universe.hpp"
+#include "src/universe/universe.hpp"
 
 #include <string>
 #include <vector>
@@ -14,11 +14,11 @@
 #include <sstream>
 #include <stack>
 
-#include "town.hpp"
-#include "oldstructs.hpp"
-#include "mathutil.hpp"
-#include "fileio.hpp"
-#include "gfxsheets.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/oldstructs.hpp"
+#include "src/scenario/town.hpp"
+#include "src/util/mathutil.hpp"
 
 void cCurOut::import_legacy(legacy::out_info_type& old){
 	for(int i = 0; i < 96; i++)

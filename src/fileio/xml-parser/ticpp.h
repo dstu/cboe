@@ -52,13 +52,14 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #ifndef TICPP_INCLUDED
 #define TICPP_INCLUDED
 
-#include "ticppapi.h"
-#include "tinyxml.h"
 #include <sstream>
 #include <vector>
 #include <memory>
 #include <exception>
 #include <typeinfo>
+
+#include "src/fileio/xml-parser/ticppapi.h"
+#include "src/fileio/xml-parser/tinyxml.h"
 
 /**
 @subpage ticpp is a TinyXML wrapper that uses a lot more C++ ideals.

@@ -1,25 +1,25 @@
 
+#include <boost/filesystem.hpp>
 #include <iostream>
 #include <fstream>
 
-#include "boe.global.hpp"
-#include "universe.hpp"
-#include "boe.fileio.hpp"
-#include "boe.text.hpp"
-#include "boe.town.hpp"
-#include "boe.items.hpp"
-#include "boe.graphics.hpp"
-#include "boe.locutils.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.dlgutil.hpp"
-#include "boe.infodlg.hpp"
-#include "boe.graphutil.hpp"
-#include "sounds.hpp"
-#include "mathutil.hpp"
-#include "strdlog.hpp"
-#include "fileio.hpp"
-#include "cursors.hpp"
-#include <boost/filesystem.hpp>
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/game/boe.dlgutil.hpp"
+#include "src/game/boe.fileio.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.graphutil.hpp"
+#include "src/game/boe.infodlg.hpp"
+#include "src/game/boe.items.hpp"
+#include "src/game/boe.locutils.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/game/boe.town.hpp"
+#include "src/sounds.hpp"
+#include "src/tools/cursors.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
 
 #define	DONE_BUTTON_ITEM	1
 
@@ -38,8 +38,8 @@ extern bool mac_is_intel;
 
 bool loaded_yet = false, got_nagged = false;
 std::string last_load_file = "Blades of Exile Save";
-fs::path file_to_load;
-fs::path store_file_reply;
+boost::filesystem::path file_to_load;
+boost::filesystem::path store_file_reply;
 short jl;
 
 extern bool cur_scen_is_mac;
@@ -51,7 +51,7 @@ void add_outdoor_maps();
 short specials_res_id,data_dump_file_id;
 char start_name[256];
 short start_volume,data_volume;
-extern fs::path progDir;
+extern boost::filesystem::path progDir;
 
 cCustomGraphics spec_scen_g;
 
@@ -318,7 +318,7 @@ void add_outdoor_maps() {
 }
 
 void start_data_dump() {
-	fs::path path = progDir/"Data Dump.txt";
+	boost::filesystem::path path = progDir/"Data Dump.txt";
 	std::ofstream fout(path.string().c_str());
 	
 	fout << "Begin data dump:\n";
@@ -340,7 +340,7 @@ void start_data_dump() {
 	}
 }
 
-extern fs::path scenDir;
+extern boost::filesystem::path scenDir;
 std::vector<scen_header_type> build_scen_headers() {
 	fs::create_directories(scenDir);
 	std::cout << progDir << '\n' << scenDir << std::endl;
@@ -375,7 +375,7 @@ std::vector<scen_header_type> build_scen_headers() {
 }
 
 // This is only called at startup, when bringing headers of active scenarios.
-bool load_scenario_header(fs::path file,scen_header_type& scen_head){
+bool load_scenario_header(boost::filesystem::path file,scen_header_type& scen_head){
 	bool file_ok = false;
 	
 	std::string fname = file.filename().string();

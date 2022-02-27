@@ -13,11 +13,11 @@
 #include <map>
 #include <sstream>
 
-#include "scenario.hpp"
-#include "oldstructs.hpp"
-#include "mathutil.hpp"
-#include "fileio.hpp"
-#include "utility.hpp"
+// #include "src/scenario/scenario.hpp"
+#include "src/oldstructs.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/util/utility.hpp"
 
 void cTown::import_legacy(legacy::town_record_type& old){
 	town_chop_time = old.town_chop_time;

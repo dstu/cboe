@@ -16,8 +16,9 @@
 
 #include <string>
 #include <boost/optional.hpp>
-#include "control.hpp"
-#include "render_text.hpp"
+
+#include "src/dialogxml/widgets/control.hpp"
+#include "src/gfx/render_text.hpp"
 
 /// A simple static text message.
 /// This class can also create a frame for grouping controls or a clickable area.

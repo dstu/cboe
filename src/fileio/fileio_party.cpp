@@ -21,14 +21,14 @@
 #include "tarball.hpp"
 
 extern bool mac_is_intel;
-extern fs::path progDir, tempDir;
+extern boost::filesystem::path progDir, tempDir;
 extern cCustomGraphics spec_scen_g;
 
 // Load saved games
-static bool load_party_v1(fs::path file_to_load, cUniverse& univ, bool town_restore, bool in_scen, bool maps_there, bool must_port);
-static bool load_party_v2(fs::path file_to_load, cUniverse& univ);
+static bool load_party_v1(boost::filesystem::path file_to_load, cUniverse& univ, bool town_restore, bool in_scen, bool maps_there, bool must_port);
+static bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& univ);
 
-bool load_party(fs::path file_to_load, cUniverse& univ){
+bool load_party(boost::filesystem::path file_to_load, cUniverse& univ){
 	bool town_restore = false;
 	bool maps_there = false;
 	bool in_scen = false;
@@ -131,7 +131,7 @@ bool load_party(fs::path file_to_load, cUniverse& univ){
 	return true;
 }
 
-bool load_party_v1(fs::path file_to_load, cUniverse& real_univ, bool town_restore, bool in_scen, bool maps_there, bool must_port){
+bool load_party_v1(boost::filesystem::path file_to_load, cUniverse& real_univ, bool town_restore, bool in_scen, bool maps_there, bool must_port){
 	std::ifstream fin(file_to_load.string().c_str(), std::ios_base::binary);
 	fin.seekg(3*sizeof(short),std::ios_base::beg); // skip the header, which is 6 bytes in the old format
 	
@@ -222,7 +222,7 @@ bool load_party_v1(fs::path file_to_load, cUniverse& real_univ, bool town_restor
 	cUniverse univ;
 	
 	if(in_scen){
-		fs::path path = locate_scenario(store_party.scen_name);
+		boost::filesystem::path path = locate_scenario(store_party.scen_name);
 		if(path.empty()) {
 			std::ostringstream msg;
 			msg << "The scenario that this party was in (\"" << store_party.scen_name;
@@ -271,8 +271,8 @@ bool load_party_v1(fs::path file_to_load, cUniverse& real_univ, bool town_restor
 	return true;
 }
 
-extern fs::path scenDir;
-bool load_party_v2(fs::path file_to_load, cUniverse& real_univ){
+extern boost::filesystem::path scenDir;
+bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 	igzstream zin(file_to_load.string().c_str());
 	tarball partyIn;
 	partyIn.readFrom(zin);
@@ -332,7 +332,7 @@ bool load_party_v2(fs::path file_to_load, cUniverse& real_univ){
 	}
 	
 	if(!univ.party.scen_name.empty()) {
-		fs::path path = locate_scenario(univ.party.scen_name);
+		boost::filesystem::path path = locate_scenario(univ.party.scen_name);
 		if(path.empty()) {
 			std::ostringstream msg;
 			msg << "The scenario that this party was in (\"" << univ.party.scen_name;
@@ -403,7 +403,7 @@ bool load_party_v2(fs::path file_to_load, cUniverse& real_univ){
 }
 
 //mode;  // 0 - normal  1 - save as
-bool save_party(fs::path dest_file, const cUniverse& univ) {
+bool save_party(boost::filesystem::path dest_file, const cUniverse& univ) {
 	// Make sure it has the proper file extension
 	std::string fname = dest_file.filename().string();
 	size_t dot = fname.find_last_of('.');
@@ -472,7 +472,7 @@ bool save_party(fs::path dest_file, const cUniverse& univ) {
 	if(spec_scen_g.party_sheet) {
 		sf::Image party_pics = spec_scen_g.party_sheet->copyToImage();
 		party_pics.flipVertically();
-		fs::path tempPath = tempDir/"temp.png";
+		boost::filesystem::path tempPath = tempDir/"temp.png";
 		party_pics.saveToFile(tempPath.string());
 		std::ostream& pic_out = partyOut.newFile("save/export.png");
 		std::ifstream fin(tempPath.string().c_str(), std::ios::binary);

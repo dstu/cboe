@@ -13,7 +13,7 @@
 #include <map>
 #include <sstream>
 
-#include "oldstructs.hpp"
+#include "src/oldstructs.hpp"
 
 void cPopulation::import_legacy(legacy::creature_list_type old){
 	dudes.resize(60);

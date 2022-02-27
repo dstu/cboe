@@ -1,0 +1,172 @@
+cc_library(
+    name = "area",
+    hdrs = ["area.hpp"],
+    deps = [
+        "//src/tools:vector2d",
+    ],
+    visibility = ["//visibility:public"],
+)    
+
+cc_library(
+    name = "item",
+    hdrs = [
+        "item.hpp",
+        "item_abilities.hpp",
+        "item_variety.hpp",
+    ],
+    srcs = ["item.cpp"],
+    deps = [
+        "//src/fileio",
+        "//src/fileio/resmgr:res_image",
+        "//src/util",
+        "//src:alchemy",
+        "//src:damage",
+        "//src:location",
+        "//src:oldstructs",
+        "//src:race",
+        "//src:skills_traits",
+        "//src:spell",
+        "//src:types",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+
+cc_library(
+    name = "monster",
+    hdrs = [
+        "monster_abilities.hpp",
+        "monster.hpp",
+    ],
+    srcs = ["monster.cpp"],
+    deps = [
+        "//src:damage",
+        "//src:fields",
+        "//src:spell",
+        "//src:race",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "outdoors",
+    hdrs = ["outdoors.hpp"],
+    srcs = ["outdoors.cpp"],
+    deps = [
+        ":area",
+        ":monster",
+        ":special",
+        "//src:location",
+        "//src:oldstructs",
+        "//src/dialogxml/dialogs:strdlog",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "special",
+    hdrs = ["special.hpp"],
+    srcs = ["special.cpp"],
+    deps = [
+        "//src:location",
+        "//src/dialogxml/dialogs:strdlog",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "quest",
+    hdrs = ["quest.hpp"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "scenario",
+    hdrs = ["scenario.hpp"],
+    srcs = ["scenario.cpp"],
+    deps = [
+        ":monster",
+        ":item",
+        ":outdoors",
+        ":quest",
+        ":shop",
+        ":special",
+        ":terrain",
+        ":town",
+        ":vehicle",
+        "//src:oldstructs",
+        "//src/tools:vector2d",
+        "//src/util:mathutil",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shop",
+    hdrs = ["shop.hpp"],
+    srcs = ["shop.cpp"],
+    deps = [
+        "//src/dialogxml/widgets:pictypes",
+        "//src/scenario:item",
+        "//src/util",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "talking",
+    hdrs = ["talking.hpp"],
+    srcs = ["talking.cpp"],
+    deps = [
+        ":shop",
+        "//src:oldstructs",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "terrain",
+    hdrs = [
+        "terrain.hpp",
+        "terrain_abilities.hpp",
+    ],
+    srcs = ["terrain.cpp"],
+    deps = [
+        "//src:damage",
+        "//src:location",
+        "//src:oldstructs",
+        "//src:types",
+        "//src/dialogxml/widgets:pictypes",
+        "//src/gfx:gfxsheets",
+    ],
+    visibility = ["//visibility:public"],
+)
+    
+
+cc_library(
+    name = "town",
+    hdrs = ["town.hpp"],
+    srcs = ["town.cpp"],
+    deps = [
+        ":area",
+        ":monster",
+        ":special",
+        ":shop",
+        ":talking",
+        "//src/fileio",
+        "//src:location",
+        "//src/util",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "vehicle",
+    hdrs = ["vehicle.hpp"],
+    srcs = ["vehicle.cpp"],
+    deps = [
+        "//src:location",
+        "//src:oldstructs",
+    ],
+    visibility = ["//visibility:public"],
+)

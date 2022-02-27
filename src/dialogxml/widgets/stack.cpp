@@ -6,14 +6,16 @@
 //
 //
 
-#include "stack.hpp"
-#include "field.hpp"
-#include "button.hpp"
-#include "dialog.hpp"
-#include "message.hpp"
-#include "pict.hpp"
-#include "scrollbar.hpp"
+#include "src/dialogxml/widgets/stack.hpp"
+
 #include <climits>
+
+#include "src/dialogxml/widgets/field.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/message.hpp"
+#include "src/dialogxml/widgets/pict.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
 
 bool cStack::hasChild(std::string id) {
 	return controls.find(id) != controls.end();

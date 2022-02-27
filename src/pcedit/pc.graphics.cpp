@@ -21,7 +21,7 @@ extern cUniverse univ;
 extern sf::RenderWindow mainPtr;
 extern sf::View mainView;
 extern bool party_in_scen,scen_items_loaded;
-extern fs::path file_in_mem;
+extern boost::filesystem::path file_in_mem;
 
 extern short store_flags[3];
 extern short current_active_pc;

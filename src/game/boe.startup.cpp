@@ -1,7 +1,7 @@
 
 #include "boe.global.hpp"
 
-#include "universe.hpp"
+#include "src/universe/universe.hpp"
 #include "boe.newgraph.hpp"
 #include "boe.graphics.hpp"
 #include "boe.fileio.hpp"

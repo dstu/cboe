@@ -1,30 +1,28 @@
 
+#include <array>
+#include <boost/lexical_cast.hpp>
 #include <cstdio>
 #include <cstring>
 
-#include "boe.global.hpp"
-
-#include "universe.hpp"
-
-#include "boe.graphics.hpp"
-#include "boe.text.hpp"
-#include "boe.items.hpp"
-#include "boe.specials.hpp"
-#include "boe.party.hpp"
-#include "boe.locutils.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.infodlg.hpp"
-#include "sounds.hpp"
-#include "boe.monster.hpp"
-#include "boe.main.hpp"
-#include "mathutil.hpp"
-#include "strdlog.hpp"
-#include "3choice.hpp"
-#include "message.hpp"
-#include <array>
-#include <boost/lexical_cast.hpp>
-#include "winutil.hpp"
-#include "cursors.hpp"
+#include "src/dialogxl/widgets/message.hpp"
+#include "src/dialogxml/dialogs/3choice.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.infodlg.hpp"
+#include "src/game/boe.items.hpp"
+#include "src/game/boe.locutils.hpp"
+#include "src/game/boe.main.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.party.hpp"
+#include "src/game/boe.specials.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/sounds.hpp"
+#include "src/tools/cursors.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/universe/universe.hpp"
+#include "src/utilmathutil.hpp"
 
 extern short which_combat_type;
 extern eGameMode overall_mode;

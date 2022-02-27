@@ -9,8 +9,8 @@
 #ifndef BOE_RES_CURSOR_HPP
 #define BOE_RES_CURSOR_HPP
 
-#include "resmgr.hpp"
-#include "cursors.hpp"
+#include "src/fileio/resmgr/resmgr.hpp"
+#include "src/tools/cursors.hpp"
 
 using CursorRsrc = ResMgr::cPointer<Cursor>;
 

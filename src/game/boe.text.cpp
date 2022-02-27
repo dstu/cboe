@@ -1,3 +1,4 @@
+#include "src/game/boe.text.hpp"
 
 const int LINES_IN_TEXT_WIN = 11;
 const int TEXT_BUF_LEN = 70;
@@ -5,23 +6,22 @@ const int TEXT_BUF_LEN = 70;
 #include <sstream>
 #include <list>
 
-#include "boe.global.hpp"
-#include "boe.graphutil.hpp"
-#include "universe.hpp"
-#include "boe.text.hpp"
-#include "boe.locutils.hpp"
-#include "boe.infodlg.hpp"
-#include "mathutil.hpp"
-#include "render_text.hpp"
-#include "render_image.hpp"
-#include "render_shapes.hpp"
-#include "tiling.hpp"
-#include "utility.hpp"
-#include "scrollbar.hpp"
-#include "res_image.hpp"
-#include "res_font.hpp"
-#include "spell.hpp"
-#include "enum_map.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphutil.hpp"
+#include "src/game/boe.infodlg.hpp"
+// #include "src/game/boe.locutils.hpp"
+#include "src/fileio/resmgr/res_font.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/gfx/render_text.hpp"
+#include "src/spell.hpp"
+#include "src/tools/enum_map.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/gfx/tiling.hpp"
+#include "src/util/utility.hpp"
 
 typedef struct {
 	char line[50];

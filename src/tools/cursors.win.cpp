@@ -46,7 +46,7 @@ static void GetMaskBitmaps(const sf::Image& srcImage, HBITMAP& hAndMaskBitmap, H
 	ReleaseDC(NULL, hDC);
 }
 
-Cursor::Cursor(fs::path imgPath, float hotSpotX, float hotSpotY) {
+Cursor::Cursor(boost::filesystem::path imgPath, float hotSpotX, float hotSpotY) {
 	sf::Image gif;
 	if(!gif.loadFromFile(imgPath.string())) {
 		std::string error = "Error loading cursor from " + imgPath.string();

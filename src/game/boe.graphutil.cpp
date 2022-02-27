@@ -4,22 +4,21 @@
 #include <cstdio>
 #include <queue>
 
-#include "boe.global.hpp"
-
-#include "universe.hpp"
-#include "boe.graphutil.hpp"
-#include "boe.text.hpp"
-#include "boe.locutils.hpp"
-#include "boe.graphics.hpp"
-#include "boe.infodlg.hpp"
-#include "boe.monster.hpp"
-#include "boe.specials.hpp"
-#include "sounds.hpp"
-#include "render_image.hpp"
-#include "render_shapes.hpp"
-#include "mathutil.hpp"
-#include "strdlog.hpp"
-#include "res_image.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.graphutil.hpp"
+#include "src/game/boe.infodlg.hpp"
+// #include "src/game/boe.locutils.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.specials.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/sounds.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
 
 extern sf::RenderWindow mainPtr;
 extern rectangle	windRect;

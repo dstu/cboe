@@ -4,7 +4,7 @@
 #include <sstream>
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "boeresource.h"
-#include "universe.hpp"
+#include "src/universe/universe.hpp"
 #include "boe.party.hpp"
 #include "boe.infodlg.hpp"
 #include "boe.consts.hpp"

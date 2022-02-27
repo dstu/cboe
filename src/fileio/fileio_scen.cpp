@@ -33,16 +33,16 @@
 
 bool cur_scen_is_mac = true;
 extern cCustomGraphics spec_scen_g;
-extern fs::path tempDir, scenDir, progDir;
+extern boost::filesystem::path tempDir, scenDir, progDir;
 
-void load_spec_graphics_v1(fs::path scen_file);
+void load_spec_graphics_v1(boost::filesystem::path scen_file);
 void load_spec_graphics_v2(int num_sheets);
 // Load old scenarios (town talk is handled by the town loading function)
-static bool load_scenario_v1(fs::path file_to_load, cScenario& scenario, bool only_header);
-static bool load_outdoors_v1(fs::path scen_file, location which_out,cOutdoors& the_out, legacy::scenario_data_type& scenario);
-static bool load_town_v1(fs::path scen_file,short which_town,cTown& the_town,legacy::scenario_data_type& scenario,std::vector<shop_info_t>& shops);
+static bool load_scenario_v1(boost::filesystem::path file_to_load, cScenario& scenario, bool only_header);
+static bool load_outdoors_v1(boost::filesystem::path scen_file, location which_out,cOutdoors& the_out, legacy::scenario_data_type& scenario);
+static bool load_town_v1(boost::filesystem::path scen_file,short which_town,cTown& the_town,legacy::scenario_data_type& scenario,std::vector<shop_info_t>& shops);
 // Load new scenarios
-static bool load_scenario_v2(fs::path file_to_load, cScenario& scenario, bool only_header);
+static bool load_scenario_v2(boost::filesystem::path file_to_load, cScenario& scenario, bool only_header);
 // Some of these are non-static so that the test cases can access them.
 ticpp::Document xmlDocFromStream(std::istream& stream, std::string name);
 void readScenarioFromXml(ticpp::Document&& data, cScenario& scenario);
@@ -61,14 +61,14 @@ static std::string get_file_error() {
 	return sout.str();
 }
 
-fs::path locate_scenario(std::string scen_name) {
+boost::filesystem::path locate_scenario(std::string scen_name) {
 	fs::create_directories(scenDir);
 	std::transform(scen_name.begin(), scen_name.end(), scen_name.begin(), tolower);
 	size_t dot = scen_name.find_first_of('.');
 	std::string base_name = scen_name.substr(0,dot);
 	if(base_name == "valleydy" || base_name == "stealth" || base_name == "zakhazi"/* || base_name == "busywork" */)
 		return progDir/"Blades of Exile Scenarios"/scen_name;
-	fs::path scenPath;
+	boost::filesystem::path scenPath;
 	for(fs::recursive_directory_iterator iter(scenDir); iter != fs::recursive_directory_iterator(); iter++) {
 		fs::file_status stat = iter->status();
 		std::string fname = iter->path().filename().string().c_str();
@@ -99,16 +99,16 @@ fs::path locate_scenario(std::string scen_name) {
 	return scenPath;
 }
 
-bool load_scenario(fs::path file_to_load, cScenario& scenario, bool only_header) {
+bool load_scenario(boost::filesystem::path file_to_load, cScenario& scenario, bool only_header) {
 	// Before loading a scenario, we may need to pop scenario resource paths.
-	fs::path graphics_path = ResMgr::graphics.popPath();
+	boost::filesystem::path graphics_path = ResMgr::graphics.popPath();
 	for(auto p : graphics_path) {
 		if(p.string() == "data") {
 			ResMgr::graphics.pushPath(graphics_path);
 			break;
 		}
 	}
-	fs::path sounds_path = ResMgr::sounds.popPath();
+	boost::filesystem::path sounds_path = ResMgr::sounds.popPath();
 	for(auto p : sounds_path) {
 		if(p.string() == "data") {
 			ResMgr::sounds.pushPath(sounds_path);
@@ -156,7 +156,7 @@ template<typename Container> static void port_shop_spec_node(cSpecial& spec, std
 }
 
 static const std::string err_prefix = "Error loading Blades of Exile Scenario: ";
-bool load_scenario_v1(fs::path file_to_load, cScenario& scenario, bool only_header){
+bool load_scenario_v1(boost::filesystem::path file_to_load, cScenario& scenario, bool only_header){
 	bool file_ok = false;
 	long len;
 	char temp_str[256];
@@ -2056,7 +2056,7 @@ static void readSpecialNodesFromStream(std::istream& stream, std::vector<cSpecia
 }
 
 extern std::string scenario_temp_dir_name;
-bool load_scenario_v2(fs::path file_to_load, cScenario& scenario, bool only_header) {
+bool load_scenario_v2(boost::filesystem::path file_to_load, cScenario& scenario, bool only_header) {
 	// First determine whether we're dealing with a packed or unpacked scenario.
 	bool is_packed = true;
 	tarball pack;
@@ -2189,7 +2189,7 @@ bool load_scenario_v2(fs::path file_to_load, cScenario& scenario, bool only_head
 				if(!std::all_of(fname.begin() + 19, fname.begin() + dot, isdigit)) continue;
 			} else continue;
 			fname = fname.substr(9);
-			fs::path path = tempDir/scenario_temp_dir_name/fname;
+			boost::filesystem::path path = tempDir/scenario_temp_dir_name/fname;
 			fs::create_directories(path.parent_path());
 			std::istream& f = file.contents;
 			std::ofstream fout(path.string().c_str(), std::ios::binary);
@@ -2234,7 +2234,7 @@ static long get_town_offset(short which_town, legacy::scenario_data_type& scenar
 	return len_to_jump;
 }
 
-bool load_town_v1(fs::path scen_file, short which_town, cTown& the_town, legacy::scenario_data_type& scenario, std::vector<shop_info_t>& shops) {
+bool load_town_v1(boost::filesystem::path scen_file, short which_town, cTown& the_town, legacy::scenario_data_type& scenario, std::vector<shop_info_t>& shops) {
 	long len,len_to_jump = 0;
 	char temp_str[256];
 	legacy::town_record_type store_town;
@@ -2371,7 +2371,7 @@ static long get_outdoors_offset(location& which_out, legacy::scenario_data_type&
 }
 
 //mode -> 0 - primary load  1 - add to top  2 - right  3 - bottom  4 - left
-bool load_outdoors_v1(fs::path scen_file, location which_out,cOutdoors& the_out, legacy::scenario_data_type& scenario){
+bool load_outdoors_v1(boost::filesystem::path scen_file, location which_out,cOutdoors& the_out, legacy::scenario_data_type& scenario){
 	long len,len_to_jump;
 	char temp_str[256];
 	legacy::outdoor_record_type store_out;
@@ -2423,14 +2423,14 @@ bool load_outdoors_v1(fs::path scen_file, location which_out,cOutdoors& the_out,
 }
 
 #ifdef __APPLE__
-bool tryLoadPictFromResourceFile(fs::path& gpath, sf::Image& graphics_store);
+bool tryLoadPictFromResourceFile(boost::filesystem::path& gpath, sf::Image& graphics_store);
 #endif
 
-void load_spec_graphics_v1(fs::path scen_file) {
+void load_spec_graphics_v1(boost::filesystem::path scen_file) {
 	static const char*const noGraphics = "The game will still work without the custom graphics, but some things will not look right.";
 	fs::remove_all(tempDir/scenario_temp_dir_name/"graphics");
 	fs::remove_all(tempDir/scenario_temp_dir_name/"sounds");
-	fs::path path(scen_file);
+	boost::filesystem::path path(scen_file);
 	std::cout << "Loading scenario graphics... (" << path  << ")\n";
 	// Tried path.replace_extension, but that only deleted the extension, so I have to do it manually
 	std::string filename = path.stem().string();
@@ -2440,12 +2440,12 @@ void load_spec_graphics_v1(fs::path scen_file) {
 		static sf::Image graphics_store;
 		bool foundGraphics = false;
 #ifdef __APPLE__
-		fs::path gpath = path/(filename + ".meg");
+		boost::filesystem::path gpath = path/(filename + ".meg");
 		if(fs::exists(gpath))
 			foundGraphics = tryLoadPictFromResourceFile(gpath, graphics_store);
 #endif
 		if(!foundGraphics) {
-			fs::path gpath = path/(filename + ".bmp");
+			boost::filesystem::path gpath = path/(filename + ".bmp");
 			if(fs::exists(gpath)) {
 				if(graphics_store.loadFromFile(gpath.string()))
 					foundGraphics = true;

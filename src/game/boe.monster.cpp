@@ -1,21 +1,20 @@
 
 #include <cstdio>
 
-#include "boe.global.hpp"
-
-#include "universe.hpp"
-#include "boe.locutils.hpp"
-#include "boe.monster.hpp"
-#include "boe.combat.hpp"
-#include "boe.text.hpp"
-#include "boe.specials.hpp"
-#include "boe.items.hpp"
-#include "sounds.hpp"
-#include "boe.graphics.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.main.hpp"
-#include "mathutil.hpp"
-#include "gfxsheets.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/universe/universe.hpp"
+// #include "src/game/boe.locutils.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.combat.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/game/boe.specials.hpp"
+#include "src/game/boe.items.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.main.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/sounds.hpp"
+#include "src/util/mathutil.hpp"
 
 extern eGameMode overall_mode;
 extern short which_combat_type;

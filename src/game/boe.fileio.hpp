@@ -3,7 +3,8 @@
 #define BOE_GAME_FILEIO_H
 
 #include <boost/filesystem/path.hpp>
-#include "location.hpp"
+
+#include "src/location.hpp"
 
 void finish_load_party();
 void change_rect_terrain(rectangle r,ter_num_t terrain_type,short probability,bool hollow);
@@ -24,8 +25,8 @@ void start_data_dump();
 void end_data_dump();
 short onm(char x_sector,char y_sector);
 std::vector<scen_header_type> build_scen_headers();
-bool load_scenario_header(fs::path filename,scen_header_type& header_entry);
-fs::path locate_scenario(std::string scen_name);
+bool load_scenario_header(boost::filesystem::path filename,scen_header_type& header_entry);
+boost::filesystem::path locate_scenario(std::string scen_name);
 
 void alter_rect(rectangle *r);
 

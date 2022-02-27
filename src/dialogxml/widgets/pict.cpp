@@ -6,19 +6,20 @@
  *
  */
 
-#include "pict.hpp"
+#include "src/dialogxml/widgets/pict.hpp"
+
 #include <vector>
 #include <map>
 #include <stdexcept>
 
-#include "gfxsheets.hpp"
-#include "render_shapes.hpp"
-#include "render_image.hpp"
-#include "render_text.hpp"
-#include "tiling.hpp"
-#include "location.hpp"
-#include "dialog.hpp"
-#include "res_image.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/gfx/render_text.hpp"
+#include "src/gfx/tiling.hpp"
+#include "src/location.hpp"
 
 extern sf::Texture bg_gworld;
 extern cCustomGraphics spec_scen_g;

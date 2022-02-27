@@ -201,7 +201,7 @@ void update_mouse_spot(location the_point) {
 }
 
 static bool handle_lb_action(location the_point) {
-	fs::path file_to_load;
+	boost::filesystem::path file_to_load;
 	int x;
 	for(int i = 0; i < NLS; i++)
 		if(!mouse_button_held && the_point.in(left_buttons[i][0])

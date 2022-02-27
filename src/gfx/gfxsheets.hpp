@@ -13,7 +13,9 @@
 #include <vector>
 #include <memory>
 #include <SFML/Graphics/Texture.hpp>
-#include "location.hpp"
+
+#include "src/global.hpp"
+#include "src/location.hpp"
 
 static const pic_num_t NO_PIC = -1;
 using graf_pos = std::pair<std::shared_ptr<const sf::Texture>,rectangle>;

@@ -46,7 +46,7 @@ class Cursor {
 	void* ptr;
 public:
 	static cursor_type current;
-	Cursor(fs::path imgPath, float hotSpotX, float hotSpotY);
+	Cursor(boost::filesystem::path imgPath, float hotSpotX, float hotSpotY);
 	~Cursor();
 	void apply();
 };

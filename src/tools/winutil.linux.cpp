@@ -154,30 +154,30 @@ static std::string runFileDialog(const std::string& file, bool save) {
     return filename;
 }
 
-fs::path nav_get_party() {
+boost::filesystem::path nav_get_party() {
 	return runFileDialog("Blades of Exile Save.exg", false);
 }
 
-fs::path nav_put_party(fs::path def) {
+boost::filesystem::path nav_put_party(boost::filesystem::path def) {
     if (def.empty())
         def = "Blades of Exile Save.exg";
 	return runFileDialog(def.string(), true);
 }
 
-fs::path nav_get_scenario() {
+boost::filesystem::path nav_get_scenario() {
 	return runFileDialog("", false);
 }
 
-fs::path nav_put_scenario(fs::path def) {
+boost::filesystem::path nav_put_scenario(boost::filesystem::path def) {
 	return runFileDialog(def.string(), false);
 }
 
 
-fs::path nav_get_rsrc(std::initializer_list<std::string> extensions) {
+boost::filesystem::path nav_get_rsrc(std::initializer_list<std::string> extensions) {
 	return "";
 }
 
-fs::path nav_put_rsrc(std::initializer_list<std::string> extensions, fs::path def) {
+boost::filesystem::path nav_put_rsrc(std::initializer_list<std::string> extensions, boost::filesystem::path def) {
 	return "";
 }
 

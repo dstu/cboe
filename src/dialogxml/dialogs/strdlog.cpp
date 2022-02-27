@@ -9,8 +9,9 @@
 #include "strdlog.hpp"
 
 #include <sstream>
-#include "winutil.hpp"
-#include "pict.hpp"
+
+#include "src/dialogxml/widgets/pict.hpp"
+#include "src/tools/winutil.hpp"
 
 std::string cStrDlog::getFileName(short n_strs, ePicType type, bool hasTitle){
 	std::ostringstream sout;

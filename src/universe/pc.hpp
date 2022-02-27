@@ -16,12 +16,12 @@
 #include <bitset>
 #include <cstdint>
 
-#include "item.hpp"
-#include "pictypes.hpp"
+#include "src/scenario/item.hpp"
+#include "src/dialogxml/widgets/pictypes.hpp"
 #include "living.hpp"
-#include "skills_traits.hpp"
-#include "race.hpp"
-#include "spell.hpp"
+#include "src/skills_traits.hpp"
+#include "src/race.hpp"
+#include "src/spell.hpp"
 
 namespace legacy { struct pc_record_type; };
 

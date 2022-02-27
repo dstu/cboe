@@ -13,8 +13,8 @@
 #include <map>
 #include <sstream>
 
-#include "oldstructs.hpp"
-#include "mathutil.hpp"
+#include "src/oldstructs.hpp"
+#include "src/util/mathutil.hpp"
 
 void cScenario::reset_version() {
 	format.prog_make_ver[0] = 2;

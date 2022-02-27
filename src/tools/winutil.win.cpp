@@ -238,19 +238,19 @@ static std::string runFileDlog(OPENFILENAMEA& dlg, const std::string& file, bool
 	return result;
 }
 
-fs::path nav_get_party() {
+boost::filesystem::path nav_get_party() {
 	return runFileDlog(getParty, "Blades of Exile Save.exg", false);
 }
 
-fs::path nav_put_party(fs::path def) {
+boost::filesystem::path nav_put_party(boost::filesystem::path def) {
 	return runFileDlog(putParty, def.string(), true);
 }
 
-fs::path nav_get_scenario() {
+boost::filesystem::path nav_get_scenario() {
 	return runFileDlog(getScen, "", false);
 }
 
-fs::path nav_put_scenario(fs::path def) {
+boost::filesystem::path nav_put_scenario(boost::filesystem::path def) {
 	return runFileDlog(putScen, def.string(), true);
 }
 
@@ -280,13 +280,13 @@ static std::unique_ptr<CHAR, std::default_delete<CHAR[]>> extListToFilter(std::i
 	return std::unique_ptr<CHAR, std::default_delete<CHAR[]>>(str);
 }
 
-fs::path nav_get_rsrc(std::initializer_list<std::string> extensions) {
+boost::filesystem::path nav_get_rsrc(std::initializer_list<std::string> extensions) {
 	auto filter = extListToFilter(extensions);
 	getRsrc.lpstrFilter = LPCTSTR(filter.get());
 	return runFileDlog(getRsrc, "", false);
 }
 
-fs::path nav_put_rsrc(std::initializer_list<std::string> extensions, fs::path def) {
+boost::filesystem::path nav_put_rsrc(std::initializer_list<std::string> extensions, boost::filesystem::path def) {
 	auto filter = extListToFilter(extensions);
 	putRsrc.lpstrFilter = LPCTSTR(filter.get());
 	return runFileDlog(putRsrc, def.string(), true);

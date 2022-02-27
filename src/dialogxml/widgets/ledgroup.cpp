@@ -7,9 +7,11 @@
  *
  */
 
-#include "ledgroup.hpp"
+#include "src/dialogxml/widgets/ledgroup.hpp"
 
-#include "dialog.hpp"
+#include <climits>
+
+#include "src/dialogxml/widgets/dialog.hpp"
 
 cLedGroup::cLedGroup(cDialog& parent) :
 	cContainer(CTRL_GROUP,parent),

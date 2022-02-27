@@ -12,7 +12,7 @@
 #include <vector>
 #include <memory>
 #include <SFML/Graphics/Shape.hpp>
-#include "location.hpp"
+#include "src/location.hpp"
 
 class Region {
 	std::vector<std::shared_ptr<sf::Shape>> shapes;

@@ -13,7 +13,7 @@
 #include <map>
 #include <sstream>
 
-#include "oldstructs.hpp"
+#include "src/oldstructs.hpp"
 
 cVehicle::cVehicle() :
 	loc(0,0),

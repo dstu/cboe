@@ -11,7 +11,7 @@
 
 #include <vector>
 #include <string>
-#include "resmgr.hpp"
+#include "src/fileio/resmgr/resmgr.hpp"
 
 using StringList = std::vector<std::string>;
 using StringRsrc = ResMgr::cPointer<StringList>;

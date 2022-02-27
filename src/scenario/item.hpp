@@ -12,11 +12,12 @@
 #include <string>
 #include <iosfwd>
 
-#include "location.hpp"
+#include "src/global.hpp"
+#include "src/location.hpp"
 #include "item_abilities.hpp"
 #include "item_variety.hpp"
-#include "skills_traits.hpp"
-#include "alchemy.hpp"
+#include "src/alchemy.hpp"
+#include "src/skills_traits.hpp"
 
 namespace legacy { struct item_record_type; };
 

@@ -22,7 +22,7 @@ enum {
 extern sf::RenderWindow mainPtr;
 extern cUniverse univ;
 extern bool scen_items_loaded, party_in_scen;
-extern fs::path file_in_mem;
+extern boost::filesystem::path file_in_mem;
 LONG_PTR mainProc;
 HMENU menuHandle = NULL;
 accel_table_t accel;
@@ -157,7 +157,7 @@ void drawMenuBar() {
 #include "pc.fileio.hpp"
 
 extern bool party_in_scen, scen_items_loaded;
-extern fs::path file_in_mem;
+extern boost::filesystem::path file_in_mem;
 void set_up_apple_events(int argc, char* argv[]) {
 	if(argc > 1) {
 		if(load_party(argv[1], univ)) {

@@ -1,16 +1,15 @@
-#include "boe.menus.hpp"
-#include "boe.consts.hpp"
+#include "src/game/boe.menus.hpp"
 
-#include <unordered_map>
-#include <string>
-#include <memory>
 #include <SFML/Graphics.hpp>
+#include <memory>
+#include <string>
+#include <unordered_map>
 
-#include "boe.menu.hpp"
-#include "boe.consts.hpp"
-
-#include "event_listener.hpp"
-#include "drawable_manager.hpp"
+#include "src/game/boe.consts.hpp"
+#include "src/game/boe.consts.hpp"
+#include "src/global.hpp"
+#include "src/tools/drawable_manager.hpp"
+#include "src/tools/event_listener.hpp"
 
 extern sf::RenderWindow mainPtr;
 extern cUniverse univ;

@@ -1,42 +1,43 @@
-
-#include "boe.global.hpp"
-#include "universe.hpp"
+#include "src/game/boe.main.hpp"
 
 #include <boost/filesystem/operations.hpp>
 #include <unordered_map>
 #include <string>
 #include <memory>
-#include "boe.graphics.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.fileio.hpp"
-#include "boe.actions.hpp"
-#include "boe.text.hpp"
-#include "boe.party.hpp"
-#include "boe.items.hpp"
-#include "boe.locutils.hpp"
-#include "boe.town.hpp"
-#include "boe.dlgutil.hpp"
-#include "boe.infodlg.hpp"
-#include "boe.main.hpp"
-#include "boe.consts.hpp"
-#include "boe.ui.hpp"
-#include "winutil.hpp"
-#include "sounds.hpp"
-#include "render_image.hpp"
-#include "tiling.hpp"
-#include "mathutil.hpp"
-#include "fileio.hpp"
-#include "strdlog.hpp"
-#include "choicedlog.hpp"
-#include "scrollbar.hpp"
-#include "boe.menus.hpp"
-#include "cursors.hpp"
-#include "prefs.hpp"
-#include "button.hpp"
-#include "enum_map.hpp"
-#include "framerate_limiter.hpp"
-#include "event_listener.hpp"
-#include "drawable_manager.hpp"
+
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/game/boe.actions.hpp"
+#include "src/game/boe.consts.hpp"
+#include "src/game/boe.dlgutil.hpp"
+#include "src/game/boe.fileio.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.infodlg.hpp"
+#include "src/game/boe.items.hpp"
+#include "src/game/boe.locutils.hpp"
+#include "src/game/boe.menus.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.party.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/game/boe.town.hpp"
+#include "src/game/boe.ui.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/tiling.hpp"
+#include "src/sounds.hpp"
+#include "src/tools/cursors.hpp"
+#include "src/tools/drawable_manager.hpp"
+#include "src/tools/enum_map.hpp"
+#include "src/tools/event_listener.hpp"
+#include "src/tools/framerate_limiter.hpp"
+#include "src/tools/prefs.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
+
 bool All_Done = false;
 sf::RenderWindow mainPtr;
 short had_text_freeze = 0,num_fonts;
@@ -339,7 +340,7 @@ void handle_one_event(const sf::Event& event) {
 					std::string choice = cChoiceDlog("quit-confirm-save", {"save","quit","cancel"}).show();
 					if(choice == "cancel") break;
 					if(choice == "save") {
-						fs::path file = nav_put_party();
+						boost::filesystem::path file = nav_put_party();
 						if(!file.empty()) break;
 						save_party(file, univ);
 					}
@@ -437,7 +438,7 @@ void close_program() {
 	sync_prefs();
 }
 
-extern fs::path progDir;
+extern boost::filesystem::path progDir;
 void handle_menu_choice(eMenu item_hit) {
 	std::string dialogToShow;
 	sf::Event dummyEvent = {sf::Event::KeyPressed};
@@ -490,7 +491,7 @@ void handle_menu_choice(eMenu item_hit) {
 					std::string choice = cChoiceDlog("quit-confirm-save", {"save","quit","cancel"}).show();
 					if(choice == "cancel") break;
 					if(choice == "save") {
-						fs::path file = nav_put_party();
+						boost::filesystem::path file = nav_put_party();
 						if(!file.empty()) break;
 						save_party(file, univ);
 					}

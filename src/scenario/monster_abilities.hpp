@@ -9,9 +9,9 @@
 #ifndef BoE_DATA_MONSTER_ABILITIES_HPP
 #define BoE_DATA_MONSTER_ABILITIES_HPP
 
-#include "damage.hpp"
-#include "fields.hpp"
-#include "spell.hpp"
+#include "src/damage.hpp"
+#include "src/fields.hpp"
+#include "src/spell.hpp"
 
 enum class eMonstAbil {
 	NO_ABIL,

@@ -18,11 +18,11 @@
 class cScenario;
 class cUniverse;
 
-fs::path locate_scenario(std::string scen_name);
-bool load_scenario(fs::path file_to_load, cScenario& scenario, bool only_header = false);
+boost::filesystem::path locate_scenario(std::string scen_name);
+bool load_scenario(boost::filesystem::path file_to_load, cScenario& scenario, bool only_header = false);
 
-bool load_party(fs::path file_to_load, cUniverse& univ);
-bool save_party(fs::path dest_file, const cUniverse& univ);
+bool load_party(boost::filesystem::path file_to_load, cUniverse& univ);
+bool save_party(boost::filesystem::path dest_file, const cUniverse& univ);
 
 void init_directories(const char* exec_path);
 void check_for_intel();

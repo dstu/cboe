@@ -11,7 +11,8 @@
 
 #include <string>
 #include <vector>
-#include "dialog.hpp"
+
+#include "src/dialogxml/widgets/dialog.hpp"
 
 /// A simple dialog that lets you select one of several buttons.
 /// This class loads a definition from a file, so there can be any amount of other stuff in the dialog,

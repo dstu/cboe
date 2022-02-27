@@ -15,11 +15,11 @@
 #include <algorithm>
 #include <utility>
 
-#include "universe.hpp"
-#include "oldstructs.hpp"
-#include "mathutil.hpp"
-#include "fileio.hpp"
-#include "sounds.hpp"
+#include "src/universe/universe.hpp"
+#include "src/oldstructs.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/sounds.hpp"
 
 extern short skill_bonus[21];
 // A nice convenient bitset with just the low 30 bits set, for initializing spells

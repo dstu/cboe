@@ -6,18 +6,18 @@
 //
 //
 
-#include "boe.ui.hpp"
+#include "src/game/boe.ui.hpp"
 
 #include <numeric>
-#include "enum_map.hpp"
-#include "boe.consts.hpp"
 #include "boe.locutils.hpp"
 #include "boe.graphics.hpp"
-#include "render_shapes.hpp"
-#include "render_image.hpp"
-#include "res_image.hpp"
-#include "mathutil.hpp"
-#include "sounds.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/game/boe.consts.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/sounds.hpp"
+#include "src/tools/enum_map.hpp"
+#include "src/util/mathutil.hpp"
 
 namespace UI {
 	cToolbar toolbar;

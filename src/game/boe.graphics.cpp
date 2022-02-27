@@ -6,41 +6,40 @@
 #include <string>
 #include <memory>
 
-#include "boe.global.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/game/boe.dlgutil.hpp"
+#include "src/game/boe.global.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.graphutil.hpp"
+#include "src/game/boe.infodlg.hpp"
+#include "src/game/boe.items.hpp"
+// #include "src/game/boe.locutils.hpp"
+#include "src/game/boe.menus.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/game/boe.newgraph.hpp"
+#include "src/game/boe.party.hpp"
+#include "src/game/boe.text.hpp"
+#include "src/game/boe.town.hpp"
+// #include "src/game/boe.ui.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/gfx/render_text.hpp"
+#include "src/gfx/tiling.hpp"
+#include "src/sounds.hpp"
+#include "src/tools/drawable_manager.hpp"
+#include "src/tools/enum_map.hpp"
+#include "src/tools/prefs.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
 
-#include "universe.hpp"
-#include "boe.graphics.hpp"
-#include "boe.newgraph.hpp"
-#include "boe.graphutil.hpp"
-#include "boe.monster.hpp"
-#include "boe.locutils.hpp"
-#include "boe.text.hpp"
-#include "render_image.hpp"
-#include "render_shapes.hpp"
-#include "render_text.hpp"
-#include "tiling.hpp"
-#include "sounds.hpp"
-#include "mathutil.hpp"
-#include "button.hpp"
-#include "enum_map.hpp"
-#include "drawable_manager.hpp"
-
-#include "boe.party.hpp"
-#include "boe.town.hpp"
-#include "boe.items.hpp"
-#include "boe.dlgutil.hpp"
-#include "boe.infodlg.hpp"
-#include "boe.ui.hpp"
-
-#include "scrollbar.hpp"
-
-#include "res_image.hpp"
-#include "boe.menus.hpp"
-#include "winutil.hpp"
-#include "prefs.hpp"
-#ifndef MSBUILD_GITREV
-#include "gitrev.hpp"
-#endif
+// TODO(blaze): I guess we don't have this in the repo anymore and no one
+// noticed.
+// #ifndef MSBUILD_GITREV
+// #include "gitrev.hpp"
+// #endif
 
 extern sf::RenderWindow mainPtr;
 extern eItemWinMode stat_window;

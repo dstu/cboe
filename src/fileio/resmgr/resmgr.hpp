@@ -40,7 +40,7 @@ namespace ResMgr {
 		using ResourceList = std::vector<std::string>;
 	public:
 		/// Loads a resource from the requested path
-		virtual T* operator()(const fs::path& from) const = 0;
+		virtual T* operator()(const boost::filesystem::path& from) const = 0;
 		/// Returns a string identifying the type of the resource handled by this loader
 		virtual std::string typeName() const = 0;
 		/// Expands a resource name into a list of possible resources to attempt resolution on, eg adding possible file extensions
@@ -83,17 +83,17 @@ namespace ResMgr {
 		std::string directory;
 		size_t overflow;
 		std::unordered_map<std::string, cPointer<T>> resources;
-		std::unordered_map<std::string, fs::path> resolvedPaths;
-		std::stack<fs::path> paths;
+		std::unordered_map<std::string, boost::filesystem::path> resolvedPaths;
+		std::stack<boost::filesystem::path> paths;
 		cLoader<T>& load;
 		/// Converts a resource name to an absolute file path referencing the resource
-		fs::path find(const std::string& resourceName) {
+		boost::filesystem::path find(const std::string& resourceName) {
 			for(const std::string name : load.expand(resourceName)) {
-				fs::path path = name;
+				boost::filesystem::path path = name;
 				if(!directory.empty()) path = directory/path;
-				std::stack<fs::path> tmpPaths = paths;
+				std::stack<boost::filesystem::path> tmpPaths = paths;
 				while(!tmpPaths.empty()) {
-					fs::path thisPath = tmpPaths.top()/path;
+					boost::filesystem::path thisPath = tmpPaths.top()/path;
 					if(fs::exists(thisPath)) {
 						resolvedPaths[name] = thisPath;
 						return thisPath;
@@ -155,7 +155,7 @@ namespace ResMgr {
 					return resIter->second;
 				}
 				// If we get here, the resource's path has been removed from the stack, so it must be re-resolved.
-				fs::path newPath = find(resourceName);
+				boost::filesystem::path newPath = find(resourceName);
 				if(newPath == resIter->second.path) {
 					// Path didn't change, so remember the path and return it
 					resolvedPaths[resourceName] = newPath;
@@ -172,7 +172,7 @@ namespace ResMgr {
 				return resIter->second;
 			}
 			// If we get here, it hasn't even been loaded yet.
-			fs::path path = find(resourceName);
+			boost::filesystem::path path = find(resourceName);
 			T* ptr = load(path);
 			if(!ptr) goto ERROR_THROW;
 			resIter = resources.emplace(resourceName, cPointer<T>(purgeable)).first;
@@ -210,14 +210,14 @@ namespace ResMgr {
 		}
 		/// Pushes a new path onto the resolution stack.
 		/// Calling this causes any cached resolved paths to be forgotten.
-		void pushPath(const fs::path& path) {
+		void pushPath(const boost::filesystem::path& path) {
 			paths.push(path);
 			resolvedPaths.clear();
 		}
 		/// Pops the top path from the resolution stack and returns it.
 		/// Any resources previously resolved to this path are marked as orphaned.
-		fs::path popPath() {
-			fs::path p = paths.top();
+		boost::filesystem::path popPath() {
+			boost::filesystem::path p = paths.top();
 			paths.pop();
 			std::string pstr = p.string();
 			auto iter = resolvedPaths.begin();
@@ -235,7 +235,7 @@ namespace ResMgr {
 			return p;
 		}
 		/// Returns the path at the top of the resolution stack
-		fs::path topPath() {
+		boost::filesystem::path topPath() {
 			return paths.top();
 		}
 	};

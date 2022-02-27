@@ -6,20 +6,20 @@
  *
  */
 
-#include "monster.hpp"
+#include "src/scenario/monster.hpp"
 
-#include <string>
-#include <vector>
+#include <boost/lexical_cast.hpp>
+#include <iomanip>
+#include <iostream>
 #include <map>
 #include <sstream>
-#include <iostream>
-#include <iomanip>
-#include <boost/lexical_cast.hpp>
+#include <string>
+#include <vector>
 
-#include "oldstructs.hpp"
-#include "fileio.hpp"
-#include "spell.hpp"
-#include "gfxsheets.hpp" // for NO_PIC
+#include "src/fileio/fileio.hpp"
+#include "src/gfx/gfxsheets.hpp" // for NO_PIC
+#include "src/oldstructs.hpp"
+#include "src/spell.hpp"
 
 void cMonster::import_legacy(legacy::monster_record_type& old){
 	level = old.level;

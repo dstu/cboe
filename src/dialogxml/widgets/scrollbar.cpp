@@ -6,13 +6,14 @@
 //
 //
 
-#include "scrollbar.hpp"
-#include "dialog.hpp"
-#include "res_image.hpp"
-#include "render_image.hpp"
-#include "render_shapes.hpp"
-#include "mathutil.hpp"
-#include "cursors.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/tools/cursors.hpp"
+#include "src/util/mathutil.hpp"
 
 std::string cScrollbar::scroll_textures[NUM_STYLES] = {
 	"dlogscrollwh",

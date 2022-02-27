@@ -6,13 +6,14 @@
 //
 //
 
-#include "tiling.hpp"
+#include "src/gfx/tiling.hpp"
 
 #include <unordered_map>
 #include <SFML/Graphics.hpp>
-#include "res_image.hpp"
-#include "render_image.hpp"
-#include "render_shapes.hpp"
+
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
 
 rectangle bg_rects[21];
 tessel_ref_t bg[21];
