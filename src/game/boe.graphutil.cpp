@@ -10,7 +10,7 @@
 #include "src/game/boe.graphics.hpp"
 #include "src/game/boe.graphutil.hpp"
 #include "src/game/boe.infodlg.hpp"
-// #include "src/game/boe.locutils.hpp"
+#include "src/game/boe.locutils.hpp"
 #include "src/game/boe.monster.hpp"
 #include "src/game/boe.specials.hpp"
 #include "src/game/boe.text.hpp"

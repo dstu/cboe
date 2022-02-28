@@ -13,7 +13,7 @@
 #include <map>
 #include <sstream>
 
-// #include "src/scenario/scenario.hpp"
+#include "src/scenario/scenario.hpp"
 #include "src/oldstructs.hpp"
 #include "src/util/mathutil.hpp"
 #include "src/fileio/fileio.hpp"

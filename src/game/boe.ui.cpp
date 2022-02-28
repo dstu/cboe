@@ -9,10 +9,11 @@
 #include "src/game/boe.ui.hpp"
 
 #include <numeric>
-#include "boe.locutils.hpp"
-#include "boe.graphics.hpp"
+
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/game/boe.consts.hpp"
+#include "src/game/boe.graphics.hpp"
+#include "src/game/boe.locutils.hpp"
 #include "src/gfx/render_image.hpp"
 #include "src/gfx/render_shapes.hpp"
 #include "src/sounds.hpp"

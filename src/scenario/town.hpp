@@ -9,17 +9,17 @@
 #ifndef BOE_DATA_TOWN_H
 #define BOE_DATA_TOWN_H
 
-#include <vector>
-#include <iosfwd>
 #include <array>
 #include <boost/dynamic_bitset.hpp>
+#include <iosfwd>
+#include <vector>
 
-#include "item.hpp"
-#include "monster.hpp"
-#include "talking.hpp"
-#include "special.hpp"
-#include "src/scenario/area.hpp"
 #include "src/location.hpp"
+#include "src/scenario/area.hpp"
+#include "src/scenario/item.hpp"
+#include "src/scenario/monster.hpp"
+#include "src/scenario/special.hpp"
+#include "src/scenario/talking.hpp"
 
 namespace legacy {
 	struct town_record_type;

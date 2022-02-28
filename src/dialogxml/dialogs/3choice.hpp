@@ -9,15 +9,16 @@
 #ifndef DIALOG_3CHOICE_H
 #define DIALOG_3CHOICE_H
 
-#include <string>
-#include <vector>
 #include <array>
 #include <boost/optional.hpp>
+#include <string>
+#include <vector>
 
-#include "keycodes.hpp"
-#include "choicedlog.hpp"
-#include "button.hpp"
-#include "pictypes.hpp"
+#include "src/dialogxml/keycodes.hpp"
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/pictypes.hpp"
+#include "src/global.hpp"
 
 /// Basic button type template
 struct bbtt {

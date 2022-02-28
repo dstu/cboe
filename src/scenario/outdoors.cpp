@@ -15,7 +15,7 @@
 
 #include "src/dialogxml/dialogs/strdlog.hpp"
 #include "src/oldstructs.hpp"
-// #include "src/scenario/scenario.hpp"
+#include "src/scenario/scenario.hpp"
 
 void cOutdoors::import_legacy(legacy::outdoor_record_type& old){
 	ambient_sound = AMBIENT_NONE;

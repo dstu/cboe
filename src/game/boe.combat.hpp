@@ -2,11 +2,14 @@
 #ifndef BOE_GAME_COMBAT_H
 #define BOE_GAME_COMBAT_H
 
-#include "boe.global.hpp"
+#include "src/game/boe.global.hpp"
 #include "src/location.hpp"
+#include "src/scenario/item.hpp"
 #include "src/scenario/monster.hpp"
 #include "src/scenario/outdoors.hpp"
 #include "src/spell.hpp"
+#include "src/universe/creature.hpp"
+#include "src/universe/living.hpp"
 
 void start_outdoor_combat(cOutdoors::cCreature encounter,location where,short num_walls);
 bool pc_combat_move(location destination);

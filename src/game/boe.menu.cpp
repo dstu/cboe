@@ -1,12 +1,12 @@
 // Author: xq, Saturday 2020-01-25
 
-#include "boe.menu.hpp"
-#include "boe.menus.hpp"
-#include "boe.party.hpp"
-
 #include <sstream>
 #include <stdexcept>
 #include <utility>
+
+#include "src/game/boe.menu.hpp"
+#include "src/game/boe.menus.hpp"
+#include "src/game/boe.party.hpp"
 
 OpenBoEMenu::OpenBoEMenu(sf::RenderWindow& window, cUniverse& universe)
 	: tgui { window }
@@ -89,7 +89,7 @@ void OpenBoEMenu::add_persistent_menu_items(tgui::MenuBar::Ptr& menubar) const {
 
 	// Note that signal connection ids are discarded.
 	for(const auto& item : persistent_menu_items) {
-		menubar->addMenuItem(item.first);
+		menubar->addMenuItem(item.first[0], item.first[1]);
 		menubar->connectMenuItem(item.first, handle_menu_choice, item.second);
 	}
 }
@@ -235,8 +235,9 @@ void OpenBoEMenu::update_for_game_state(eGameMode overall_mode, bool party_in_me
 // Disconnect all spell menu items from signals and clear the menus
 void OpenBoEMenu::purge_spell_menus(tgui::MenuBar::Ptr& menubar) {
 	for(const auto& connection_id : this->spell_menus_connection_ids) {
-		if(!menubar->disconnect(connection_id))
-			throw std::runtime_error { "BUG: attempted to disconnect menubar signal using invalid connection id" };
+          std::cerr << "ERROR: trying to remove spell menu item with connection id " << connection_id << std::endl;
+		// if(!menubar->disconnect(connection_id))
+		// 	throw std::runtime_error { "BUG: attempted to disconnect menubar signal using invalid connection id" };
 	}
 
 	this->spell_menus_connection_ids.clear();

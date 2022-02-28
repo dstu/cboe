@@ -3,7 +3,7 @@
 
 #include "src/game/boe.global.hpp"
 #include "src/universe/universe.hpp"
-// #include "src/game/boe.locutils.hpp"
+#include "src/game/boe.locutils.hpp"
 #include "src/game/boe.monster.hpp"
 #include "src/game/boe.combat.hpp"
 #include "src/game/boe.text.hpp"

@@ -1,4 +1,11 @@
+#ifndef BOE_GAME_TEXT_H
+#define BOE_GAME_TEXT_H
+
 #include <string>
+
+#include "src/game/boe.consts.hpp"
+#include "src/location.hpp"
+#include "src/scenario/outdoors.hpp"
 
 class cVehicle;
 
@@ -46,3 +53,5 @@ struct text_label_t {
 
 void place_text_label(std::string string, location at, bool centred);
 void draw_text_label(const text_label_t& label);
+
+#endif  // BOE_GAME_TEXT_H

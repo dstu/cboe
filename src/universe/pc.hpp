@@ -9,19 +9,20 @@
 #ifndef BOE_DATA_PC_H
 #define BOE_DATA_PC_H
 
-#include <string>
-#include <map>
-#include <iosfwd>
 #include <array>
 #include <bitset>
 #include <cstdint>
+#include <iosfwd>
+#include <limits>
+#include <map>
+#include <string>
 
 #include "src/scenario/item.hpp"
 #include "src/dialogxml/widgets/pictypes.hpp"
-#include "living.hpp"
 #include "src/skills_traits.hpp"
 #include "src/race.hpp"
 #include "src/spell.hpp"
+#include "src/universe/living.hpp"
 
 namespace legacy { struct pc_record_type; };
 

@@ -4,6 +4,7 @@
 
 #include <SFML/Window/Event.hpp>
 
+#include "src/global.hpp"
 #include "src/location.hpp"
 
 void init_screen_locs();

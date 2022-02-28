@@ -5,6 +5,7 @@
 #include "src/scenario/item.hpp"
 #include "src/scenario/monster.hpp"
 #include "src/universe/creature.hpp"
+#include "src/universe/party.hpp"
 #include "src/universe/pc.hpp"
 
 class cDialog;

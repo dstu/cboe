@@ -9,13 +9,14 @@
 #ifndef DIALOG_PICTCHOICE_H
 #define DIALOG_PICTCHOICE_H
 
-#include <vector>
 #include <functional>
 #include <utility>
+#include <vector>
 
-#include "dialog.hpp"
-#include "ledgroup.hpp"
-#include "pictypes.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/ledgroup.hpp"
+#include "src/dialogxml/widgets/pictypes.hpp"
+#include "src/global.hpp"
 
 /// A dialog that presents a list of icons with LEDs and allows you to choose one.
 /// The list may span several pages.

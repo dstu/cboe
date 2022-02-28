@@ -1,18 +1,16 @@
-# cc_library(
-#     name = "base",
-#     hdrs = ["dialog.hpp"],
-#     srcs = ["dialog.cpp"],
-#     deps = [
-#         ":dlogevt",
-#         "//src:location",
-#         "//src:sounds",
-#         "//src/fileio/xml-parser:tinyxml",
-#         "//src/gfx:tiling",
-#         "//src/tools:framerate_limiter",
-#         "//src/tools:winutil",
-#     ],
-#     visibility = ["//visibility:public"],
-# )
+cc_library(
+    name = "3choice",
+    hdrs = ["3choice.hpp"],
+    srcs = ["3choice.cpp"],
+    deps = [
+        ":choicedlog",
+        "//src:types",
+        "//src/dialogxml/widgets",
+        "//src/dialogxml/widgets:pictypes",
+        "//src/util:mathutil",
+    ],
+    visibility = ["//visibility:public"],
+)
 
 cc_library(
     name = "choicedlog",
@@ -33,22 +31,15 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
-# cc_library(
-#     name = "dialog",
-#     hdrs = ["dialog.hpp"],
-#     srcs = ["dialog.cpp"],
-#     deps = [
-#         ":dlogevt",
-#         "//src:location",
-#         "//src:sounds",
-#         "//src/dialogxml/widgets:base",
-#         "//src/fileio/xml-parser:tinyxml",
-#         "//src/gfx:tiling",
-#         "//src/tools:framerate_limiter",
-#         "//src/tools:winutil",
-#     ],
-#     visibility = ["//visibility:public"],
-# )
+cc_library(
+    name = "pictchoice",
+    hdrs = ["pictchoice.hpp"],
+    srcs = ["pictchoice.cpp"],
+    deps = [
+        "//src/dialogxml/widgets",
+    ],
+    visibility = ["//visibility:public"],
+)
 
 cc_library(
     name = "strdlog",

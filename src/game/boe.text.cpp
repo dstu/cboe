@@ -9,7 +9,7 @@ const int TEXT_BUF_LEN = 70;
 #include "src/game/boe.global.hpp"
 #include "src/game/boe.graphutil.hpp"
 #include "src/game/boe.infodlg.hpp"
-// #include "src/game/boe.locutils.hpp"
+#include "src/game/boe.locutils.hpp"
 #include "src/fileio/resmgr/res_font.hpp"
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/dialogxml/widgets/scrollbar.hpp"

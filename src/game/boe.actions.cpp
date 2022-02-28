@@ -2,8 +2,12 @@
 #include <cmath>
 #include <queue>
 
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/fileio/fileio.hpp"
 #include "src/game/boe.actions.hpp"
-// #include "src/game/boe.combat.hpp"
+#include "src/game/boe.combat.hpp"
 #include "src/game/boe.dlgutil.hpp"
 #include "src/game/boe.fileio.hpp"
 #include "src/game/boe.global.hpp"
@@ -12,7 +16,7 @@
 #include "src/game/boe.infodlg.hpp"
 #include "src/game/boe.items.hpp"
 #include "src/game/boe.locutils.hpp"
-// #include "src/game/boe.main.hpp"
+#include "src/game/boe.main.hpp"
 #include "src/game/boe.menus.hpp"
 #include "src/game/boe.monster.hpp"
 #include "src/game/boe.newgraph.hpp"
@@ -22,20 +26,16 @@
 #include "src/game/boe.town.hpp"
 #include "src/game/boe.townspec.hpp"
 #include "src/game/boe.ui.hpp"
-#include "choicedlog.hpp"
-#include "cursors.hpp"
-#include "dialog.hpp"
-#include "fileio.hpp"
-#include "src/dialogxml/widgets/scrollbar.hpp"
 #include "src/gfx/render_shapes.hpp"
 #include "src/scenario/shop.hpp"
 #include "src/sounds.hpp"
 #include "src/spell.hpp"
+#include "src/tools/cursors.hpp"
 #include "src/tools/enum_map.hpp"
 #include "src/tools/prefs.hpp"
+#include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
 #include "src/util/mathutil.hpp"
-#include "winutil.hpp"
 
 rectangle item_screen_button_rects[9] = {
 	{125,10,141,28},{125,40,141,58},{125,68,141,86},{125,98,141,116},{125,126,141,144},{125,156,141,174},

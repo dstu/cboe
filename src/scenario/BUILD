@@ -42,34 +42,45 @@ cc_library(
     deps = [
         "//src:damage",
         "//src:fields",
-        "//src:spell",
+        "//src:oldstructs",
         "//src:race",
+        "//src:spell",
+        "//src:types",
+        "//src/fileio",
+        "//src/gfx:gfxsheets",
     ],
     visibility = ["//visibility:public"],
 )
 
-cc_library(
-    name = "outdoors",
-    hdrs = ["outdoors.hpp"],
-    srcs = ["outdoors.cpp"],
-    deps = [
-        ":area",
-        ":monster",
-        ":special",
-        "//src:location",
-        "//src:oldstructs",
-        "//src/dialogxml/dialogs:strdlog",
-    ],
-    visibility = ["//visibility:public"],
-)
+# cc_library(
+#     name = "outdoors",
+#     hdrs = ["outdoors.hpp"],
+#     srcs = ["outdoors.cpp"],
+#     deps = [
+#         ":area",
+#         ":monster",
+#         ":special",
+#         "//src:location",
+#         "//src:oldstructs",
+#         "//src/dialogxml/dialogs:strdlog",
+#     ],
+#     visibility = ["//visibility:public"],
+# )
 
 cc_library(
     name = "special",
     hdrs = ["special.hpp"],
     srcs = ["special.cpp"],
     deps = [
+        "//src:damage",
+        "//src:fields",
         "//src:location",
+        "//src:oldstructs",
+        "//src:skills_traits",
+        "//src:spell",
+        "//src:types",
         "//src/dialogxml/dialogs:strdlog",
+        "//src/util",
     ],
     visibility = ["//visibility:public"],
 )
@@ -82,18 +93,27 @@ cc_library(
 
 cc_library(
     name = "scenario",
-    hdrs = ["scenario.hpp"],
-    srcs = ["scenario.cpp"],
+    hdrs = [
+        "outdoors.hpp",
+        "scenario.hpp",
+        "town.hpp",
+    ],
+    srcs = [
+        "outdoors.cpp",
+        "scenario.cpp",
+        "town.cpp",
+    ],
     deps = [
+        ":area",
         ":monster",
         ":item",
-        ":outdoors",
         ":quest",
         ":shop",
         ":special",
+        ":talking",
         ":terrain",
-        ":town",
         ":vehicle",
+        "//src:location",
         "//src:oldstructs",
         "//src/tools:vector2d",
         "//src/util:mathutil",
@@ -143,22 +163,22 @@ cc_library(
 )
     
 
-cc_library(
-    name = "town",
-    hdrs = ["town.hpp"],
-    srcs = ["town.cpp"],
-    deps = [
-        ":area",
-        ":monster",
-        ":special",
-        ":shop",
-        ":talking",
-        "//src/fileio",
-        "//src:location",
-        "//src/util",
-    ],
-    visibility = ["//visibility:public"],
-)
+# cc_library(
+#     name = "town",
+#     hdrs = ["town.hpp"],
+#     srcs = ["town.cpp"],
+#     deps = [
+#         ":area",
+#         ":monster",
+#         ":special",
+#         ":shop",
+#         ":talking",
+#         "//src/fileio",
+#         "//src:location",
+#         "//src/util",
+#     ],
+#     visibility = ["//visibility:public"],
+# )
 
 cc_library(
     name = "vehicle",

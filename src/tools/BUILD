@@ -1,6 +1,11 @@
 cc_library(
     name = "cursors",
     hdrs = ["cursors.hpp"],
+    # TODO(bazel): Add targets for other platforms and use select() here.
+    srcs = ["cursors.linux.cpp"],
+    deps = [
+        "//src/fileio/resmgr:res_cursor",
+    ],
     visibility = ["//visibility:public"],
 )
 

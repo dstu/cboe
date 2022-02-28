@@ -6,17 +6,16 @@
 //
 //
 
-#include "view_dialogs.hpp"
+#include "src/view_dialogs.hpp"
 
-#include "dialog.hpp"
-#include "pict.hpp"
-#include "button.hpp"
-#include "led.hpp"
-
-#include "item.hpp"
-#include "creature.hpp"
-#include "scenario.hpp"
-#include "utility.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/led.hpp"
+#include "src/dialogxml/widgets/pict.hpp"
+#include "src/scenario/item.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/universe/creature.hpp"
+#include "src/util/utility.hpp"
 
 void put_item_info(cDialog& me, const cItem& s_i, const cScenario& scen) {
 	std::string desc_str;

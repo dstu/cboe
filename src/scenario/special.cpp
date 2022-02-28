@@ -20,7 +20,7 @@
 #include "src/oldstructs.hpp"
 #include "src/skills_traits.hpp"
 #include "src/spell.hpp"
-#include "src/tools/utility.hpp"
+#include "src/util/utility.hpp"
 
 cSpecial::cSpecial(){
 	type = eSpecType::NONE;

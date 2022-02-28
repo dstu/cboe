@@ -3,6 +3,8 @@
 #define BOE_GAME_GRAPHICS_H
 
 #include <SFML/Graphics.hpp>
+
+#include "src/global.hpp"
 #include "src/location.hpp"
 
 enum {

@@ -1,6 +1,9 @@
 
 #include "src/dialogxml/widgets/dialog.hpp"
 #include "src/dialogxml/widgets/pict.hpp"
+#include "src/game/boe.monster.hpp"
+#include "src/global.hpp"
+#include "src/location.hpp"
 
 bool GTP(short item_num);
 bool silent_GTP(short item_num);

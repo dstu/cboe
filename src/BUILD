@@ -74,3 +74,17 @@ cc_library(
     hdrs = ["global.hpp"],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "view_dialogs",
+    hdrs = ["view_dialogs.hpp"],
+    srcs = ["view_dialogs.cpp"],
+    deps = [
+        "//src/dialogxml/widgets",
+        "//src/scenario",
+        "//src/scenario:item",
+        "//src/universe",
+        "//src/util",
+    ],
+    visibility = ["//visibility:public"],
+)

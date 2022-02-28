@@ -6,12 +6,13 @@
 // NOTE: this also includes SFML for us
 #include <TGUI/TGUI.hpp>
 #include <vector>
+
 #include "src/universe/universe.hpp"
-#include "boe.consts.hpp"
-#include "spell.hpp"
-#include "skills_traits.hpp"
-#include "event_listener.hpp"
-#include "drawable.hpp"
+#include "src/game/boe.consts.hpp"
+#include "src/skills_traits.hpp"
+#include "src/spell.hpp"
+#include "src/tools/drawable.hpp"
+#include "src/tools/event_listener.hpp"
 
 class OpenBoEMenu : public iEventListener, public iDrawable {
 public:
@@ -26,11 +27,11 @@ public:
 
 private:
 
-	using MenuHierarchy = std::vector<sf::String>;
+	using MenuHierarchy = std::vector<tgui::String>;
 
 	tgui::Gui tgui;
 	cUniverse& univ;
-	const sf::String internal_menubar_widget_name { "openboe-menu" };
+	const tgui::String internal_menubar_widget_name { "openboe-menu" };
 	std::vector<unsigned int> spell_menus_connection_ids;
 
 	tgui::MenuBar::Ptr build_menubar() const;

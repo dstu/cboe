@@ -1,8 +1,9 @@
 #include "src/game/boe.locutils.hpp"
 
 #include "src/game/boe.global.hpp"
-#include "src/game/boe.monster.hpp"
+// #include "src/game/boe.monster.hpp"
 // #include "src/game/boe.text.hpp"
+#include "src/global.hpp"
 #include "src/universe/universe.hpp"
 #include "src/util/mathutil.hpp"
 #include "src/util/utility.hpp"

@@ -7,7 +7,9 @@
 
 #include "src/game/boe.consts.hpp"
 #include "src/game/boe.consts.hpp"
+#include "src/game/boe.menu.hpp"
 #include "src/global.hpp"
+#include "src/universe/universe.hpp"
 #include "src/tools/drawable_manager.hpp"
 #include "src/tools/event_listener.hpp"
 

@@ -21,11 +21,9 @@ cc_library(
         "//src/dialogxml/widgets:pictypes",
         "//src/scenario",
         "//src/scenario:monster",
-        "//src/scenario:outdoors",
         "//src/scenario:vehicle",
         "//src/scenario:item",
         "//src/scenario:quest",
-        "//src/scenario:town",
     ],
     visibility = ["//visibility:public"],
 )

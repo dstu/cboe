@@ -12,6 +12,7 @@
 #include "src/damage.hpp"
 #include "src/fields.hpp"
 #include "src/spell.hpp"
+#include "src/global.hpp"
 
 enum class eMonstAbil {
 	NO_ABIL,

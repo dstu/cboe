@@ -1,6 +1,9 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "src/global.hpp"
+#include "src/location.hpp"
+
 int main(int argc, char* argv[]);
 void update_everything();
 void redraw_everything();

@@ -4,7 +4,7 @@
 #include <cstdio>
 #include <cstring>
 
-#include "src/dialogxl/widgets/message.hpp"
+#include "src/dialogxml/widgets/message.hpp"
 #include "src/dialogxml/dialogs/3choice.hpp"
 #include "src/dialogxml/dialogs/strdlog.hpp"
 #include "src/game/boe.global.hpp"
@@ -22,7 +22,7 @@
 #include "src/tools/cursors.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
-#include "src/utilmathutil.hpp"
+#include "src/util/mathutil.hpp"
 
 extern short which_combat_type;
 extern eGameMode overall_mode;

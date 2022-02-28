@@ -1,5 +1,8 @@
+#ifndef BOE_GAME_MONSTER_H
+#define BOE_GAME_MONSTER_H
 
 #include "src/dialogxml/widgets/pictypes.hpp"
+#include "src/scenario/outdoors.hpp"
 #include "src/universe/creature.hpp"
 
 short out_enc_lev_tot(short which);
@@ -36,3 +39,5 @@ short place_monster(mon_num_t which,location where,bool forced=false);
 bool summon_monster(mon_num_t which,location where,short duration,eAttitude given_attitude,bool by_party);
 void activate_monsters(short code,short attitude);
 mon_num_t get_summon_monster(short summon_class);
+
+#endif  // BOE_GAME_MONSTER_H

@@ -1,7 +1,10 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "src/global.hpp"
 #include "src/scenario/outdoors.hpp"
+#include "src/scenario/item_abilities.hpp"
+#include "src/scenario/terrain_abilities.hpp"
 
 void force_town_enter(short which_town,location where_start);
 void start_town_mode(short which_town, short entry_dir);

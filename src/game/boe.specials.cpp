@@ -17,7 +17,7 @@
 #include "src/game/boe.infodlg.hpp"
 #include "src/game/boe.items.hpp"
 #include "src/game/boe.locutils.hpp"
-// #include "src/game/boe.main.hpp"
+#include "src/game/boe.main.hpp"
 #include "src/game/boe.menus.hpp"
 #include "src/game/boe.monster.hpp"
 #include "src/game/boe.newgraph.hpp"

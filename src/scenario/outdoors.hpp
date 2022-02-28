@@ -9,14 +9,14 @@
 #ifndef BOE_DATA_OUTDOORS_H
 #define BOE_DATA_OUTDOORS_H
 
-#include <string>
-#include <iosfwd>
 #include <array>
+#include <iosfwd>
+#include <string>
 
 #include "src/location.hpp"
+#include "src/scenario/area.hpp"
+#include "src/scenario/monster.hpp"
 #include "src/scenario/special.hpp"
-#include "monster.hpp"
-#include "area.hpp"
 
 namespace legacy {
 	struct out_wandering_type;
