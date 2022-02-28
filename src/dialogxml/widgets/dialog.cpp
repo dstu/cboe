@@ -19,9 +19,9 @@
 #include "src/dialogxml/widgets/scrollbar.hpp"
 #include "src/dialogxml/widgets/scrollpane.hpp"
 #include "src/dialogxml/widgets/stack.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
 #include "src/gfx/tiling.hpp" // for bg
 #include "src/sounds.hpp"
-#include "src/tools/cursors.hpp"
 #include "src/tools/framerate_limiter.hpp"
 #include "src/tools/prefs.hpp"
 #include "src/tools/winutil.hpp"

@@ -15,6 +15,17 @@ cc_library(
 )
 
 cc_library(
+    name = "porting",
+    hdrs = ["porting.hpp"],
+    srcs = ["porting.cpp"],
+    deps = [
+        ":location",
+        ":oldstructs",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "damage",
     hdrs = ["damage.hpp"],
     visibility = ["//visibility:public"],

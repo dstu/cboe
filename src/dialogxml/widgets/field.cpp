@@ -14,10 +14,10 @@
 #include <sstream>
 
 #include "src/dialogxml/widgets/dialog.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
 // #include "strdlog.hpp"
 #include "src/gfx/render_shapes.hpp"
 #include "src/tools/winutil.hpp"
-#include "src/tools/cursors.hpp"
 
 bool cTextField::callHandler(event_fcn<EVT_DEFOCUS>::type onFocus, cDialog& me, std::string id) {
 	if(field_type != FLD_TEXT) {

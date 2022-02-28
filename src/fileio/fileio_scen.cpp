@@ -12,20 +12,20 @@
 #include <boost/filesystem/operations.hpp>
 #include <boost/lexical_cast.hpp>
 
-#include "strdlog.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
 
-#include "scenario.hpp"
-#include "town.hpp"
-#include "map_parse.hpp"
-#include "special_parse.hpp"
-#include "gfxsheets.hpp"
-#include "mathutil.hpp"
-#include "gzstream.h"
-#include "tarball.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/scenario/town.hpp"
+#include "src/fileio/map_parse.hpp"
+#include "src/fileio/special_parse.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/fileio/gzstream/gzstream.h"
+#include "src/fileio/tarball.hpp"
 
-#include "porting.hpp"
-#include "res_image.hpp"
-#include "res_sound.hpp"
+#include "src/porting.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/fileio/resmgr/res_sound.hpp"
 
 // Because the full template definition needs to be visible in this file
 // Also, for some reason, it's not found in the include paths, so use a relative path
@@ -57,7 +57,7 @@ void loadTownMapData(map_data&& data, int which, cScenario& scen);
 
 static std::string get_file_error() {
 	std::ostringstream sout;
-	sout << std_fmterr;
+	sout << strerror(errno);
 	return sout.str();
 }
 

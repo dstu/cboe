@@ -2,6 +2,7 @@
 
 #include "src/dialogxml/dialogs/choicedlog.hpp"
 #include "src/fileio/fileio.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/game/boe.actions.hpp"
 #include "src/game/boe.dlgutil.hpp"
@@ -17,7 +18,6 @@
 #include "src/game/boe.text.hpp"
 #include "src/gfx/render_image.hpp"
 #include "src/sounds.hpp"
-#include "src/tools/cursors.hpp"
 #include "src/tools/enum_map.hpp"
 #include "src/tools/prefs.hpp"
 #include "src/tools/winutil.hpp"

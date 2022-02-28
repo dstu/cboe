@@ -33,6 +33,7 @@ cc_library(
         "//src:location",
         "//src:sounds",
         "//src:types",
+        "//src/fileio/resmgr:res_cursor",
         "//src/fileio/resmgr:res_image",
         "//src/gfx:gfxsheets",
         "//src/dialogxml:keycodes",

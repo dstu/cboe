@@ -110,4 +110,13 @@ cc_binary(
         "//src/universe",
         "//src/util:mathutil",
     ],
+    linkopts = [
+        "-L/usr/local/lib",
+        "-ltgui",
+        "-lsfml-audio",
+        "-lsfml-graphics",
+        "-lsfml-window",
+        "-lsfml-system",
+    ],
+    copts = ["-std=c++17"],
 )

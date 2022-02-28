@@ -6,19 +6,17 @@
 //
 //
 
-#include "fileio.hpp"
+#include "src/fileio/fileio.hpp"
 
-#include <fstream>
 #include <boost/filesystem/operations.hpp>
+#include <fstream>
 
-#include "strdlog.hpp"
-#include "gzstream.h"
-
-#include "universe.hpp"
-#include "gfxsheets.hpp"
-
-#include "porting.hpp"
-#include "tarball.hpp"
+// #include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/fileio/gzstream/gzstream.h"
+#include "src/fileio/tarball.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/porting.hpp"
+// #include "src/universe/universe.hpp"
 
 extern bool mac_is_intel;
 extern boost::filesystem::path progDir, tempDir;

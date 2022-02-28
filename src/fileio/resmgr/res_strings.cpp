@@ -10,9 +10,6 @@
 #include <iostream>
 #include <fstream>
 
-// Redeclare this instead of including "fileio.h"
-extern std::ostream& std_fmterr(std::ostream& out);
-
 class StringsLoader : public ResMgr::cLoader<StringList> {
 	/// Load a list of strings from a TXT file.
 	/// Each line in the file becomes one string in the resulting list.
@@ -20,7 +17,7 @@ class StringsLoader : public ResMgr::cLoader<StringList> {
 	StringList* operator() (const boost::filesystem::path& fpath) const override {
 		std::ifstream fin(fpath.string().c_str());
 		if(fin.fail()) {
-			std::cerr << std_fmterr << ": Error opening file";
+                        std::cerr << strerror(errno) << ": Error opening file";
 			throw ResMgr::xError(ResMgr::ERR_LOAD, "Failed to load string list: " + fpath.string());
 		}
 		std::string next;

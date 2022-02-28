@@ -9,10 +9,10 @@
 #include "src/dialogxml/widgets/scrollbar.hpp"
 
 #include "src/dialogxml/widgets/dialog.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/gfx/render_image.hpp"
 #include "src/gfx/render_shapes.hpp"
-#include "src/tools/cursors.hpp"
 #include "src/util/mathutil.hpp"
 
 std::string cScrollbar::scroll_textures[NUM_STYLES] = {

@@ -6,9 +6,13 @@
  *
  */
 
+#ifndef SRC_PORTING_H
+#define SRC_PORTING_H
+
 #include <cstdint>
-#include "oldstructs.hpp"
-#include "location.hpp"
+
+#include "src/location.hpp"
+#include "src/oldstructs.hpp"
 
 void flip_long(int32_t *s);
 void flip_spec_node(legacy::special_node_type *spec);
@@ -26,3 +30,5 @@ void port_town(legacy::town_record_type* dummy_town_ptr);
 void port_party(legacy::party_record_type* old);
 void port_pc(legacy::pc_record_type* old);
 void port_c_town(legacy::current_town_type* old);
+
+#endif  // SRC_PORTING_H

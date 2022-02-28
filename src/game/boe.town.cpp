@@ -4,6 +4,7 @@
 #include <queue>
 
 #include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/game/boe.combat.hpp"
 #include "src/game/boe.fileio.hpp"
@@ -24,7 +25,6 @@
 #include "src/gfx/render_text.hpp"
 #include "src/gfx/tiling.hpp"
 #include "src/sounds.hpp"
-#include "src/tools/cursors.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
 #include "src/util/mathutil.hpp"

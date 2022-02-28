@@ -13,11 +13,11 @@
 #include "src/dialogxml/widgets/button.hpp"
 #include "src/dialogxml/widgets/dialog.hpp"
 #include "src/dialogxml/widgets/led.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/gfx/render_shapes.hpp"
 #include "src/gfx/render_text.hpp"
 #include "src/sounds.hpp"
-#include "src/tools/cursors.hpp"
 #include "src/tools/prefs.hpp"
 #include "src/util/mathutil.hpp"
 

@@ -11,6 +11,7 @@
 #include "src/dialogxml/dialogs/strdlog.hpp"
 #include "src/dialogxml/widgets/button.hpp"
 #include "src/fileio/fileio.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
 #include "src/game/boe.actions.hpp"
 #include "src/game/boe.combat.hpp"
 #include "src/game/boe.combat.hpp"
@@ -32,7 +33,6 @@
 #include "src/gfx/render_shapes.hpp" // for colour constants
 #include "src/sounds.hpp"
 #include "src/spell.hpp"
-#include "src/tools/cursors.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
 #include "src/util/mathutil.hpp"

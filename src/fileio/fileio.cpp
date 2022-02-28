@@ -175,7 +175,3 @@ std::string maybe_quote_string(std::string which) {
 	}
 	return which;
 }
-
-std::ostream& std_fmterr(std::ostream& out) {
-	return out << strerror(errno);
-}

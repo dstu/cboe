@@ -1,15 +1,4 @@
 cc_library(
-    name = "cursors",
-    hdrs = ["cursors.hpp"],
-    # TODO(bazel): Add targets for other platforms and use select() here.
-    srcs = ["cursors.linux.cpp"],
-    deps = [
-        "//src/fileio/resmgr:res_cursor",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-cc_library(
     name = "drawable",
     hdrs = ["drawable.hpp"],
     visibility = ["//visibility:public"],
@@ -47,8 +36,8 @@ cc_library(
 cc_library(
     name = "prefs",
     hdrs = ["prefs.hpp"],
+    # TODO(bazel): Set platform targets and use select() here.
     srcs = ["prefs.win.cpp"],
-    # TODO(blaze): Set platform targets and use select() here.
     visibility = ["//visibility:public"],
 )
 

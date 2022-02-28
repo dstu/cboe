@@ -5,6 +5,7 @@
 
 #include "src/dialogxml/dialogs/strdlog.hpp"
 #include "src/fileio/fileio.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
 #include "src/game/boe.dlgutil.hpp"
 #include "src/game/boe.fileio.hpp"
 #include "src/game/boe.global.hpp"
@@ -17,7 +18,6 @@
 #include "src/game/boe.text.hpp"
 #include "src/game/boe.town.hpp"
 #include "src/sounds.hpp"
-#include "src/tools/cursors.hpp"
 #include "src/universe/universe.hpp"
 #include "src/util/mathutil.hpp"
 

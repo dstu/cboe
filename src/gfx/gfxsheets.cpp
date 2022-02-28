@@ -6,7 +6,7 @@
 //
 //
 
-#include "gfxsheets.hpp"
+#include "src/gfx/gfxsheets.hpp"
 
 #include "src/location.hpp"
 #include "src/fileio/resmgr/res_image.hpp"

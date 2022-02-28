@@ -24,7 +24,8 @@ cc_library(
         "render_text.cpp",
     ],
     deps = [
-        "//src/fileio",
+        # "//src/fileio",
+        "//src/fileio/resmgr:res_font",
         "//src:location",
         "//src/dialogxml/widgets:pictypes",
     ],
