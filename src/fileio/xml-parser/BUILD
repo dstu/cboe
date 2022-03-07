@@ -8,9 +8,12 @@ cc_library(
         "tinyxml.h",
     ],
     srcs = [
-        "tinyxml.cpp",
         "ticpp.cpp",
         "tinystr.cpp",
+        "tinyxml.cpp",
+        "tinyxmlerror.cpp",
+        "tinyxmlparser.cpp",
     ],
     visibility = ["//visibility:public"],
+    copts = ["-DTIXML_USE_TICPP"],
 )

@@ -6,7 +6,7 @@
 
 #include "src/dialogxml/dialogs/strdlog.hpp"
 #include "src/dialogxml/widgets/button.hpp"
-#include "src/fileio/fileio.hpp"
+// #include "src/fileio/fileio.hpp"
 #include "src/fileio/resmgr/cursors.hpp"
 // #include "src/game/boe.fileio.hpp"
 #include "src/game/boe.global.hpp"

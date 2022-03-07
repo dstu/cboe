@@ -15,6 +15,24 @@ cc_library(
 )
 
 cc_library(
+    name = "edit_stuff_done",
+    hdrs = ["edit_stuff_done.hpp"],
+    srcs = ["edit_stuff_done.cpp"],
+    deps = [
+        ":winutil",
+        "//src/gfx:render",
+        "//src:skills_traits",
+        "//src/dialogxml/dialogs:choicedlog",
+        "//src/dialogxml/dialogs:strdlog",
+        "//src/dialogxml/widgets",
+        "//src/fileio",
+        "//src/universe",
+        "//src/util",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "enum_map",
     hdrs = ["enum_map.hpp"],
     visibility = ["//visibility:public"],
@@ -42,6 +60,13 @@ cc_library(
 )
 
 cc_library(
+    name = "rw",
+    hdrs = ["rw.hpp"],
+    srcs = ["rw.cpp"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
     name = "undo",
     hdrs = ["undo.hpp"],
     srcs = ["undo.cpp"],
@@ -61,4 +86,5 @@ cc_library(
     # here.
     srcs = ["winutil.linux.cpp"],
     visibility = ["//visibility:public"],
+    copts = ["-std=c++17"],
 )

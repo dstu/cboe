@@ -9,8 +9,9 @@
 #ifndef BoE_special_parse_hpp
 #define BoE_special_parse_hpp
 
-#include "special.hpp"
 #include <boost/spirit/include/classic.hpp>
+
+#include "src/scenario/special.hpp"
 
 enum eParseError {
 	generic_error,

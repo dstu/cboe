@@ -1,7 +1,10 @@
 cc_library(
     name = "3choice",
     hdrs = ["3choice.hpp"],
-    srcs = ["3choice.cpp"],
+    srcs = [
+        "3choice.cpp",
+        "basicbtns.cpp",
+    ],
     deps = [
         ":choicedlog",
         "//src:types",

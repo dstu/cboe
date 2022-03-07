@@ -24,6 +24,7 @@ cc_library(
         "//src/scenario:vehicle",
         "//src/scenario:item",
         "//src/scenario:quest",
+        "//src/tools:rw",
     ],
     visibility = ["//visibility:public"],
 )

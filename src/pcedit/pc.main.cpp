@@ -23,6 +23,7 @@
 #include "res_image.hpp"
 #include "prefs.hpp"
 #include "framerate_limiter.hpp"
+#include "src/tools/edit_stuff_done.hpp"
 
 cUniverse univ;
 

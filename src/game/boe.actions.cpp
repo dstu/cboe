@@ -32,6 +32,7 @@
 #include "src/sounds.hpp"
 #include "src/spell.hpp"
 #include "src/tools/enum_map.hpp"
+#include "src/tools/edit_stuff_done.hpp"
 #include "src/tools/prefs.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
@@ -116,9 +117,6 @@ std::queue<pending_special_type> special_queue;
 bool end_scenario = false;
 
 static void advance_time(bool did_something, bool need_redraw, bool need_reprint);
-
-// This is defined in pc.editors.cpp since the PC editor also uses it
-extern void edit_stuff_done();
 
 static void init_shopping_rects() {
 	rectangle shop_base = {63,12,99,267};

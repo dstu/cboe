@@ -16,10 +16,10 @@
 #include <string>
 #include <vector>
 
-#include "src/fileio/fileio.hpp"
 #include "src/gfx/gfxsheets.hpp" // for NO_PIC
 #include "src/oldstructs.hpp"
 #include "src/spell.hpp"
+#include "src/tools/rw.hpp"
 
 void cMonster::import_legacy(legacy::monster_record_type& old){
 	level = old.level;

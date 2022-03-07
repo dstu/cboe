@@ -15,22 +15,22 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/ptr_container/ptr_set.hpp>
 
-#include "spell.hpp"
-#include "item_abilities.hpp"
-#include "item_variety.hpp"
-#include "damage.hpp"
-#include "race.hpp"
-#include "location.hpp"
-#include "fields.hpp"
-#include "quest.hpp"
-#include "shop.hpp"
-#include "terrain_abilities.hpp"
+#include "src/spell.hpp"
+#include "src/scenario/item_abilities.hpp"
+#include "src/scenario/item_variety.hpp"
+#include "src/damage.hpp"
+#include "src/race.hpp"
+#include "src/location.hpp"
+#include "src/fields.hpp"
+#include "src/scenario/quest.hpp"
+#include "src/scenario/shop.hpp"
+#include "src/scenario/terrain_abilities.hpp"
 
-#include "monster.hpp"
-#include "party.hpp"
-#include "town.hpp"
-#include "talking.hpp"
-#include "scenario.hpp"
+#include "src/scenario/monster.hpp"
+#include "src/universe/party.hpp"
+#include "src/scenario/town.hpp"
+#include "src/scenario/talking.hpp"
+#include "src/scenario/scenario.hpp"
 
 const char* oboeVersionString() {
 	static std::shared_ptr<char> version;

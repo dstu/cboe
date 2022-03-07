@@ -18,7 +18,7 @@
 #include "src/scenario/scenario.hpp"
 #include "src/dialogxml/dialogs/strdlog.hpp"
 #include "src/oldstructs.hpp"
-#include "src/fileio/fileio.hpp"
+#include "src/tools/rw.hpp"
 #include "src/util/mathutil.hpp"
 
 cParty::cParty(ePartyPreset party_preset) {

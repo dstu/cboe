@@ -8,7 +8,7 @@
 
 //#define BOOST_SPIRIT_DEBUG
 
-#include "special_parse.hpp"
+#include "src/fileio/special_parse.hpp"
 
 #include <fstream>
 #include <sstream>

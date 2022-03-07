@@ -1,7 +1,7 @@
 #include <vector>
 
 #include "src/dialogxml/dialogs/choicedlog.hpp"
-#include "src/fileio/fileio.hpp"
+// #include "src/fileio/fileio.hpp"
 #include "src/fileio/resmgr/cursors.hpp"
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/game/boe.actions.hpp"

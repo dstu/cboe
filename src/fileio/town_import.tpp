@@ -11,10 +11,9 @@
 #include <map>
 #include <sstream>
 
-#include "scenario.hpp"
-#include "strdlog.hpp"
-#include "oldstructs.hpp"
-#include "fileio.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/oldstructs.hpp"
+#include "src/scenario/scenario.hpp"
 
 template<typename T>
 struct import_helper {

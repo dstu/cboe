@@ -10,13 +10,13 @@
 
 #include <boost/filesystem/operations.hpp>
 #include <fstream>
+#include <iostream>
 
-// #include "src/dialogxml/dialogs/strdlog.hpp"
 #include "src/fileio/gzstream/gzstream.h"
 #include "src/fileio/tarball.hpp"
 #include "src/gfx/gfxsheets.hpp"
 #include "src/porting.hpp"
-// #include "src/universe/universe.hpp"
+#include "src/universe/universe.hpp"
 
 extern bool mac_is_intel;
 extern boost::filesystem::path progDir, tempDir;
@@ -52,7 +52,9 @@ bool load_party(boost::filesystem::path file_to_load, cUniverse& univ){
 	// the three flags still follow that.
 	FILE* file_id = fopen(file_to_load.string().c_str(), "rb");
 	if(file_id == nullptr) {
-		showError("Loading Blades of Exile save file failed.");
+          // TODO(bazel): fix circular dependencies.
+		// showError("Loading Blades of Exile save file failed.");
+          std::cerr << "Loading Blades of Exile save file failed" << std::endl;
 		return false;
 	}
 	
@@ -61,7 +63,8 @@ bool load_party(boost::filesystem::path file_to_load, cUniverse& univ){
 	n = fread(&flags, len, 1, file_id);
 	if(n < 1) {
 		fclose(file_id);
-		showError("This is not a Blades of Exile save file.");
+                // TODO(bazel): fix circular dependencies.
+                std::cerr << "This is not a Blades of Exile save file." << std::endl;
 		return false;
 	}
 	
@@ -122,7 +125,9 @@ bool load_party(boost::filesystem::path file_to_load, cUniverse& univ){
 		case new_oboe:
 			return load_party_v2(file_to_load, univ);
 		case unknown:
-			showError("This is not a Blades of Exile save file.");
+                  // TODO(bazel): fix circular dependencies.
+			// showError("This is not a Blades of Exile save file.");
+                  std::cerr << "This is not a Blades of Exile save file" << std::endl;
 			return false;
 	}
 	
@@ -225,7 +230,9 @@ bool load_party_v1(boost::filesystem::path file_to_load, cUniverse& real_univ, b
 			std::ostringstream msg;
 			msg << "The scenario that this party was in (\"" << store_party.scen_name;
 			msg << "\") could not be found. Most likely, it is not installed in the Scenarios directory.";
-			showError(msg.str());
+                        // TODO(bazel): fix circular dependencies.
+			// showError(msg.str());
+                        std::cerr << msg.str() << std::endl;
 			return false;
 		}
 		
@@ -281,7 +288,9 @@ bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 	{ // Load main party data first
 		std::istream& fin = partyIn.getFile("save/party.txt");
 		if(!fin) {
-			showError("Loading Blades of Exile save file failed.");
+                  // TODO(bazel): Fix circular dependencies.
+			// showError("Loading Blades of Exile save file failed.");
+                  std::cerr << "Loading Blades of Exile save file failed" << std::endl;
 			return false;
 		}
 		univ.party.readFrom(fin);
@@ -290,7 +299,9 @@ bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 	{ // Then the "setup" array
 		std::istream& fin = partyIn.getFile("save/setup.dat");
 		if(!fin) {
-			showError("Loading Blades of Exile save file failed.");
+                  // TODO(bazel): Fix circular dependencies.
+			// showError("Loading Blades of Exile save file failed.");
+                        std::cerr << "Loading Blades of Exile save file failed" << std::endl;
 			return false;
 		}
 		uint16_t magic;
@@ -309,7 +320,9 @@ bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 		fname[7] = i + '1';
 		std::istream& fin = partyIn.getFile(fname);
 		if(!fin) {
-			showError("Loading Blades of Exile save file failed.");
+                  // TODO(bazel): Fix circular dependencies.
+			// showError("Loading Blades of Exile save file failed.");
+                  std::cerr << "Loading Blades of Exile save file failed" << std::endl;
 			return false;
 		}
 		univ.party[i].readFrom(fin);
@@ -335,7 +348,9 @@ bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 			std::ostringstream msg;
 			msg << "The scenario that this party was in (\"" << univ.party.scen_name;
 			msg << "\") could not be found. Most likely, it is not installed in the Scenarios directory.";
-			showError(msg.str());
+                        // TODO(bazel): Fix circular dependencies.
+			// showError(msg.str());
+                        std::cerr << msg.str() << std::endl;
 			return false;
 		}
 		
@@ -346,7 +361,9 @@ bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 			// Load scenario data
 			std::istream& fin = partyIn.getFile("save/scenario.txt");
 			if(!fin) {
-				showError("Loading Blades of Exile save file failed.");
+                          // TODO(bazel): Fix circular dependencies.
+				// showError("Loading Blades of Exile save file failed.");
+                          std::cerr << "Loading Blades of Exile save file failed" << std::endl;
 				return false;
 			}
 			univ.scenario.readFrom(fin);
@@ -356,7 +373,9 @@ bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 			// Load town data
 			std::istream& fin = partyIn.getFile("save/town.txt");
 			if(!fin) {
-				showError("Loading Blades of Exile save file failed.");
+                          // TODO(bazel): Fix circular dependencies.
+				// showError("Loading Blades of Exile save file failed.");
+                          std::cerr << "Loading Blades of Exile save file failed" << std::endl;
 				return false;
 			}
 			univ.town.readFrom(fin);
@@ -371,7 +390,9 @@ bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 		// Load outdoors data
 		std::istream& fin = partyIn.getFile("save/out.txt");
 		if(!fin) {
-			showError("Loading Blades of Exile save file failed.");
+                  // TODO(bazel): Fix circular dependencies.
+			// showError("Loading Blades of Exile save file failed.");
+                  std::cerr << "Loading Blades of Exile save file failed" << std::endl;
 			return false;
 		}
 		univ.out.readFrom(fin);
@@ -393,7 +414,11 @@ bool load_party_v2(boost::filesystem::path file_to_load, cUniverse& real_univ){
 			sheet.create(party_sheet.getSize().x, party_sheet.getSize().y);
 			sheet.update(party_sheet);
 			spec_scen_g.party_sheet.reset(new sf::Texture(sheet));
-		} else showWarning("There was an error loading the party custom graphics.");
+		} else {
+                  // TODO(bazel): Fix circular dependencies.
+                  // showWarning("There was an error loading the party custom graphics.");
+                  std::cerr << "There was an error loading the party custom graphics" << std::endl;
+                }
 	}
 	
 	real_univ = std::move(univ);

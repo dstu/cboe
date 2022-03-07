@@ -10,7 +10,7 @@
 #include "src/dialogxml/widgets/pict.hpp"
 #include "src/dialogxml/widgets/scrollbar.hpp"
 #include "src/dialogxml/widgets/stack.hpp"
-#include "src/fileio/fileio.hpp"
+// #include "src/fileio/fileio.hpp"
 #include "src/fileio/resmgr/cursors.hpp"
 #include "src/fileio/resmgr/res_strings.hpp"
 #include "src/game/boe.consts.hpp"

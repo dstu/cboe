@@ -16,9 +16,8 @@ cc_library(
     ],
     srcs = ["item.cpp"],
     deps = [
-        "//src/fileio",
-        "//src/fileio/resmgr:res_image",
-        "//src/util",
+        # "//src/fileio",
+        # "//src/fileio/resmgr:res_image",
         "//src:alchemy",
         "//src:damage",
         "//src:location",
@@ -27,6 +26,8 @@ cc_library(
         "//src:skills_traits",
         "//src:spell",
         "//src:types",
+        "//src/tools:rw",
+        "//src/util",
     ],
     visibility = ["//visibility:public"],
 )
@@ -46,8 +47,8 @@ cc_library(
         "//src:race",
         "//src:spell",
         "//src:types",
-        "//src/fileio",
         "//src/gfx:gfxsheets",
+        "//src/tools:rw",
     ],
     visibility = ["//visibility:public"],
 )
@@ -115,6 +116,7 @@ cc_library(
         ":vehicle",
         "//src:location",
         "//src:oldstructs",
+        "//src/tools:rw",
         "//src/tools:vector2d",
         "//src/util:mathutil",
     ],

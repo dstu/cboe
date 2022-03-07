@@ -13,23 +13,18 @@
 #include <boost/lexical_cast.hpp>
 
 #include "src/dialogxml/dialogs/strdlog.hpp"
-
-#include "src/scenario/scenario.hpp"
-#include "src/scenario/town.hpp"
-#include "src/fileio/map_parse.hpp"
-#include "src/fileio/special_parse.hpp"
-#include "src/gfx/gfxsheets.hpp"
-#include "src/util/mathutil.hpp"
 #include "src/fileio/gzstream/gzstream.h"
-#include "src/fileio/tarball.hpp"
-
-#include "src/porting.hpp"
+#include "src/fileio/town_import.tpp"
+#include "src/fileio/map_parse.hpp"
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/fileio/resmgr/res_sound.hpp"
-
-// Because the full template definition needs to be visible in this file
-// Also, for some reason, it's not found in the include paths, so use a relative path
-#include "../scenario/town_import.tpp"
+#include "src/fileio/special_parse.hpp"
+#include "src/fileio/tarball.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/porting.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/scenario/town.hpp"
+#include "src/util/mathutil.hpp"
 
 bool cur_scen_is_mac = true;
 extern cCustomGraphics spec_scen_g;

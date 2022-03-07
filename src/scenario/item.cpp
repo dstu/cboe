@@ -16,10 +16,10 @@
 #include <vector>
 
 #include "src/damage.hpp"
-#include "src/fileio/fileio.hpp"
 #include "src/oldstructs.hpp"
 #include "src/race.hpp"
 #include "src/spell.hpp"
+#include "src/tools/rw.hpp"
 #include "src/util/utility.hpp"
 
 static std::array<item_variety_t, 28> load_item_type_info() {

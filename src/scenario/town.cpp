@@ -16,8 +16,8 @@
 #include "src/scenario/scenario.hpp"
 #include "src/oldstructs.hpp"
 #include "src/util/mathutil.hpp"
-#include "src/fileio/fileio.hpp"
 #include "src/util/utility.hpp"
+#include "src/tools/rw.hpp"
 
 void cTown::import_legacy(legacy::town_record_type& old){
 	town_chop_time = old.town_chop_time;
