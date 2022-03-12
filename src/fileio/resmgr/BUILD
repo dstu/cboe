@@ -51,6 +51,9 @@ cc_library(
     deps = [
         ":resmgr",
     ],
+    data = [
+        "//rsrc/strings",
+    ],
     visibility = ["//visibility:public"],
 )
 
