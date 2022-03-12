@@ -19,7 +19,7 @@ sf::Shader maskShader;
 extern boost::filesystem::path progDir;
 
 void init_shaders() {
-	boost::filesystem::path shaderPath = progDir/"data"/"shaders";
+	boost::filesystem::path shaderPath = progDir/"boe.runfiles"/"__main__"/"src"/"gfx";
 	boost::filesystem::path fragPath = shaderPath/"mask.frag", vertPath = shaderPath/"mask.vert";
 	
 	do {

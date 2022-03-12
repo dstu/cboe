@@ -181,7 +181,7 @@ void cDialog::loadFromFile(std::string path){
 	static const cKey enterKey = {true, key_enter};
 	bg = defaultBackground;
 	fname = path;
-	boost::filesystem::path cPath = progDir/"data"/"dialogs"/path;
+	boost::filesystem::path cPath = progDir/"boe.runfiles"/"__main__"/"rsrc"/"dialogs"/path;
 	try{
 		TiXmlBase::SetCondenseWhiteSpace(false);
 		Document xml(cPath.string().c_str());

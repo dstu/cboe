@@ -47,7 +47,7 @@ void init_directories(const char* exec_path) {
 #endif
 	progDir = progDir.parent_path();
 	// Initialize the resource manager paths
-	add_resmgr_paths(progDir/"data");
+	add_resmgr_paths(progDir/"boe.runfiles"/"__main__"/"rsrc");
 	
 	// We need a location for temporary files, primarily for loading and saving operations
 	// The scenario editor may also use this location as "scratch space"
