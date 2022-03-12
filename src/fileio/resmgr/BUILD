@@ -12,6 +12,9 @@ cc_library(
     deps = [
         ":resmgr",
     ],
+    data = [
+        "//rsrc/cursors",
+    ],
     visibility = ["//visibility:public"],
 )
 
@@ -22,6 +25,9 @@ cc_library(
     deps = [
         ":resmgr",
     ],
+    data = [
+        "//rsrc/fonts",
+    ],
     visibility = ["//visibility:public"],
 )
 
@@ -31,6 +37,9 @@ cc_library(
     srcs = ["res_image.cpp"],
     deps = [
         ":resmgr",
+    ],
+    data = [
+        "//rsrc/graphics",
     ],
     visibility = ["//visibility:public"],
 )

@@ -40,9 +40,7 @@ cc_library(
     hdrs = ["boe.locutils.hpp"],
     srcs = ["boe.locutils.cpp"],
     deps = [
-        # ":graphics",
         ":lib",
-        # ":monster",
         "//src:types",
         "//src/universe",
         "//src/util:mathutil",
@@ -110,6 +108,9 @@ cc_binary(
         "//src/tools:enum_map",
         "//src/universe",
         "//src/util:mathutil",
+    ],
+    data = [
+        "//rsrc/dialogs",
     ],
     linkopts = [
         "-L/usr/local/lib",

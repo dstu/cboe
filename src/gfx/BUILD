@@ -23,6 +23,10 @@ cc_library(
         "render_shapes.cpp",
         "render_text.cpp",
     ],
+    data = [
+        ":mask.frag",
+        ":mask.vert",
+    ],
     deps = [
         # "//src/fileio",
         "//src/fileio/resmgr:res_font",

@@ -64,6 +64,9 @@ cc_library(
         "//src/tools:prefs",
         "//src/util:mathutil",
     ],
+    data = [
+        "//rsrc/sounds",
+    ],
     visibility = ["//visibility:public"],
 )
 
