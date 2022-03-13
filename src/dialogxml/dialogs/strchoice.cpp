@@ -6,10 +6,10 @@
  *
  */
 
-#include "strchoice.hpp"
-
-#include <sstream>
 #include <algorithm>
+#include <sstream>
+
+#include "src/dialogxml/dialogs/strchoice.hpp"
 
 #include <boost/lexical_cast.hpp>
 

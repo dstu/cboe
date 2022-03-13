@@ -1,6 +1,8 @@
 
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/universe/pc.hpp"
+
 #include <SFML/Window/Event.hpp>
-#include "dialog.hpp"
 
 bool handle_action(const sf::Event&);
 void flash_rect(rectangle to_flash);

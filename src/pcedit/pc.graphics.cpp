@@ -1,20 +1,20 @@
 
 #include <iomanip>
-#include "universe.hpp"
-#include "pc.graphics.hpp"
-#include "pc.editors.hpp"
-#include "pc.action.hpp"
-#include "pc.menus.hpp"
-#include "sounds.hpp"
-#include "gfxsheets.hpp"
-#include "render_shapes.hpp"
-#include "render_image.hpp"
-#include "res_image.hpp"
-#include "message.hpp"
-#include "mathutil.hpp"
-#include "gitrev.hpp"
-#include "tiling.hpp" // for bg
-#include "utility.hpp"
+
+#include "src/dialogxml/widgets/message.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/gfx/tiling.hpp" // for bg
+#include "src/pcedit/pc.action.hpp"
+#include "src/pcedit/pc.editors.hpp"
+#include "src/pcedit/pc.graphics.hpp"
+#include "src/pcedit/pc.menus.hpp"
+#include "src/sounds.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/util/utility.hpp"
 
 extern cUniverse univ;
 

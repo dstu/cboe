@@ -9,11 +9,12 @@
 #ifndef DIALOG_STRINGCHOICE_H
 #define DIALOG_STRINGCHOICE_H
 
+#include <functional>
 #include <string>
 #include <vector>
-#include <functional>
-#include "dialog.hpp"
-#include "ledgroup.hpp"
+
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/ledgroup.hpp"
 
 /// A dialog that presents a list of strings with LEDs and allows you to choose one.
 /// The list may span several pages.

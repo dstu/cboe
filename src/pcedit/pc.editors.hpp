@@ -1,3 +1,4 @@
+#include "src/universe/pc.hpp"
 
 class cDialog;
 

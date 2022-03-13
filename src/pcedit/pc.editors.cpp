@@ -1,18 +1,19 @@
+#include "src/pcedit/pc.editors.hpp"
 
-#include "pc.graphics.hpp"
-#include "universe.hpp"
-#include "pc.editors.hpp"
-#include "utility.hpp"
-#include "dialog.hpp"
-#include "control.hpp"
-#include "button.hpp"
-#include "ledgroup.hpp"
-#include "pict.hpp"
-#include "strdlog.hpp"
-#include "choicedlog.hpp"
-#include "winutil.hpp"
-#include "cursors.hpp"
-#include "render_shapes.hpp" // for colour constants
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/control.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/ledgroup.hpp"
+#include "src/dialogxml/widgets/pict.hpp"
+#include "src/gfx/render_shapes.hpp" // for colour constants
+#include "src/pcedit/pc.graphics.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/utility.hpp"
+
 #include <boost/lexical_cast.hpp>
 
 /*
@@ -46,7 +47,7 @@ extern bool current_file_has_maps;
 bool choice_active[6];
 
 extern short which_pc_displayed;
-cPlayer *store_pc;
+extern cPlayer *store_pc;
 sf::Texture button_num_gworld;
 
 extern std::map<eSkill,short> skill_cost;

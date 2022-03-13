@@ -1,16 +1,18 @@
 
 #include <cstdio>
 
-#include "pc.graphics.hpp"
-#include "universe.hpp"
-#include "pc.editors.hpp"
-#include "pc.fileio.hpp"
-#include "pc.action.hpp"
-#include "sounds.hpp"
-#include "mathutil.hpp"
-#include "dialog.hpp"
-#include "control.hpp"
-#include "cursors.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
+#include "src/dialogxml/widgets/control.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/pcedit/pc.action.hpp"
+#include "src/pcedit/pc.editors.hpp"
+#include "src/pcedit/pc.fileio.hpp"
+#include "src/pcedit/pc.graphics.hpp"
+#include "src/sounds.hpp"
+#include "src/tools/edit_stuff_done.hpp"
+#include "src/universe/universe.hpp"
+#include "src/util/mathutil.hpp"
+
 #include <boost/lexical_cast.hpp>
 
 extern cUniverse univ;

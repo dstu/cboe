@@ -56,3 +56,15 @@ cc_library(
     ],
     visibility = ["//visibility:public"],
 )
+
+cc_library(
+    name = "strchoice",
+    srcs = ["strchoice.cpp"],
+    hdrs = ["strchoice.hpp"],
+    deps = [
+        "//src/dialogxml/widgets",
+        "//src/tools:edit_stuff_done",
+        "//src/fileio/resmgr:res_image",
+    ],
+    visibility = ["//visibility:public"],
+)
