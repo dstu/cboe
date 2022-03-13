@@ -13,29 +13,6 @@ cc_library(
 )
 
 cc_library(
-    name = "dlgutil",
-    hdrs = ["boe.dlgutil.hpp"],
-    srcs = ["boe.dlgutil.cpp"],
-    deps = [
-        ":lib",
-        "//src/dialogxml/dialogs:choicedlog",
-        "//src/dialogxml/dialogs:strdlog",
-        "//src/dialogxml/widgets",
-        "//src/fileio",
-        "//src/fileio/resmgr:res_strings",
-        "//src:sounds",
-        "//src/tools:cursors",
-        "//src/tools:enum_map",
-        "//src/tools:prefs",
-        "//src/tools:winutil",
-        "//src/util",
-        "//src/util:mathutil",
-        "//src/universe",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-cc_library(
     name = "locutils",
     hdrs = ["boe.locutils.hpp"],
     srcs = ["boe.locutils.cpp"],
