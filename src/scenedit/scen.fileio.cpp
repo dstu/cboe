@@ -1,26 +1,28 @@
 
 #include <cstring>
-#include "scen.global.hpp"
-#include "scenario.hpp"
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/scenedit/scen.fileio.hpp"
+#include "src/scenedit/scen.keydlgs.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/scenedit/scen.core.hpp"
+#include "src/sounds.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/oldstructs.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/fileio/tarball.hpp"
+#include "src/fileio/gzstream/gzstream.h"
+#include "src/fileio/xml-parser/tinyprint.h"
+#include "src/fileio/map_parse.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/tools/undo.hpp"
+
 #include <boost/filesystem/operations.hpp>
-#include "scen.fileio.hpp"
-#include "scen.keydlgs.hpp"
-#include "gfxsheets.hpp"
-#include "scen.core.hpp"
-#include "sounds.hpp"
-#include "mathutil.hpp"
-#include "oldstructs.hpp"
-#include "fileio.hpp"
-#include "tarball.hpp"
-#include "gzstream.h"
-#include "tinyprint.h"
-#include "map_parse.hpp"
-#include "winutil.hpp"
-#include "choicedlog.hpp"
-#include "undo.hpp"
 
 extern cScenario scenario;
 

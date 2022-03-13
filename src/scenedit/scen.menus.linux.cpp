@@ -1,13 +1,16 @@
-#include "scen.global.hpp"
-#include "scen.menus.hpp"
-#include <SFML/Graphics/RenderWindow.hpp>
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenedit/scen.menus.hpp"
+
 #include <memory>
-#include <unordered_map>
 #include <string>
-#include "scen.menu.hpp"
-#include "undo.hpp"
-#include "event_listener.hpp"
-#include "drawable_manager.hpp"
+#include <unordered_map>
+
+#include "src/scenedit/scen.menu.hpp"
+#include "src/tools/undo.hpp"
+#include "src/tools/event_listener.hpp"
+#include "src/tools/drawable_manager.hpp"
+
+#include <SFML/Graphics/RenderWindow.hpp>
 
 extern sf::RenderWindow mainPtr;
 extern cUndoList undo_list;

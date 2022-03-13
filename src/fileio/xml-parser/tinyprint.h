@@ -9,11 +9,13 @@
 #ifndef BoE_tinyprint_hpp
 #define BoE_tinyprint_hpp
 
-#include "ticpp.h"
-#include <string>
-#include <stack>
-#include <boost/lexical_cast.hpp>
 #include <ios>
+#include <stack>
+#include <string>
+
+#include "ticpp.h"
+
+#include <boost/lexical_cast.hpp>
 
 namespace ticpp {
 	class Printer : public Visitor {

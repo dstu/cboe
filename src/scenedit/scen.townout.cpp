@@ -2,27 +2,29 @@
 #include <cstdio>
 #include <cstring>
 #include <stack>
+
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/widgets/ledgroup.hpp"
+#include "src/dialogxml/widgets/scrollpane.hpp"
+#include "src/dialogxml/widgets/field.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/scenario/town.hpp"
+#include "src/scenedit/scen.actions.hpp"
+#include "src/scenedit/scen.core.hpp"
+#include "src/scenedit/scen.fileio.hpp"
+#include "src/scenedit/scen.graphics.hpp"
+#include "src/scenedit/scen.keydlgs.hpp"
+#include "src/scenedit/scen.townout.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/dialogxml/widgets/stack.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/util/utility.hpp"
+
 #include <boost/lexical_cast.hpp>
-#include "scen.global.hpp"
-#include "scenario.hpp"
-#include "town.hpp"
-#include "utility.hpp"
-#include "scen.actions.hpp"
-#include "scen.graphics.hpp"
-#include "scen.townout.hpp"
-#include "scen.keydlgs.hpp"
-#include "scen.fileio.hpp"
-#include "scen.core.hpp"
-#include "mathutil.hpp"
-#include "button.hpp"
-#include "field.hpp"
-#include "strdlog.hpp"
-#include "choicedlog.hpp"
-#include "winutil.hpp"
-#include "ledgroup.hpp"
-#include "stack.hpp"
-#include "scrollpane.hpp"
-#include "fileio.hpp"
 
 extern short cen_x, cen_y, overall_mode;
 extern bool mouse_button_held,editing_town,change_made;

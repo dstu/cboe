@@ -1,31 +1,29 @@
 
-#include <cstdio>
-#include <sstream>
-#include <cstring>
-#include "scen.global.hpp"
-#include "scenario.hpp"
-#include "gfxsheets.hpp"
-#include "render_image.hpp"
-#include "render_shapes.hpp"
-#include "render_text.hpp"
-#include "tiling.hpp" // for bg
-#include "scen.graphics.hpp"
 #include <cmath>
-#include "scen.keydlgs.hpp"
-#include "sounds.hpp"
-#include "mathutil.hpp"
-#include "drawable_manager.hpp"
-#include "cursors.hpp"
+#include <cstdio>
+#include <cstring>
+#include <sstream>
 
-#include "dialog.hpp"
-
-#include "scen.core.hpp"
-#include "scen.menus.hpp"
-#include "scen.townout.hpp"
-#include "scrollbar.hpp"
-#include "res_image.hpp"
-
-#include "scen.btnmg.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/gfx/render_text.hpp"
+#include "src/gfx/tiling.hpp" // for bg
+#include "src/scenario/scenario.hpp"
+#include "src/scenedit/scen.btnmg.hpp"
+#include "src/scenedit/scen.core.hpp"
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenedit/scen.graphics.hpp"
+#include "src/scenedit/scen.keydlgs.hpp"
+#include "src/scenedit/scen.menus.hpp"
+#include "src/scenedit/scen.townout.hpp"
+#include "src/sounds.hpp"
+#include "src/tools/drawable_manager.hpp"
+#include "src/util/mathutil.hpp"
 
 void load_terrain_template();
 short terrain_in_index();

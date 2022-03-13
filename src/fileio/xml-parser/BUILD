@@ -4,11 +4,13 @@ cc_library(
         "ticpp.h",
         "ticppapi.h",
         "ticpprc.h",
+        "tinyprint.h",
         "tinystr.h",
         "tinyxml.h",
     ],
     srcs = [
         "ticpp.cpp",
+        "tinyprint.cpp",
         "tinystr.cpp",
         "tinyxml.cpp",
         "tinyxmlerror.cpp",

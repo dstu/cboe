@@ -1,40 +1,42 @@
 
+#include <algorithm>
 #include <cstdio>
 #include <cstring>
 #include <functional>
 #include <numeric>
-#include <algorithm>
 #include <unordered_map>
+
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/scenario/town.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/util/utility.hpp"
+#include "src/scenedit/scen.graphics.hpp"
+#include "src/scenedit/scen.core.hpp"
+#include "src/scenedit/scen.keydlgs.hpp"
+#include "src/scenedit/scen.townout.hpp"
+#include "src/scenedit/scen.fileio.hpp"
+#include "src/scenedit/scen.actions.hpp"
+#include "src/scenedit/scen.menus.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/control.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/dialogxml/dialogs/3choice.hpp"
+#include "src/dialogxml/dialogs/strchoice.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/dialogxml/widgets/field.hpp"
+#include "src/fileio/resmgr/res_strings.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/fileio/resmgr/res_sound.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
+#include "src/dialogxml/widgets/stack.hpp"
+#include "src/spell.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/view_dialogs.hpp"
+
 #include <boost/lexical_cast.hpp>
-#include "scen.global.hpp"
-#include "scenario.hpp"
-#include "town.hpp"
-#include "gfxsheets.hpp"
-#include "utility.hpp"
-#include "scen.graphics.hpp"
-#include "scen.core.hpp"
-#include "scen.keydlgs.hpp"
-#include "scen.townout.hpp"
-#include "scen.fileio.hpp"
-#include "scen.actions.hpp"
-#include "scen.menus.hpp"
-#include "dialog.hpp"
-#include "control.hpp"
-#include "button.hpp"
-#include "strdlog.hpp"
-#include "3choice.hpp"
-#include "strchoice.hpp"
-#include "fileio.hpp"
-#include "field.hpp"
-#include "res_strings.hpp"
-#include "res_image.hpp"
-#include "res_sound.hpp"
-#include "cursors.hpp"
-#include "stack.hpp"
-#include "spell.hpp"
-#include "mathutil.hpp"
-#include "winutil.hpp"
-#include "view_dialogs.hpp"
 
 extern short cen_x, cen_y,cur_town;
 extern bool mouse_button_held;

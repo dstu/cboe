@@ -6,9 +6,9 @@
 // NOTE: this also includes SFML for us
 #include <TGUI/TGUI.hpp>
 #include <vector>
-#include "undo.hpp"
-#include "event_listener.hpp"
-#include "drawable.hpp"
+#include "src/tools/undo.hpp"
+#include "src/tools/event_listener.hpp"
+#include "src/tools/drawable.hpp"
 
 class OpenBoESceneditMenu : public iEventListener, public iDrawable  {
 public:
@@ -22,10 +22,10 @@ public:
 	
 private:
 	
-	using MenuHierarchy = std::vector<sf::String>;
+	using MenuHierarchy = std::vector<tgui::String>;
 	
 	tgui::Gui tgui;
-	const sf::String internal_menubar_widget_name { "openboe-scenedit-menu" };
+	const tgui::String internal_menubar_widget_name { "openboe-scenedit-menu" };
 
 	tgui::MenuBar::Ptr build_menubar() const;
 	void add_menu_placeholders(tgui::MenuBar::Ptr&) const;

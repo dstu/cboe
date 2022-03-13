@@ -1,5 +1,6 @@
 
-#include "location.hpp" // for sign_loc_t
+#include "src/location.hpp" // for sign_loc_t
+#include "src/scenario/outdoors.hpp"
 
 void edit_placed_monst(short which_m);
 cTownperson edit_placed_monst_adv(cTownperson monst_record, short which, class cDialog& parent);

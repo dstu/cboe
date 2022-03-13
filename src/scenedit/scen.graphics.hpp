@@ -1,7 +1,9 @@
 
+#include "src/fields.hpp"
+#include "src/location.hpp"
+#include "src/global.hpp"
+
 #include <SFML/Graphics/RenderWindow.hpp>
-#include "fields.hpp"
-#include "location.hpp"
 
 void Set_up_win ();
 void run_startup_g();

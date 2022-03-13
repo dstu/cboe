@@ -1,6 +1,8 @@
 
-#include "scen.global.hpp"
-#include "undo.hpp"
+#include "src/global.hpp"
+#include "src/scenedit/scen.global.hpp"
+#include "src/tools/undo.hpp"
+#include "src/scenario/town.hpp"
 
 void init_screen_locs();
 void handle_action(location the_point,sf::Event event);

@@ -3,24 +3,26 @@
 #include <set>
 #include <map>
 #include <numeric>
+
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/gfx/gfxsheets.hpp"
+#include "src/util/utility.hpp"
+#include "src/scenedit/scen.graphics.hpp"
+#include "src/scenedit/scen.keydlgs.hpp"
+#include "src/scenedit/scen.core.hpp"
+#include "src/dialogxml/widgets/dialog.hpp"
+#include "src/dialogxml/widgets/control.hpp"
+#include "src/dialogxml/widgets/button.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/dialogxml/dialogs/3choice.hpp"
+#include "src/dialogxml/dialogs/strchoice.hpp"
+#include "src/dialogxml/dialogs/pictchoice.hpp"
+#include "src/fileio/resmgr/res_strings.hpp"
+#include "src/spell.hpp"
+#include "src/gfx/render_shapes.hpp" // for colour constants
+
 #include <boost/lexical_cast.hpp>
-#include "scen.global.hpp"
-#include "scenario.hpp"
-#include "gfxsheets.hpp"
-#include "utility.hpp"
-#include "scen.graphics.hpp"
-#include "scen.keydlgs.hpp"
-#include "scen.core.hpp"
-#include "dialog.hpp"
-#include "control.hpp"
-#include "button.hpp"
-#include "strdlog.hpp"
-#include "3choice.hpp"
-#include "strchoice.hpp"
-#include "pictchoice.hpp"
-#include "res_strings.hpp"
-#include "spell.hpp"
-#include "render_shapes.hpp" // for colour constants
 
 extern short cen_x, cen_y;
 extern bool mouse_button_held;

@@ -1,31 +1,30 @@
 
+#include <array>
 #include <cmath>
 #include <cstdio>
 #include <cstring>
-#include <array>
-#include <string>
 #include <stack>
-#include "scen.global.hpp"
-#include "scenario.hpp"
-#include "render_shapes.hpp"
-#include "scen.graphics.hpp"
-#include "scen.actions.hpp"
-#include "sounds.hpp"
-#include "scen.core.hpp"
-#include "scen.fileio.hpp"
-#include "scen.keydlgs.hpp"
-#include "scen.townout.hpp"
-#include "scen.menus.hpp"
-#include "mathutil.hpp"
-#include "fileio.hpp"
-#include "winutil.hpp"
-#include "cursors.hpp"
-#include "scrollbar.hpp"
-#include "strdlog.hpp"
-#include "choicedlog.hpp"
-#include "gitrev.hpp"
+#include <string>
 
-#include "scen.btnmg.hpp"
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/gfx/render_shapes.hpp"
+#include "src/scenedit/scen.actions.hpp"
+#include "src/scenedit/scen.btnmg.hpp"
+#include "src/scenedit/scen.core.hpp"
+#include "src/scenedit/scen.fileio.hpp"
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenedit/scen.graphics.hpp"
+#include "src/scenedit/scen.keydlgs.hpp"
+#include "src/scenedit/scen.menus.hpp"
+#include "src/scenedit/scen.townout.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/sounds.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/tools/winutil.hpp"
 
 extern std::string current_string[2];
 extern short mini_map_scales[3];

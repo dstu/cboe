@@ -1,34 +1,35 @@
 
 #include <cstdio>
-#include <string>
 #include <memory>
-#include <boost/filesystem/operations.hpp>
+#include <string>
 
-#include "scen.global.hpp"
-#include "scenario.hpp"
-#include "render_image.hpp"
-#include "tiling.hpp"
-#include "scen.graphics.hpp"
-#include "scen.actions.hpp"
-#include "scen.fileio.hpp"
-#include "scen.btnmg.hpp"
-#include "sounds.hpp"
-#include "scen.townout.hpp"
-#include "scen.core.hpp"
-#include "scen.keydlgs.hpp"
-#include "mathutil.hpp"
-#include "fileio.hpp"
-#include "scrollbar.hpp"
-#include "winutil.hpp"
-#include "cursors.hpp"
-#include "strdlog.hpp"
-#include "choicedlog.hpp"
-#include "scen.menus.hpp"
-#include "res_image.hpp"
-#include "prefs.hpp"
-#include "framerate_limiter.hpp"
-#include "event_listener.hpp"
-#include "drawable_manager.hpp"
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenario/scenario.hpp"
+#include "src/gfx/render_image.hpp"
+#include "src/gfx/tiling.hpp"
+#include "src/scenedit/scen.graphics.hpp"
+#include "src/scenedit/scen.actions.hpp"
+#include "src/scenedit/scen.fileio.hpp"
+#include "src/scenedit/scen.btnmg.hpp"
+#include "src/sounds.hpp"
+#include "src/scenedit/scen.townout.hpp"
+#include "src/scenedit/scen.core.hpp"
+#include "src/scenedit/scen.keydlgs.hpp"
+#include "src/util/mathutil.hpp"
+#include "src/fileio/fileio.hpp"
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/tools/winutil.hpp"
+#include "src/fileio/resmgr/cursors.hpp"
+#include "src/dialogxml/dialogs/strdlog.hpp"
+#include "src/dialogxml/dialogs/choicedlog.hpp"
+#include "src/scenedit/scen.menus.hpp"
+#include "src/fileio/resmgr/res_image.hpp"
+#include "src/tools/prefs.hpp"
+#include "src/tools/framerate_limiter.hpp"
+#include "src/tools/event_listener.hpp"
+#include "src/tools/drawable_manager.hpp"
+
+#include <boost/filesystem/operations.hpp>
 
 /* Globals */
 bool  All_Done = false;

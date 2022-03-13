@@ -1,14 +1,15 @@
 
-#include <cstring>
-#include <cstdio>
-
-#include "scen.global.hpp"
 #include <array>
-#include <string>
-#include "scen.graphics.hpp"
 #include <cmath>
-#include "scen.btnmg.hpp"
-#include "scrollbar.hpp"
+#include <cstdio>
+#include <cstring>
+#include <memory>
+#include <string>
+
+#include "src/dialogxml/widgets/scrollbar.hpp"
+#include "src/scenedit/scen.btnmg.hpp"
+#include "src/scenedit/scen.global.hpp"
+#include "src/scenedit/scen.graphics.hpp"
 
 extern rectangle right_sbar_rect;
 

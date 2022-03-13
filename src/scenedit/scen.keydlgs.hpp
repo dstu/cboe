@@ -1,7 +1,9 @@
 
 #include <string>
-#include "pict.hpp" // for ePicType
-#include "location.hpp" // for info_rect_t
+
+#include "src/dialogxml/widgets/pict.hpp" // for ePicType
+#include "src/location.hpp" // for info_rect_t
+
 class cDialog;
 
 enum eStrType {
