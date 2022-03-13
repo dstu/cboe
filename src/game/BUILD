@@ -43,7 +43,7 @@ cc_library(
         ":lib",
         "//src:types",
         "//src/universe",
-        "//src/util:mathutil",
+        "//src/tools:mathutil",
     ],
     visibility = ["//visibility:public"],
 )
@@ -107,7 +107,7 @@ cc_binary(
         "//src/tools:edit_stuff_done",
         "//src/tools:enum_map",
         "//src/universe",
-        "//src/util:mathutil",
+        "//src/tools:mathutil",
     ],
     data = [
         "//rsrc/dialogs",

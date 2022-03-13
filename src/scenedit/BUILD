@@ -28,7 +28,7 @@ cc_binary(
         "//src/scenario",
         "//src/gfx:gfxsheets",
         "//src:sounds",
-        "//src/util:mathutil",
+        "//src/tools:mathutil",
         "//src:oldstructs",
         "//src/fileio",
         "//src/fileio:tarball",

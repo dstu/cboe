@@ -19,7 +19,7 @@
 #include "src/game/boe.town.hpp"
 #include "src/sounds.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 #define	DONE_BUTTON_ITEM	1
 

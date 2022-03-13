@@ -12,7 +12,7 @@
 #include "src/gfx/render_shapes.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 
 extern cUniverse univ;
 extern std::map<eSkill,short> skill_max;

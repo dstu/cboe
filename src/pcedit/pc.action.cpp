@@ -11,7 +11,7 @@
 #include "src/sounds.hpp"
 #include "src/tools/edit_stuff_done.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 #include <boost/lexical_cast.hpp>
 

@@ -9,7 +9,7 @@
 #include "src/dialogxml/dialogs/choicedlog.hpp"
 #include "src/fileio/resmgr/cursors.hpp"
 #include "src/fileio/fileio.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/gfx/render_shapes.hpp"
 #include "src/scenedit/scen.actions.hpp"
 #include "src/scenedit/scen.btnmg.hpp"

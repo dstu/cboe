@@ -10,7 +10,7 @@
 #include "src/scenario/scenario.hpp"
 #include "src/scenario/town.hpp"
 #include "src/gfx/gfxsheets.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 #include "src/scenedit/scen.graphics.hpp"
 #include "src/scenedit/scen.core.hpp"
 #include "src/scenedit/scen.keydlgs.hpp"
@@ -32,7 +32,7 @@
 #include "src/fileio/resmgr/cursors.hpp"
 #include "src/dialogxml/widgets/stack.hpp"
 #include "src/spell.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/view_dialogs.hpp"
 

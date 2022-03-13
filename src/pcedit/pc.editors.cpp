@@ -12,7 +12,7 @@
 #include "src/fileio/resmgr/cursors.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 
 #include <boost/lexical_cast.hpp>
 

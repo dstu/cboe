@@ -10,7 +10,7 @@
 
 #include <numeric>
 
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/dialogxml/widgets/dialog.hpp"
 
 extern sf::Texture bg_gworld;

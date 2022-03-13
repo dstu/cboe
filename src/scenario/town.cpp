@@ -15,8 +15,8 @@
 
 #include "src/scenario/scenario.hpp"
 #include "src/oldstructs.hpp"
-#include "src/util/mathutil.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/mathutil.hpp"
+#include "src/tools/utility.hpp"
 #include "src/tools/rw.hpp"
 
 void cTown::import_legacy(legacy::town_record_type& old){

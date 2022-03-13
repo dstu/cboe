@@ -13,7 +13,7 @@
 
 #include "src/global.hpp"
 #include "src/oldstructs.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/universe/pc.hpp"
 #include "src/spell.hpp"
 

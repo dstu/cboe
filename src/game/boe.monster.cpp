@@ -14,7 +14,7 @@
 #include "src/game/boe.main.hpp"
 #include "src/gfx/gfxsheets.hpp"
 #include "src/sounds.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 extern eGameMode overall_mode;
 extern short which_combat_type;

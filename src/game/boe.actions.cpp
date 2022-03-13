@@ -36,7 +36,7 @@
 #include "src/tools/prefs.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 rectangle item_screen_button_rects[9] = {
 	{125,10,141,28},{125,40,141,58},{125,68,141,86},{125,98,141,116},{125,126,141,144},{125,156,141,174},

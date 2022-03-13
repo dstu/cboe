@@ -35,8 +35,8 @@
 #include "src/spell.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/mathutil.hpp"
+#include "src/tools/utility.hpp"
 
 extern short skill_bonus[21];
 

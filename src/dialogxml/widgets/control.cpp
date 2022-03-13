@@ -19,7 +19,7 @@
 #include "src/gfx/render_text.hpp"
 #include "src/sounds.hpp"
 #include "src/tools/prefs.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 void cControl::setText(std::string l){
 	lbl = l;

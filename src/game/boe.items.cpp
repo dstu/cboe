@@ -22,7 +22,7 @@
 #include "src/sounds.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 extern short which_combat_type;
 extern eGameMode overall_mode;

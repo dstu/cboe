@@ -8,7 +8,7 @@
 
 #include "spell.hpp"
 
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 
 std::map<eSpell,cSpell> cSpell::dictionary;
 

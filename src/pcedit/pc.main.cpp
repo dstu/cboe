@@ -24,7 +24,7 @@
 #include "src/tools/prefs.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 
 cUniverse univ;
 

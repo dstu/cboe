@@ -29,7 +29,7 @@
 #include "src/sounds.hpp"
 #include "src/spell.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 extern sf::RenderWindow mainPtr;
 extern eGameMode overall_mode;

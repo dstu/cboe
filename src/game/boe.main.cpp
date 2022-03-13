@@ -36,7 +36,7 @@
 #include "src/tools/prefs.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 bool All_Done = false;
 sf::RenderWindow mainPtr;

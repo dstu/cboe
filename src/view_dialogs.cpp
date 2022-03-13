@@ -15,7 +15,7 @@
 #include "src/scenario/item.hpp"
 #include "src/scenario/scenario.hpp"
 #include "src/universe/creature.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 
 void put_item_info(cDialog& me, const cItem& s_i, const cScenario& scen) {
 	std::string desc_str;

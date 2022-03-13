@@ -13,7 +13,7 @@
 #include "src/fileio/resmgr/res_image.hpp"
 #include "src/gfx/render_image.hpp"
 #include "src/gfx/render_shapes.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 std::string cScrollbar::scroll_textures[NUM_STYLES] = {
 	"dlogscrollwh",

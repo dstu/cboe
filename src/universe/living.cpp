@@ -10,7 +10,7 @@
 
 #include <set>
 #include <algorithm>
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 void iLiving::apply_status(eStatus which, int how_much) {
 	if(!is_alive()) return;

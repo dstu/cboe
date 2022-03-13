@@ -23,7 +23,7 @@
 #include "src/scenedit/scen.townout.hpp"
 #include "src/sounds.hpp"
 #include "src/tools/drawable_manager.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 void load_terrain_template();
 short terrain_in_index();

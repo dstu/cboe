@@ -27,7 +27,7 @@ cc_library(
         "//src/dialogxml/widgets",
         "//src/fileio",
         "//src/universe",
-        "//src/util",
+        "//src/tools:utility",
     ],
     visibility = ["//visibility:public"],
 )
@@ -48,6 +48,13 @@ cc_library(
     name = "framerate_limiter",
     hdrs = ["framerate_limiter.hpp"],
     srcs = ["framerate_limiter.cpp"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "mathutil",
+    hdrs = ["mathutil.hpp"],
+    srcs = ["mathutil.cpp"],
     visibility = ["//visibility:public"],
 )
 
@@ -87,4 +94,15 @@ cc_library(
     srcs = ["winutil.linux.cpp"],
     visibility = ["//visibility:public"],
     copts = ["-std=c++17"],
+)
+
+cc_library(
+    name = "utility",
+    hdrs = ["utility.hpp"],
+    srcs = ["utility.cpp"],
+    deps = [
+        "//src:location",
+        "//src/fileio/resmgr:res_strings",
+    ],
+    visibility = ["//visibility:public"],
 )

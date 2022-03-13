@@ -8,7 +8,7 @@
 #include "src/pcedit/pc.graphics.hpp"
 #include "src/sounds.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 extern cUniverse univ;
 extern bool party_in_scen,scen_items_loaded;

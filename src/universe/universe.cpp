@@ -18,7 +18,7 @@
 #include "src/oldstructs.hpp"
 #include "src/scenario/town.hpp"
 #include "src/tools/rw.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 void cCurOut::import_legacy(legacy::out_info_type& old){
 	for(int i = 0; i < 96; i++)

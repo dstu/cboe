@@ -5,8 +5,8 @@
 // #include "src/game/boe.text.hpp"
 #include "src/global.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/mathutil.hpp"
+#include "src/tools/utility.hpp"
 
 bool combat_pt_in_light();
 location obs_sec;

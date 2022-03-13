@@ -19,9 +19,9 @@ const int TEXT_BUF_LEN = 70;
 #include "src/spell.hpp"
 #include "src/tools/enum_map.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/gfx/tiling.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 
 typedef struct {
 	char line[50];

@@ -16,7 +16,7 @@
 #include "special.hpp"
 #include "src/tools/vector2d.hpp"
 #include "src/location.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 enum {
 	AREA_TINY = 24,

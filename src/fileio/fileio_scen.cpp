@@ -24,7 +24,7 @@
 #include "src/porting.hpp"
 #include "src/scenario/scenario.hpp"
 #include "src/scenario/town.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 bool cur_scen_is_mac = true;
 extern cCustomGraphics spec_scen_g;

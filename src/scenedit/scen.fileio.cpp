@@ -11,7 +11,7 @@
 #include "src/gfx/gfxsheets.hpp"
 #include "src/scenedit/scen.core.hpp"
 #include "src/sounds.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/oldstructs.hpp"
 #include "src/fileio/fileio.hpp"
 #include "src/fileio/tarball.hpp"

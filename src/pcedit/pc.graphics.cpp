@@ -13,8 +13,8 @@
 #include "src/pcedit/pc.menus.hpp"
 #include "src/sounds.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/mathutil.hpp"
+#include "src/tools/utility.hpp"
 
 extern cUniverse univ;
 

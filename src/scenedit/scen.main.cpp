@@ -15,7 +15,7 @@
 #include "src/scenedit/scen.townout.hpp"
 #include "src/scenedit/scen.core.hpp"
 #include "src/scenedit/scen.keydlgs.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/fileio/fileio.hpp"
 #include "src/dialogxml/widgets/scrollbar.hpp"
 #include "src/tools/winutil.hpp"

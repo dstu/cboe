@@ -10,7 +10,7 @@ cc_library(
         "//src:types",
         "//src/dialogxml/widgets",
         "//src/dialogxml/widgets:pictypes",
-        "//src/util:mathutil",
+        "//src/tools:mathutil",
     ],
     visibility = ["//visibility:public"],
 )

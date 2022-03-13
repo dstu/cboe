@@ -16,8 +16,6 @@ cc_library(
     ],
     srcs = ["item.cpp"],
     deps = [
-        # "//src/fileio",
-        # "//src/fileio/resmgr:res_image",
         "//src:alchemy",
         "//src:damage",
         "//src:location",
@@ -27,7 +25,7 @@ cc_library(
         "//src:spell",
         "//src:types",
         "//src/tools:rw",
-        "//src/util",
+        "//src/tools:utility",
     ],
     visibility = ["//visibility:public"],
 )
@@ -53,21 +51,6 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 
-# cc_library(
-#     name = "outdoors",
-#     hdrs = ["outdoors.hpp"],
-#     srcs = ["outdoors.cpp"],
-#     deps = [
-#         ":area",
-#         ":monster",
-#         ":special",
-#         "//src:location",
-#         "//src:oldstructs",
-#         "//src/dialogxml/dialogs:strdlog",
-#     ],
-#     visibility = ["//visibility:public"],
-# )
-
 cc_library(
     name = "special",
     hdrs = ["special.hpp"],
@@ -81,7 +64,7 @@ cc_library(
         "//src:spell",
         "//src:types",
         "//src/dialogxml/dialogs:strdlog",
-        "//src/util",
+        "//src/tools:utility",
     ],
     visibility = ["//visibility:public"],
 )
@@ -118,7 +101,7 @@ cc_library(
         "//src:oldstructs",
         "//src/tools:rw",
         "//src/tools:vector2d",
-        "//src/util:mathutil",
+        "//src/tools:mathutil",
     ],
     visibility = ["//visibility:public"],
 )
@@ -130,7 +113,7 @@ cc_library(
     deps = [
         "//src/dialogxml/widgets:pictypes",
         "//src/scenario:item",
-        "//src/util",
+        "//src/tools:utility",
     ],
     visibility = ["//visibility:public"],
 )
@@ -164,24 +147,6 @@ cc_library(
     visibility = ["//visibility:public"],
 )
     
-
-# cc_library(
-#     name = "town",
-#     hdrs = ["town.hpp"],
-#     srcs = ["town.cpp"],
-#     deps = [
-#         ":area",
-#         ":monster",
-#         ":special",
-#         ":shop",
-#         ":talking",
-#         "//src/fileio",
-#         "//src:location",
-#         "//src/util",
-#     ],
-#     visibility = ["//visibility:public"],
-# )
-
 cc_library(
     name = "vehicle",
     hdrs = ["vehicle.hpp"],

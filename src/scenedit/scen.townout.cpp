@@ -19,10 +19,10 @@
 #include "src/scenedit/scen.graphics.hpp"
 #include "src/scenedit/scen.keydlgs.hpp"
 #include "src/scenedit/scen.townout.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/dialogxml/widgets/stack.hpp"
 #include "src/tools/winutil.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 
 #include <boost/lexical_cast.hpp>
 

@@ -9,8 +9,8 @@
 #include "shop.hpp"
 #include <numeric>
 #include <iostream>
-#include "src/util/mathutil.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/mathutil.hpp"
+#include "src/tools/utility.hpp"
 
 std::map<eSkill,short> skill_cost = {
 	{eSkill::STRENGTH,3}, {eSkill::DEXTERITY,3}, {eSkill::INTELLIGENCE,3},

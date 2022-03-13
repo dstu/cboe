@@ -20,7 +20,7 @@
 #include "src/race.hpp"
 #include "src/spell.hpp"
 #include "src/tools/rw.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 
 static std::array<item_variety_t, 28> load_item_type_info() {
 	std::multiset<eItemType> equippable = {

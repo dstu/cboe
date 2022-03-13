@@ -22,8 +22,8 @@
 #include "src/spell.hpp"
 #include "src/tools/prefs.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/mathutil.hpp"
+#include "src/tools/utility.hpp"
 
 extern eGameMode overall_mode;
 extern short which_combat_type;

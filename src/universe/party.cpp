@@ -19,7 +19,7 @@
 #include "src/dialogxml/dialogs/strdlog.hpp"
 #include "src/oldstructs.hpp"
 #include "src/tools/rw.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 cParty::cParty(ePartyPreset party_preset) {
 	gold = 200;

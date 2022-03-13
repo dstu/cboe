@@ -23,8 +23,8 @@
 #include "src/spell.hpp"
 #include "src/tools/prefs.hpp"
 #include "src/universe/universe.hpp"
-#include "src/util/mathutil.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/mathutil.hpp"
+#include "src/tools/utility.hpp"
 #include "src/view_dialogs.hpp"
 
 short mage_spell_pos = 0,priest_spell_pos = 0,skill_pos = 0;

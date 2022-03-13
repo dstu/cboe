@@ -14,7 +14,7 @@
 #include <sstream>
 
 #include "src/oldstructs.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 void cScenario::reset_version() {
 	format.prog_make_ver[0] = 2;

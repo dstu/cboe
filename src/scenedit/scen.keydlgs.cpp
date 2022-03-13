@@ -7,7 +7,7 @@
 #include "src/scenedit/scen.global.hpp"
 #include "src/scenario/scenario.hpp"
 #include "src/gfx/gfxsheets.hpp"
-#include "src/util/utility.hpp"
+#include "src/tools/utility.hpp"
 #include "src/scenedit/scen.graphics.hpp"
 #include "src/scenedit/scen.keydlgs.hpp"
 #include "src/scenedit/scen.core.hpp"

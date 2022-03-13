@@ -9,7 +9,7 @@ cc_library(
     hdrs = ["location.hpp"],
     srcs = ["location.cpp"],
     deps = [
-        "//src/util:mathutil",
+        "//src/tools:mathutil",
     ],
     visibility = ["//visibility:public"],
 )
@@ -43,7 +43,7 @@ cc_library(
     srcs = ["spell.cpp"],
     deps = [
         ":skills_traits",
-        "//src/util",
+        "//src/tools:utility",
     ],
     visibility = ["//visibility:public"],
 )
@@ -62,7 +62,7 @@ cc_library(
         "//src:types",
         "//src/fileio/resmgr:res_sound",
         "//src/tools:prefs",
-        "//src/util:mathutil",
+        "//src/tools:mathutil",
     ],
     data = [
         "//rsrc/sounds",
@@ -98,7 +98,7 @@ cc_library(
         "//src/scenario",
         "//src/scenario:item",
         "//src/universe",
-        "//src/util",
+        "//src/tools:utility",
     ],
     visibility = ["//visibility:public"],
 )

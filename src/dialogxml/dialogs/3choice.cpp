@@ -13,7 +13,7 @@
 
 #include "src/dialogxml/widgets/message.hpp"
 #include "src/dialogxml/widgets/pict.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 
 cThreeChoice::cThreeChoice
   (std::vector<std::string>& strings, cBasicButtonType button, pic_num_t pic, ePicType t, cDialog* parent)

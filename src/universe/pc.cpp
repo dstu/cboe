@@ -17,7 +17,7 @@
 
 #include "src/universe/universe.hpp"
 #include "src/oldstructs.hpp"
-#include "src/util/mathutil.hpp"
+#include "src/tools/mathutil.hpp"
 #include "src/sounds.hpp"
 #include "src/tools/rw.hpp"
 
