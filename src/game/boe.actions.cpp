@@ -32,7 +32,7 @@
 #include "src/sounds.hpp"
 #include "src/spell.hpp"
 #include "src/tools/enum_map.hpp"
-#include "src/tools/edit_stuff_done.hpp"
+#include "src/tools/boe_pcedit_shared.hpp"
 #include "src/tools/prefs.hpp"
 #include "src/tools/winutil.hpp"
 #include "src/universe/universe.hpp"

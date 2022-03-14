@@ -1,5 +1,5 @@
-#ifndef SRC_TOOLS_EDIT_STUFF_DONE_H_
-#define SRC_TOOLS_EDIT_STUFF_DONE_H_
+#ifndef SRC_TOOLS_PCEDIT_SHARED_H
+#define SRC_TOOLS_PCEDIT_SHARED_H
 
 #include <map>
 
@@ -29,4 +29,4 @@ void display_alchemy(bool allowEdit,cDialog* parent);
 
 void display_pc(short pc_num,short mode, cDialog* parent);
 
-#endif  // SRC_TOOLS_EDIT_STUFF_DONE_H_
+#endif  // SRC_TOOLS_PCEDIT_SHARED_H

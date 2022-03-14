@@ -1,4 +1,4 @@
-#include "src/tools/edit_stuff_done.hpp"
+#include "src/tools/boe_pcedit_shared.hpp"
 
 #include <boost/lexical_cast.hpp>
 

@@ -19,7 +19,7 @@
 #include "src/pcedit/pc.graphics.hpp"
 #include "src/pcedit/pc.menus.hpp"
 #include "src/sounds.hpp"
-#include "src/tools/edit_stuff_done.hpp"
+#include "src/tools/boe_pcedit_shared.hpp"
 #include "src/tools/framerate_limiter.hpp"
 #include "src/tools/prefs.hpp"
 #include "src/tools/winutil.hpp"

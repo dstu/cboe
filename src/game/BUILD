@@ -81,7 +81,7 @@ cc_binary(
         "//src/dialogxml/dialogs:strdlog",
         "//src/fileio",
         "//src/tools:drawable_manager",
-        "//src/tools:edit_stuff_done",
+        "//src/tools:boe_pcedit_shared",
         "//src/tools:enum_map",
         "//src/universe",
         "//src/tools:mathutil",

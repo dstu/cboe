@@ -9,7 +9,7 @@
 #include "src/pcedit/pc.fileio.hpp"
 #include "src/pcedit/pc.graphics.hpp"
 #include "src/sounds.hpp"
-#include "src/tools/edit_stuff_done.hpp"
+#include "src/tools/boe_pcedit_shared.hpp"
 #include "src/universe/universe.hpp"
 #include "src/tools/mathutil.hpp"
 

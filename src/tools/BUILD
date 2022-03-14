@@ -15,9 +15,9 @@ cc_library(
 )
 
 cc_library(
-    name = "edit_stuff_done",
-    hdrs = ["edit_stuff_done.hpp"],
-    srcs = ["edit_stuff_done.cpp"],
+    name = "boe_pcedit_shared",
+    hdrs = ["boe_pcedit_shared.hpp"],
+    srcs = ["boe_pcedit_shared.cpp"],
     deps = [
         ":winutil",
         "//src/gfx:render",

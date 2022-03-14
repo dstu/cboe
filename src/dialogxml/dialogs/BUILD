@@ -63,7 +63,7 @@ cc_library(
     hdrs = ["strchoice.hpp"],
     deps = [
         "//src/dialogxml/widgets",
-        "//src/tools:edit_stuff_done",
+        "//src/tools:boe_pcedit_shared",
         "//src/fileio/resmgr:res_image",
     ],
     visibility = ["//visibility:public"],
